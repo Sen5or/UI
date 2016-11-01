@@ -12,7 +12,6 @@ var MM = (function() {
 
 	var modules = [];
 
-	/* Private Methods */
 
 	/* createDomObjects()
 	 * Create dom objects for all modules that
@@ -22,13 +21,20 @@ var MM = (function() {
 		for (var m in modules) {
 			var module = modules[m];
 
+
+			createAndPlaceModule();
+			/*
 			if (typeof module.data.position === "string") {
 
-				var wrapper = selectWrapper(module.data.position);
+				var wrapper = selectWrapper(module.data.position);						/* Module Position
+
+
 
 				var dom = document.createElement("div");
 				dom.id = module.identifier;
 				dom.className = module.name;
+
+				console.log("creating: "+ module.identifier + " at " + module.data.position)
 
 				if (typeof module.data.classes === "string") {
 					dom.className = "module " + dom.className + " " + module.data.classes;
@@ -47,12 +53,369 @@ var MM = (function() {
 				moduleContent.className = "module-content";
 				dom.appendChild(moduleContent);
 
+
+				addClickListenerToDom(dom, module); //.data.position);
+
+
 				updateDom(module, 0);
-			}
+			}*/
 		}
 
 		sendNotification("DOM_OBJECTS_CREATED");
 	};
+
+
+	var createAndPlaceModule = function(module){
+
+		if (typeof module.data.position === "string") {
+
+			var wrapper = selectWrapper(module.data.position);						/* Module Position*/
+
+
+			var dom = document.createElement("div");
+			dom.id = module.identifier;
+			dom.className = module.name;
+
+			console.log("creating: "+ module.identifier + " at " + module.data.position)
+
+			if (typeof module.data.classes === "string") {
+				dom.className = "module " + dom.className + " " + module.data.classes;
+			}
+
+			dom.opacity = 0;
+			wrapper.appendChild(dom);
+
+			if (typeof module.data.header !== "undefined" && module.data.header !== "") {
+				var moduleHeader = document.createElement("header");
+				moduleHeader.innerHTML = module.data.header;
+				dom.appendChild(moduleHeader);
+			}
+
+			var moduleContent = document.createElement("div");
+			moduleContent.className = "module-content";
+			dom.appendChild(moduleContent);
+
+
+			addClickListenerToDom(dom, module); //.data.position);
+
+
+			updateDom(module, 0);
+		}
+
+	};
+
+
+	var followCursor = false;
+	/***
+	 * TODO : add moveable modules.
+	 * Determine start location, determine which region cursor has moved to,
+	 * update selected module location, and location of module that is in the new place. --- just swap them for now?
+	 * @param dom
+	 * @param position
+     */
+	var addClickListenerToDom = function(dom, module) {      // This should actually become active when gestures are sensed....
+		dom.onclick = function(event) {
+
+			console.log("clicked: " + dom.id + " at "+ module.data.position);
+
+			if(selected == null){
+				selectElement(dom, event);
+			}
+
+			if(document.onmousemove == null) {
+				startHoverChecker();
+			}
+			else{
+				//console.log("SWAP: " + selected.id + " from "+ selected.data.position +" with "+ dom.id + " at " + module.data.position);
+				stopHoverChecker();
+			}
+
+		};
+	};
+
+
+	/**
+	 * The currently selected element gets a copy made of it for "floating" effect
+	 * @param dom
+	 * @param event
+	 */
+	var selectElement = function (dom, event) {
+		console.log("Selected: " + dom);
+		selected = dom;
+		selected.style.backgroundColor = 'red';
+
+
+		selectedCopy = selected.cloneNode(true);
+		selectedCopy.style.position = "absolute";
+		selectedCopy.height = selected.offsetHeight;
+		selectedCopy.width = selected.offsetWidth;
+		selectedCopy.style.left = selected.style.left;
+		selectedCopy.style.top = selected.style.top;
+		selectedCopy.id = "selected-copy";
+		selectedCopy.style.margin = -50 + "px";
+
+		document.body.appendChild(selectedCopy);
+
+		selectedCopy.style.left = selected.style.left;
+		selectedCopy.style.top = selected.style.top;
+		placeDiv(event.pageX, event.pageY);
+
+	};
+
+	var selected = null;
+	var selectedCopy = null;
+	var previous_hover = null;
+	var current_hover = null;
+
+
+	/**
+	 * Starts tracking the location of the cursor, moves the selectedCopy to the x,y coord
+	 */
+	var startHoverChecker = function () {
+
+		document.onmousemove = handleMouseMove;
+
+		var myElement = document.querySelector("html");
+		myElement.style.cursor = "move";
+
+
+		function handleMouseMove(event) {
+			var dot, eventDoc, doc, body, pageX, pageY;
+
+			event = event || window.event; // IE-ism
+
+			// If pageX/Y aren't available and clientX/Y are,
+			// calculate pageX/Y - logic taken from jQuery.
+			// (This is to support old IE)
+			if (event.pageX == null && event.clientX != null) {
+				eventDoc = (event.target && event.target.ownerDocument) || document;
+				doc = eventDoc.documentElement;
+				body = eventDoc.body;
+
+				event.pageX = event.clientX +
+					(doc && doc.scrollLeft || body && body.scrollLeft || 0) -
+					(doc && doc.clientLeft || body && body.clientLeft || 0);
+				event.pageY = event.clientY +
+					(doc && doc.scrollTop || body && body.scrollTop || 0) -
+					(doc && doc.clientTop || body && body.clientTop || 0 );
+			}
+
+			var element = document.elementFromPoint(event.pageX, event.pageY);
+			// Use event.pageX / event.pageY here
+			//console.log(event.pageX + ", " + event.pageY);
+
+
+			var temp = isDescendant(element);
+			if(temp[0] && selected != temp[1]){
+
+				console.log("Hover: "+ temp[1].id  + ". (" + temp[1].offsetWidth + ", " +temp[1].offsetHeight + ")");
+
+
+				if(temp[1] != current_hover){
+
+					if(current_hover != null)
+						current_hover.style.backgroundColor = 'transparent';
+
+					previous_hover = current_hover;
+					current_hover = temp[1];
+					current_hover.style.backgroundColor = '#035207';
+
+				}
+			}
+			placeDiv(event.pageX, event.pageY);
+		}
+
+	};
+
+
+
+/*
+	function getMouseCoords(event) {
+		var dot, eventDoc, doc, body, pageX, pageY;
+
+		document.onmou
+		event = event || window.event; // IE-ism
+
+		// If pageX/Y aren't available and clientX/Y are,
+		// calculate pageX/Y - logic taken from jQuery.
+		// (This is to support old IE)
+		if (event.pageX == null && event.clientX != null) {
+			eventDoc = (event.target && event.target.ownerDocument) || document;
+			doc = eventDoc.documentElement;
+			body = eventDoc.body;
+
+			event.pageX = event.clientX +
+				(doc && doc.scrollLeft || body && body.scrollLeft || 0) -
+				(doc && doc.clientLeft || body && body.clientLeft || 0);
+			event.pageY = event.clientY +
+				(doc && doc.scrollTop || body && body.scrollTop || 0) -
+				(doc && doc.clientTop || body && body.clientTop || 0 );
+		}
+
+		var element = document.elementFromPoint(event.pageX, event.pageY);
+		// Use event.pageX / event.pageY here
+		//console.log(event.pageX + ", " + event.pageY);
+
+		placeDiv(event.pageX, event.pageY);
+	}
+*/
+
+
+	/**
+	 * Stops tracking cursor, resets any selected backgrounds, and removes selectedCopy from the UI
+	 */
+	var stopHoverChecker = function () {
+
+		document.onmousemove = null;
+
+		var myElement = document.querySelector("html");
+		myElement.style.cursor = "default";
+
+		if(selected != null)
+			selected.style.backgroundColor = 'transparent';
+
+		if(current_hover != null)
+			current_hover.style.backgroundColor = 'transparent';
+
+		if(previous_hover != null)
+				previous_hover.style.backgroundColor = 'transparent';
+
+		document.body.removeChild(selectedCopy);
+
+		previous_hover = null;
+		current_hover = null;
+		selected = null;
+
+	};
+
+
+	/**
+	 * Helper method to determine if child element is part of a module tree.
+	 * @param child
+	 * @returns {*[]}
+	 */
+	function isDescendant(child) {
+		var node = child;
+		while (node != null) {
+			if(node.id != undefined && node.id.includes("module")) {
+				return [true, node];
+			}
+			node = node.parentNode;
+		}
+		return [false, null];
+	}
+
+
+	/*
+	var getParentContainer = function (element) {
+
+		if(element == null){ //end
+			return "no parent";
+		}
+		else if( (element.class == null) || !(element.class.includes("module"))){
+			getParentContainer(element.parentNode);
+		}
+		else{
+			return "class: "+element.class;
+		}
+
+	};*/
+
+
+	/** LOCATION OPTIONS
+	 *
+	 * top_bar,
+	 * top_left,
+	 * top_center,
+	 * top_right,
+	 * upper_third,
+	 * middle_center,
+	 * lower_third,
+	 * bottom_left,
+	 * bottom_center,
+	 * bottom_right,
+	 * bottom_bar,
+	 * fullscreen_above
+	 * fullscreen_below
+	 *
+	 */
+
+
+/*
+	var listenToCursor = function (dom, position) {
+
+			document.onmousemove = handleMouseMove;
+
+
+			function handleMouseMove(event) {
+				var dot, eventDoc, doc, body, pageX, pageY;
+
+				event = event || window.event; // IE-ism
+
+				// If pageX/Y aren't available and clientX/Y are,
+				// calculate pageX/Y - logic taken from jQuery.
+				// (This is to support old IE)
+				if (event.pageX == null && event.clientX != null) {
+					eventDoc = (event.target && event.target.ownerDocument) || document;
+					doc = eventDoc.documentElement;
+					body = eventDoc.body;
+
+					event.pageX = event.clientX +
+						(doc && doc.scrollLeft || body && body.scrollLeft || 0) -
+						(doc && doc.clientLeft || body && body.clientLeft || 0);
+					event.pageY = event.clientY +
+						(doc && doc.scrollTop || body && body.scrollTop || 0) -
+						(doc && doc.clientTop || body && body.clientTop || 0 );
+				}
+
+				// Use event.pageX / event.pageY here
+				console.log(event.pageX + ", " + event.pageY);
+
+
+				console.log("followCursor inside: "+followCursor);
+
+				if (!followCursor) {
+					document.onmousemove = null;
+				}
+				else{
+					orig_width = document.getElementById('module_3_calendar').offsetWidth;
+					orig_height = document.getElementById('module_3_calendar').offsetHeight;
+					placeDiv(document.getElementById('module_3_calendar'), event.pageX, event.pageY);
+				}
+
+			}
+	};
+*/
+
+	/**
+	 * Drops a div at the coordinate location - TODO drop div into zone
+	 * @param div
+	 * @param x_pos
+	 * @param y_pos
+     */
+	function placeDiv(x_pos, y_pos) {
+
+
+		var vertical_adjust = 0; //((selectedCopy.offsetHeight)/2);
+		var horizontal_adjust = ((selectedCopy.offsetWidth)/2);
+
+		//console.log("offsetWidth: "+selectedCopy.offsetWidth + ". x_pos : "+x_pos);
+		//console.log("offsetHeight: "+selectedCopy.offsetHeight + ". y_pos : "+y_pos);
+
+		selectedCopy.style.left = (x_pos-horizontal_adjust)+'px'; //-(200)
+		selectedCopy.style.top = (y_pos-vertical_adjust)+'px'; //(y_pos)-(300)+'px';  //300
+
+	}
+
+
+
+
+
+
+
+
+	/////*********************   Original Magic_mirror below *************************//////
+
 
 	/* selectWrapper(position)
 	 * Select the wrapper dom object for a specific position.
@@ -60,6 +423,8 @@ var MM = (function() {
 	 * argument position string - The name of the position.
 	 */
 	var selectWrapper = function(position) {
+		console.log("In wrapper: "+position);
+
 		var classes = position.replace("_"," ");
 		var parentWrapper = document.getElementsByClassName(classes);
 		if (parentWrapper.length > 0) {
@@ -69,6 +434,7 @@ var MM = (function() {
 			}
 		}
 	};
+
 
 	/* sendNotification(notification, payload, sender)
 	 * Send a notification to all modules.
@@ -143,7 +509,7 @@ var MM = (function() {
 	 */
 	var updateModuleContent = function(module, content) {
 		var moduleWrapper = document.getElementById(module.identifier);
-		var contentWrapper = moduleWrapper.getElementsByClassName("module-content")[0];
+		var contentWrapper = moduleWrapper.getElementsByClassName("module-content")[0];			//TODO
 
 		contentWrapper.innerHTML = "";
 		contentWrapper.appendChild(content);
