@@ -22,7 +22,7 @@ var MM = (function() {
 			var module = modules[m];
 
 
-			createAndPlaceModule();
+			createAndPlaceModule(module);
 			/*
 			if (typeof module.data.position === "string") {
 
@@ -388,7 +388,7 @@ var MM = (function() {
 */
 
 	/**
-	 * Drops a div at the coordinate location - TODO drop div into zone
+	 * Moves a div to the coordinate location
 	 * @param div
 	 * @param x_pos
 	 * @param y_pos
