@@ -21,44 +21,8 @@ var MM = (function() {
 		for (var m in modules) {
 			var module = modules[m];
 
-
 			createAndPlaceModule(module);
-			/*
-			if (typeof module.data.position === "string") {
 
-				var wrapper = selectWrapper(module.data.position);						/* Module Position
-
-
-
-				var dom = document.createElement("div");
-				dom.id = module.identifier;
-				dom.className = module.name;
-
-				console.log("creating: "+ module.identifier + " at " + module.data.position)
-
-				if (typeof module.data.classes === "string") {
-					dom.className = "module " + dom.className + " " + module.data.classes;
-				}
-
-				dom.opacity = 0;
-				wrapper.appendChild(dom);
-
-				if (typeof module.data.header !== "undefined" && module.data.header !== "") {
-					var moduleHeader = document.createElement("header");
-					moduleHeader.innerHTML = module.data.header;
-					dom.appendChild(moduleHeader);
-				}
-
-				var moduleContent = document.createElement("div");
-				moduleContent.className = "module-content";
-				dom.appendChild(moduleContent);
-
-
-				addClickListenerToDom(dom, module); //.data.position);
-
-
-				updateDom(module, 0);
-			}*/
 		}
 
 		sendNotification("DOM_OBJECTS_CREATED");
@@ -69,14 +33,16 @@ var MM = (function() {
 
 		if (typeof module.data.position === "string") {
 
+			//Wrap location to dom
 			var wrapper = selectWrapper(module.data.position);						/* Module Position*/
 
-
+			//Create empty dom to be populated for module
 			var dom = document.createElement("div");
 			dom.id = module.identifier;
 			dom.className = module.name;
+			dom.position = module.data.position;
 
-			console.log("creating: "+ module.identifier + " at " + module.data.position)
+			console.log("creating: "+ module.identifier + " at " + module.data.position);
 
 			if (typeof module.data.classes === "string") {
 				dom.className = "module " + dom.className + " " + module.data.classes;
@@ -105,6 +71,55 @@ var MM = (function() {
 	};
 
 
+	var swapModules = function(module1, module2){
+
+
+		console.log("Mod1: "+ module1.id + " at " + module1.position);
+		console.log("Mod2: "+ module2.id + " at " + module2.position);
+
+		var tempLocation = module1.position;
+
+		//attach mod1
+		module1.position = module2.position;
+		var wrapper1 = selectWrapper(module1.position);
+		module1.opacity = 0;
+		wrapper1.appendChild(module1);
+
+		//TODO remove old dom
+		//var element = document.getElementById(module1.id);
+		//element.parentNode.removeChild(element);
+
+
+		module2.position = tempLocation;
+		var wrapper2 = selectWrapper(module2.position);
+		module2.opacity = 0;
+		wrapper2.appendChild(module2);
+
+
+
+
+/*
+		//Wrap location to dom
+		var wrapper = selectWrapper(module.data.position);						/* Module Position
+
+		//Create empty dom to be populated for module
+		var dom = document.createElement("div");
+		dom.id = module.identifier;
+		dom.className = module.name;
+
+		console.log("creating: "+ module.identifier + " at " + module.data.position);
+
+		if (typeof module.data.classes === "string") {
+			dom.className = "module " + dom.className + " " + module.data.classes;
+		}
+
+		dom.opacity = 0;
+		wrapper.appendChild(dom);
+*/
+
+	};
+
+
 	var followCursor = false;
 	/***
 	 * TODO : add moveable modules.
@@ -127,7 +142,9 @@ var MM = (function() {
 			}
 			else{
 				//console.log("SWAP: " + selected.id + " from "+ selected.data.position +" with "+ dom.id + " at " + module.data.position);
+				swapModules(selected, dom);
 				stopHoverChecker();
+
 			}
 
 		};
