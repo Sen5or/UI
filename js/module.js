@@ -128,13 +128,6 @@ var Module = Class.extend({
 
 	
 	
-	
-	
-	
-	
-	
-	
-	
 	/*********************************************
 	 * The methods below don"t need subclassing. *
 	 *********************************************/

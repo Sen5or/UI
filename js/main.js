@@ -61,9 +61,7 @@ var MM = (function() {
 			moduleContent.className = "module-content";
 			dom.appendChild(moduleContent);
 
-
 			addClickListenerToDom(dom, module); //.data.position);
-
 
 			updateDom(module, 0);
 		}
@@ -71,8 +69,8 @@ var MM = (function() {
 	};
 
 
+	/*
 	var swapModules = function(module1, module2){
-
 
 		console.log("Mod1: "+ module1.id + " at " + module1.position);
 		console.log("Mod2: "+ module2.id + " at " + module2.position);
@@ -85,7 +83,6 @@ var MM = (function() {
 		module1.opacity = 0;
 		wrapper1.appendChild(module1);
 
-		//TODO remove old dom
 		//var element = document.getElementById(module1.id);
 		//element.parentNode.removeChild(element);
 
@@ -95,34 +92,12 @@ var MM = (function() {
 		module2.opacity = 0;
 		wrapper2.appendChild(module2);
 
-
-
-
-/*
-		//Wrap location to dom
-		var wrapper = selectWrapper(module.data.position);						/* Module Position
-
-		//Create empty dom to be populated for module
-		var dom = document.createElement("div");
-		dom.id = module.identifier;
-		dom.className = module.name;
-
-		console.log("creating: "+ module.identifier + " at " + module.data.position);
-
-		if (typeof module.data.classes === "string") {
-			dom.className = "module " + dom.className + " " + module.data.classes;
-		}
-
-		dom.opacity = 0;
-		wrapper.appendChild(dom);
-*/
-
-	};
+	};*/
 
 
 	var followCursor = false;
 	/***
-	 * TODO : add moveable modules.
+	 *
 	 * Determine start location, determine which region cursor has moved to,
 	 * update selected module location, and location of module that is in the new place. --- just swap them for now?
 	 * @param dom
@@ -133,6 +108,12 @@ var MM = (function() {
 
 			console.log("clicked: " + dom.id + " at "+ module.data.position);
 
+			console.log("news: " + JSON.stringify(module.clickable));
+
+			if(module.clickable != null)
+				showPopup(module.clickable);
+
+			/*
 			if(selected == null){
 				selectElement(dom, event);
 			}
@@ -144,11 +125,110 @@ var MM = (function() {
 				//console.log("SWAP: " + selected.id + " from "+ selected.data.position +" with "+ dom.id + " at " + module.data.position);
 				swapModules(selected, dom);
 				stopHoverChecker();
-
-			}
+			}*/
 
 		};
 	};
+
+	var page1 = "http://www.nytimes.com/pages/index.html?partner=rss&emc=rss";
+	var page = "http://www.nytimes.com/2016/11/08/business/international/china-cyber-security-regulations.html?partner=rss&emc=rss";
+	var ytube = "https://www.youtube.com/watch?v=NVHiI2azL7U";
+	ytube = ytube.replace("watch?v=", "embed/");
+
+
+	var background;
+
+	function createBackground() {
+
+		background = document.createElement('bg');
+		background.width = window.innerWidth;
+		background.height = window.innerHeight;
+
+		background.onclick = function(event) {
+			console.log("clicked background")
+			document.body.removeChild(background);
+		};
+
+		return background;
+	}
+
+	function createIframe(link) {
+
+		var iframe = document.createElement('iframe');
+		var w = window.innerWidth;
+		var h = window.innerHeight;
+		var divW = w-250;
+		var divH = h-250;
+
+		iframe.id = "popUpNews";
+
+		var html = link;
+		//iframe.src = 'data:text/html;charset=utf-8,' + encodeURI(html);
+		iframe.src = html;
+
+		console.log("html_link: " +html);
+
+		return iframe;
+
+	}
+
+	function showIframe() {
+
+		var iframe = document.getElementsByTagName('iframe')[0];
+		var url = iframe.src;
+
+		var getData = function (data) {
+			console.log("Getting data");
+			if (data && data.query && data.query.results &&
+				data.query.results.resources &&
+				data.query.results.resources.content &&
+				data.query.results.resources.status == 200) {
+				console.log("Success loaded");
+				loadHTML(data.query.results.resources.content);
+			}
+			else if (data && data.error && data.error.description){
+				console.log("Error loaded");
+				loadHTML(data.error.description);
+			}
+			else {
+				console.log("HTML error loaded");
+				loadHTML('Error: Cannot load ' + url);
+			}
+		};
+		var loadURL = function (src) {
+			url = src;
+			var script = document.createElement('script');
+			script.src = 'http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20data.headers%20where%20url%3D%22' + encodeURIComponent(url) + '%22&format=json&diagnostics=true&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=getData';
+			console.log("loadurl result: "+script.src);
+			document.body.appendChild(script);
+		};
+		var loadHTML = function (html) {
+			console.log("loading html");
+			iframe.src = 'about:blank';
+			iframe.contentWindow.document.open();
+			iframe.contentWindow.document.write(html.replace(/<head>/i, '<head><base href="' + url + '"><scr' + 'ipt>document.addEventListener("click", function(e) { if(e.target && e.target.nodeName == "A") { e.preventDefault(); parent.loadURL(e.target.href); } });</scr' + 'ipt>'));
+			iframe.contentWindow.document.close();
+		};
+		loadURL(iframe.src);
+
+/*
+		iframe.onload = function(){
+			alert("Iframe is now loaded.");
+		};*/
+
+	}
+
+	function showPopup(link){
+
+		var background = createBackground();
+		var iframe = createIframe(link);
+
+		background.appendChild(iframe);
+		document.body.appendChild(background);
+
+		//console.log('iframe.contentWindow =', iframe.contentWindow);
+		showIframe();
+	}
 
 
 	/**
@@ -188,6 +268,7 @@ var MM = (function() {
 	/**
 	 * Starts tracking the location of the cursor, moves the selectedCopy to the x,y coord
 	 */
+	/*
 	var startHoverChecker = function () {
 
 		document.onmousemove = handleMouseMove;
@@ -244,7 +325,7 @@ var MM = (function() {
 
 	};
 
-
+*/
 
 /*
 	function getMouseCoords(event) {
@@ -281,6 +362,7 @@ var MM = (function() {
 	/**
 	 * Stops tracking cursor, resets any selected backgrounds, and removes selectedCopy from the UI
 	 */
+	/*
 	var stopHoverChecker = function () {
 
 		document.onmousemove = null;
@@ -303,7 +385,7 @@ var MM = (function() {
 		current_hover = null;
 		selected = null;
 
-	};
+	};*/
 
 
 	/**
@@ -321,22 +403,6 @@ var MM = (function() {
 		}
 		return [false, null];
 	}
-
-
-	/*
-	var getParentContainer = function (element) {
-
-		if(element == null){ //end
-			return "no parent";
-		}
-		else if( (element.class == null) || !(element.class.includes("module"))){
-			getParentContainer(element.parentNode);
-		}
-		else{
-			return "class: "+element.class;
-		}
-
-	};*/
 
 
 	/** LOCATION OPTIONS
