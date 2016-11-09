@@ -23,6 +23,8 @@ var Server = function(config, callback) {
 	app.use("/vendor", express.static(path.resolve(__dirname + "/../vendor")));
 	app.use("/translations", express.static(path.resolve(__dirname + "/../translations")));
 
+	//app.use("/images", express.static(path.resolve(__dirname + "/../images")));
+
 	app.get("/", function(req, res) {
 		res.sendFile(path.resolve(__dirname + "/../index.html"));
 	});

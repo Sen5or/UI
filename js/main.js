@@ -146,7 +146,8 @@ var MM = (function() {
 
 		background.onclick = function(event) {
 			console.log("clicked background")
-			document.body.removeChild(background);
+			fadeOut(background);
+			//document.body.removeChild(background);
 		};
 
 		return background;
@@ -172,28 +173,40 @@ var MM = (function() {
 
 	}
 
+
+
 	function showIframe() {
 
 		var iframe = document.getElementsByTagName('iframe')[0];
 		var url = iframe.src;
 
+
 		var getData = function (data) {
-			console.log("Getting data");
-			if (data && data.query && data.query.results &&
-				data.query.results.resources &&
-				data.query.results.resources.content &&
-				data.query.results.resources.status == 200) {
-				console.log("Success loaded");
-				loadHTML(data.query.results.resources.content);
+
+			try{
+				console.log("Getting data");
+				if (data && data.query && data.query.results &&
+					data.query.results.resources &&
+					data.query.results.resources.content &&
+					data.query.results.resources.status == 200) {
+					console.log("Success loaded");
+					loadHTML(data.query.results.resources.content);
+				}
+				else if (data && data.error && data.error.description){
+					console.log("Error loaded");
+					loadHTML(data.error.description);
+				}
+				else {
+					console.log("HTML error loaded");
+					loadHTML('Error: Cannot load ' + url);
+				}
 			}
-			else if (data && data.error && data.error.description){
-				console.log("Error loaded");
-				loadHTML(data.error.description);
+			catch (error){
+				console.log("caught error loading data:");
+				console.log(error);
 			}
-			else {
-				console.log("HTML error loaded");
-				loadHTML('Error: Cannot load ' + url);
-			}
+
+
 		};
 		var loadURL = function (src) {
 			url = src;
@@ -206,15 +219,21 @@ var MM = (function() {
 			console.log("loading html");
 			iframe.src = 'about:blank';
 			iframe.contentWindow.document.open();
-			iframe.contentWindow.document.write(html.replace(/<head>/i, '<head><base href="' + url + '"><scr' + 'ipt>document.addEventListener("click", function(e) { if(e.target && e.target.nodeName == "A") { e.preventDefault(); parent.loadURL(e.target.href); } });</scr' + 'ipt>'));
+			iframe.contentWindow.document.write(html.replace(/<head>/i, '<head><base href="' + url + '"><scr' + 'ipt>document.addEventListener("click", iframeClick);</scr' + 'ipt>'));
 			iframe.contentWindow.document.close();
 		};
 		loadURL(iframe.src);
 
-/*
-		iframe.onload = function(){
-			alert("Iframe is now loaded.");
-		};*/
+
+		var iframeClick = function(e) {
+			if(e.target && e.target.nodeName == "A") {
+				e.preventDefault(); parent.loadURL(e.target.href);
+			}
+		};
+
+		iframe.onload=function(){
+			console.log('laoded the iframe')
+		};
 
 	}
 
@@ -225,6 +244,7 @@ var MM = (function() {
 
 		background.appendChild(iframe);
 		document.body.appendChild(background);
+		fadeIn(background);
 
 		//console.log('iframe.contentWindow =', iframe.contentWindow);
 		showIframe();
@@ -236,6 +256,7 @@ var MM = (function() {
 	 * @param dom
 	 * @param event
 	 */
+	/*
 	var selectElement = function (dom, event) {
 		console.log("Selected: " + dom);
 		selected = dom;
@@ -263,7 +284,35 @@ var MM = (function() {
 	var selectedCopy = null;
 	var previous_hover = null;
 	var current_hover = null;
+	*/
 
+	function fadeOut(element) {
+		var op = 1;  // initial opacity
+		var timer = setInterval(function () {
+			if (op <= 0.1){
+				clearInterval(timer);
+				element.style.display = 'none';
+				document.body.removeChild(element);
+			}
+			element.style.opacity = op;
+			element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+			op -= op * 0.1;
+		}, 20);
+	}
+
+
+	function fadeIn(element) {
+		var op = 0.1;  // initial opacity
+		element.style.display = 'block';
+		var timer = setInterval(function () {
+			if (op >= .9){
+				clearInterval(timer);
+			}
+			element.style.opacity = op;
+			element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+			op += op * 0.1;
+		}, 10);
+	}
 
 	/**
 	 * Starts tracking the location of the cursor, moves the selectedCopy to the x,y coord
