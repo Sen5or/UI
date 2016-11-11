@@ -61,7 +61,7 @@ var MM = (function() {
 			moduleContent.className = "module-content";
 			dom.appendChild(moduleContent);
 
-			addClickListenerToDom(dom, module); //.data.position);
+			//addClickListenerToDom(dom, module); //.data.position);
 
 			updateDom(module, 0);
 		}
@@ -103,6 +103,7 @@ var MM = (function() {
 	 * @param dom
 	 * @param position
      */
+
 	var addClickListenerToDom = function(dom, module) {      // This should actually become active when gestures are sensed....
 		dom.onclick = function(event) {
 
@@ -136,6 +137,7 @@ var MM = (function() {
 	ytube = ytube.replace("watch?v=", "embed/");
 
 
+	/*
 	var background;
 
 	function createBackground() {
@@ -250,7 +252,7 @@ var MM = (function() {
 		showIframe();
 	}
 
-
+*/
 	/**
 	 * The currently selected element gets a copy made of it for "floating" effect
 	 * @param dom
@@ -305,7 +307,7 @@ var MM = (function() {
 		var op = 0.1;  // initial opacity
 		element.style.display = 'block';
 		var timer = setInterval(function () {
-			if (op >= .9){
+			if (op >= .85){
 				clearInterval(timer);
 			}
 			element.style.opacity = op;

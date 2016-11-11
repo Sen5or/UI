@@ -1,0 +1,59 @@
+/*****************************************************
+ * Magic Mirror                                      *
+ * Custom CSS                                        *
+ *                                                   *
+ * By Michael Teeuw http://michaelteeuw.nl           *
+ * MIT Licensed.                                     *
+ *                                                   *
+ * Add any custom CSS below.                         *
+ * Changes to this files will be ignored by GIT. *
+ *****************************************************/
+
+ body {
+
+ }
+
+::selection {
+ background-color: Transparent;
+}
+
+
+bg {
+ background-color:#000000;
+ opacity: 1; /*.9;*/
+ position: absolute;
+ z-index: 9001;
+ top:-60px;
+ left:-60px;
+ width:110%;
+ height:115%;
+}
+
+
+#popUpNews {
+ width: 75%;
+ height: 80%;
+ opacity: 1;
+ border:5px solid #000000;
+ z-index: 9002;
+ margin: auto;
+ position: absolute;
+ left: -10px;
+ right: 0;
+ top: 0;
+ bottom: 0;
+}
+
+#popUpYouTube {
+ width: 75%;
+ height: 50%;
+ opacity: 1;
+ border:5px solid #000000;
+ z-index: 9002;
+ margin: auto;
+ position: absolute;
+ left:0;
+ right: 0;
+ top: 0;
+ bottom: 0;
+}

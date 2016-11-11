@@ -127,7 +127,6 @@ var Module = Class.extend({
 	},
 
 	
-	
 	/*********************************************
 	 * The methods below don"t need subclassing. *
 	 *********************************************/
@@ -362,3 +361,158 @@ Module.register = function(name, moduleDefinition) {
 	Log.log("Module registered: " + name);
 	Module.definitions[name] = moduleDefinition;
 };
+
+var background;
+
+
+Module.showPopUp = function showPopup(link){
+
+	console.log("in showpopup");
+	background = createBackground();
+	var iframe = createIframe(link);
+
+	background.appendChild(iframe);
+	document.body.appendChild(background);
+	//fadeIn('popup_bg');
+
+	//console.log('iframe.contentWindow =', iframe.contentWindow);
+	showIframe();
+};
+
+
+function createBackground() {
+
+	var background = document.createElement('bg');
+	background.width = window.innerWidth;
+	background.height = window.innerHeight;
+
+	background.onclick = function(event) {
+		console.log("clicked background");
+		//fadeOut('bg');
+		document.body.removeChild(background);
+	};
+
+	return background;
+}
+
+function createIframe(link) {
+
+	var iframe = document.createElement('iframe');
+	var w = window.innerWidth;
+	var h = window.innerHeight;
+	var divW = w-250;
+	var divH = h-250;
+
+	iframe.id = "popUpNews";
+
+	var html = link;
+	//iframe.src = 'data:text/html;charset=utf-8,' + encodeURI(html);
+	iframe.src = link;
+
+	console.log("html_link: " +link);
+
+	return iframe;
+
+}
+
+
+
+function showIframe() {
+
+	var iframe = document.getElementsByTagName('iframe')[0];
+	var url = iframe.src;
+
+
+	var getData = function (data) {
+
+		try{
+			console.log("Getting data");
+			if (data && data.query && data.query.results &&
+				data.query.results.resources &&
+				data.query.results.resources.content &&
+				data.query.results.resources.status == 200) {
+				console.log("Success loaded");
+				loadHTML(data.query.results.resources.content);
+			}
+			else if (data && data.error && data.error.description){
+				console.log("Error loaded");
+				loadHTML(data.error.description);
+			}
+			else {
+				console.log("HTML error loaded");
+				loadHTML('Error: Cannot load ' + url);
+			}
+		}
+		catch (error){
+			console.log("caught error loading data:");
+			console.log(error);
+		}
+
+
+	};
+	var loadURL = function (src) {
+		url = src;
+		var script = document.createElement('script');
+		script.src = 'http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20data.headers%20where%20url%3D%22' + encodeURIComponent(url) + '%22&format=json&diagnostics=true&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=getData';
+		console.log("loadurl result: "+script.src);
+		document.body.appendChild(script);
+	};
+	var loadHTML = function (html) {
+		console.log("loading html");
+		iframe.src = 'about:blank';
+		iframe.contentWindow.document.open();
+		iframe.contentWindow.document.write(html.replace(/<head>/i, '<head><base href="' + url + '"><scr' + 'ipt>document.addEventListener("click", iframeClick);</scr' + 'ipt>'));
+
+		iframe.contentWindow.document.close();
+	};
+	loadURL(iframe.src);
+
+
+	var iframeClick = function(e) {
+		if(e.target && e.target.nodeName == "A") {
+			e.preventDefault(); parent.loadURL(e.target.href);
+		}
+	};
+
+	iframe.onload=function(){
+		console.log('loaded the iframe')
+	};
+
+}
+
+var testLink = "https://twitter.com/statuses/796807729901895680";
+
+var testLink = "https://publish.twitter.com/oembed?url=https://twitter.com/lifewithclaire7/status/796807729901895680";
+
+
+function fadeOut(elementTag) {
+	var element = document.body.getElementsByTagName(elementTag);
+	var op = 1;  // initial opacity
+	var timer = setInterval(function () {
+		if (op <= 0.1){
+			clearInterval(timer);
+			element.style.display = 'none';
+			document.removeChild(element);		//body.removeChild(element);
+		}
+		element.style.opacity = op;
+		element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+		op -= op * 0.1;
+	}, 20);
+}
+
+
+function fadeIn(element) {
+	//var element = document.body.getElementsByTagName(elementTag);
+	var op = 0.1;  // initial opacity
+	if (element.style.display != null) {
+		element.style.display = 'block';
+		var timer = setInterval(function () {
+			if (op >= .85) {
+				clearInterval(timer);
+			}
+			element.style.opacity = op;
+			element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+			op += op * 0.1;
+		}, 10);
+	}
+}
