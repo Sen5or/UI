@@ -2,111 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="658a5715-44fa-4a0f-b825-cb6eed9171c9" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/MMM-Trello" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/ic_pan_tool_white_36dp_1x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/ic_pan_tool_white_36dp_2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/twitControl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/custom.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/default/alert/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/default/alert/alert.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/default/alert/classie.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/default/alert/modernizr.custom.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/default/alert/notificationFx.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/default/alert/ns-default.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/default/alert/translations/de.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/default/alert/translations/en.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/default/calendar/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/default/calendar/calendar.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/default/calendar/calendar.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/default/calendar/calendarfetcher.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/default/calendar/debug.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/default/calendar/node_helper.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/default/calendar/vendor/ical.js/.travis.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/default/calendar/vendor/ical.js/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/default/calendar/vendor/ical.js/NOTICE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/default/calendar/vendor/ical.js/example.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/default/calendar/vendor/ical.js/ical.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/default/calendar/vendor/ical.js/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/default/calendar/vendor/ical.js/node-ical.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/default/calendar/vendor/ical.js/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/default/calendar/vendor/ical.js/readme.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/default/calendar/vendor/ical.js/test/test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/default/calendar/vendor/ical.js/test/test1.ics" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/default/calendar/vendor/ical.js/test/test10.ics" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/default/calendar/vendor/ical.js/test/test11.ics" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/default/calendar/vendor/ical.js/test/test2.ics" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/default/calendar/vendor/ical.js/test/test3.ics" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/default/calendar/vendor/ical.js/test/test4.ics" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/default/calendar/vendor/ical.js/test/test5.ics" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/default/calendar/vendor/ical.js/test/test6.ics" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/default/calendar/vendor/ical.js/test/test7.ics" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/default/calendar/vendor/ical.js/test/test8.ics" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/default/calendar/vendor/ical.js/test/test9.ics" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/default/clock/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/default/clock/clock.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/default/clock/clock_styles.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/default/clock/faces/face-001.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/default/clock/faces/face-002.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/default/clock/faces/face-003.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/default/clock/faces/face-004.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/default/clock/faces/face-005.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/default/clock/faces/face-006.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/default/clock/faces/face-007.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/default/clock/faces/face-008.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/default/clock/faces/face-009.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/default/clock/faces/face-010.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/default/clock/faces/face-011.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/default/clock/faces/face-012.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/default/compliments/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/default/compliments/compliments.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/default/currentweather/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/default/currentweather/currentweather.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/default/currentweather/currentweather.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/default/defaultmodules.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/default/helloworld/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/default/helloworld/helloworld.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/default/newsfeed/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/default/newsfeed/fetcher.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/default/newsfeed/newsfeed.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/default/newsfeed/node_helper.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/default/spacer/spacer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/default/weatherforecast/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/default/weatherforecast/weatherforecast.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/default/weatherforecast/weatherforecast.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/gesture_control.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/npm-debug.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/node_modules/node_helper/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/node_modules/oauth/.npmignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/node_modules/oauth/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/node_modules/oauth/Makefile" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/node_modules/oauth/Readme.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/node_modules/oauth/examples/express-gdata/server.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/node_modules/oauth/examples/express-gdata/views/google_calendars.ejs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/node_modules/oauth/examples/express-gdata/views/google_contacts.ejs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/node_modules/oauth/examples/express-gdata/views/layout.ejs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/node_modules/oauth/examples/term.ie.oauth-HMAC-SHA1.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/node_modules/oauth/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/node_modules/oauth/lib/_utils.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/node_modules/oauth/lib/oauth.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/node_modules/oauth/lib/oauth2.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/node_modules/oauth/lib/sha1.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/node_modules/oauth/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/node_modules/oauth/tests/oauth.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/node_modules/oauth/tests/oauth2.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/node_modules/oauth/tests/sha1.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/node_modules/user-stream/.npmignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/node_modules/user-stream/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/node_modules/user-stream/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/node_modules/user-stream/lib/user-stream.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/node_modules/user-stream/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/node_modules/user-stream/test/stream.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/pandora/pandora.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/youtube/youtube.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/MMM-Trello" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/twitControl" afterPath="$PROJECT_DIR$/modules/twitControl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/main.js" afterPath="$PROJECT_DIR$/js/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/module.js" afterPath="$PROJECT_DIR$/js/module.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/default/clock/clock_styles.css" afterPath="$PROJECT_DIR$/modules/default/clock/clock_styles.css" />
     </list>
     <list id="85c4bf1c-1b31-4ae9-870a-ad888088530f" name="New changelist" comment="" />
     <ignored path="UI_test.iws" />
@@ -277,7 +176,6 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="NodeModulesDirectoryManager">
-    <handled-path value="$PROJECT_DIR$/modules/MMM-Trello/node_modules" />
     <handled-path value="$PROJECT_DIR$/modules/node_modules" />
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
@@ -326,6 +224,38 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="UI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="twitControl" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1066,7 +996,7 @@
       <workItem from="1478711091696" duration="11499000" />
       <workItem from="1478796073796" duration="13271000" />
       <workItem from="1478888663780" duration="227000" />
-      <workItem from="1478889046184" duration="91000" />
+      <workItem from="1478889046184" duration="883000" />
     </task>
     <task id="LOCAL-00001" summary="Hovering and module detection complete">
       <created>1478018064214</created>
@@ -1110,11 +1040,18 @@
       <option name="project" value="LOCAL" />
       <updated>1478723299771</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Adjusted git ignore file, which was restricting all custom modules">
+      <created>1478889193465</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1478889193465</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="113188000" />
+    <option name="totallyTimeSpent" value="113980000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1182,7 +1119,8 @@
     <MESSAGE value="Basic module swapping implementation" />
     <MESSAGE value="clickable news feed that opens a popup iframe." />
     <MESSAGE value="Added gesture module that tracks when mouse moves" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added gesture module that tracks when mouse moves" />
+    <MESSAGE value="Adjusted git ignore file, which was restricting all custom modules" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adjusted git ignore file, which was restricting all custom modules" />
     <option name="PRESELECT_EXISTING_CHANGELIST" value="false" />
   </component>
   <component name="XDebuggerManager">
