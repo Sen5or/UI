@@ -31,7 +31,7 @@ var config = {
 			position: 'top_left'
 		},
 		{
-			module: 'twitControl',
+			module: 'MMM-twitter',
 			position: 'top_left',
 			config: {
 				maxNumTweets: 3,
