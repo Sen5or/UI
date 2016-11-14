@@ -14,6 +14,7 @@ var Module = Class.extend({
 	 * All methods (and properties) below can be subclassed. *
 	 *********************************************************/
 
+
 	// Module config defaults.
 	defaults: {},
 
@@ -362,13 +363,52 @@ Module.register = function(name, moduleDefinition) {
 	Module.definitions[name] = moduleDefinition;
 };
 
-var background;
 
+var background;
+var popupWindow;
+/*
+var w = window.innerWidth;
+var h = window.innerHeight;
+var w_section = (w/5);
+var h_section = (h/8);
+var windowW = w-(w_section);
+var windowH = h-(h_section);
+
+var popupSpecs = "width="+windowW+",height="+windowH+",fullscreen=no,left="+(w_section)/2+",top="+(h_section)+",directories=no,titlebar=nostatus=no,toolbar=no,menubar=no,navigationbar=no,location=no,resizable=no,scrollbars=no";
+*/
+
+var popup_Window;
 
 Module.showPopUp = function showPopup(link){
 
 	console.log("in showpopup");
+
+	var w = window.innerWidth;
+	var h = window.innerHeight;
+	var w_section = (w/5);
+	var h_section = (h/8);
+	var windowW = w-(w_section);
+	var windowH = h-(h_section);
+
+	var popupSpecs = "width="+windowW+",height="+windowH+",fullscreen=no,left="+(w_section)/2+",top="+(h_section)+",directories=no,titlebar=nostatus=no,toolbar=no,menubar=no,navigationbar=no,location=no,resizable=no,scrollbars=no";
+
+	//popup_Window = new electron.BrowserWindow({width: 800, height: 600, x: 0, y: 0, kiosk:true, darkTheme: true, webPreferences: {nodeIntegration: false}});
+
+	//popup_Window.loadURL(link);
+
+
+
+	//console.log("electron.app: "+ express.app);
+	console.log("popup w: "+windowW);
+
+	popupWindow = window.open(link,"link-popup",popupSpecs,true);
+
+
 	background = createBackground();
+	document.body.appendChild(background);
+
+
+	/*
 	var iframe = createIframe(link);
 
 	background.appendChild(iframe);
@@ -376,7 +416,7 @@ Module.showPopUp = function showPopup(link){
 	//fadeIn('popup_bg');
 
 	//console.log('iframe.contentWindow =', iframe.contentWindow);
-	showIframe();
+	showIframe();*/
 };
 
 
@@ -388,12 +428,19 @@ function createBackground() {
 
 	background.onclick = function(event) {
 		console.log("clicked background");
-		//fadeOut('bg');
-		document.body.removeChild(background);
+		closePopWindow()
 	};
 
 	return background;
 }
+
+function closePopWindow(link) {
+
+	popupWindow.close();
+	//fadeOut('bg');
+	document.body.removeChild(background);
+}
+
 
 function createIframe(link) {
 
@@ -450,6 +497,8 @@ function showIframe() {
 
 
 	};
+
+
 	var loadURL = function (src) {
 		url = src;
 		var script = document.createElement('script');
@@ -469,6 +518,7 @@ function showIframe() {
 
 
 	var iframeClick = function(e) {
+		console.log("clicked iframe");
 		if(e.target && e.target.nodeName == "A") {
 			e.preventDefault(); parent.loadURL(e.target.href);
 		}

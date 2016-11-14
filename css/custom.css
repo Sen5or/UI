@@ -20,7 +20,7 @@
 
 bg {
  background-color:#000000;
- opacity: 1; /*.9;*/
+ opacity: .9; /*.9;*/
  position: absolute;
  z-index: 9001;
  top:-60px;

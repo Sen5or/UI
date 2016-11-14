@@ -35,7 +35,7 @@ var config = {
 			position: 'top_left',
 			config: {
 				maxNumTweets: 3,
-				keywords: {track: 'java'},
+				keywords: {track: 'science, ucsd'},
 				api_keys: {
 					consumer_key: 'GCNRascd1LbQMYXr9Se1MpQEB',
 					consumer_secret: 'aWtJSOIhZUh3yD4N68pjwPlqhLUAWnW6mC4ktqSggC9uJai3uh',

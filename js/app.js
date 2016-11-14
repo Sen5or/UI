@@ -146,6 +146,12 @@ var App = function() {
 			});
 		});
 	};
+
+
+	var doShit = function(callback) {
+		console.log("donig shit!")
+	}
+
 };
 
 module.exports = new App();

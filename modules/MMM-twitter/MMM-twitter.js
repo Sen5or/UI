@@ -77,6 +77,7 @@ Module.register("MMM-twitter",{
 				var tweetElement = document.createElement("div");
 				tweetElement.className = "bright xsmall light";
 				tweetElement.innerHTML = this.tweets[t].text;						//Using text
+				tweetElement.tweetId = t;
 
 				var author = document.createElement("div");
 				author.className = "xsmall light";
@@ -89,15 +90,21 @@ Module.register("MMM-twitter",{
 
 
 				tweetElement.onclick = function(){
-					console.log("clicked twitter item: "+JSON.stringify(self.tweets[t]));
-					var twitterId = self.tweets[t].id_str;
+					//console.log("t: "+tweetElement.tweetId);
+					//console.log("t: "+self.tweetId);
+					console.log("t: "+this.tweetId);
+					//console.log("clicked twitter item: "+JSON.stringify(self.tweets[t].text));
+					var twitterId = self.tweets[this.tweetId].id_str;
 					var link = "https://twitter.com/statuses/"+twitterId;
 					Module.showPopUp(link);
 				};
 
+
+
 				wrapper.appendChild(tweetElement);
 				wrapper.appendChild(author);
 				wrapper.appendChild(spacer);
+				wrapper.link = this.tweets[t].id_str;
 		}
 		return wrapper;
 	}
