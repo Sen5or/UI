@@ -6,8 +6,10 @@
  */
 
 
+
+
 var fs = require("fs");
-var Server = require(__dirname + "/server.js");
+var Server = require(__dirname + "/server.js").Server;
 var defaultModules = require(__dirname + "/../modules/default/defaultmodules.js");
 var path = require("path");
 
@@ -146,11 +148,6 @@ var App = function() {
 			});
 		});
 	};
-
-
-	var doShit = function(callback) {
-		console.log("donig shit!")
-	}
 
 };
 

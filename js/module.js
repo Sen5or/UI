@@ -8,6 +8,8 @@
  * MIT Licensed.
  */
 
+
+
 var Module = Class.extend({
 
 	/*********************************************************
@@ -365,8 +367,7 @@ Module.register = function(name, moduleDefinition) {
 
 
 var background;
-var popupWindow;
-/*
+
 var w = window.innerWidth;
 var h = window.innerHeight;
 var w_section = (w/5);
@@ -374,49 +375,25 @@ var h_section = (h/8);
 var windowW = w-(w_section);
 var windowH = h-(h_section);
 
-var popupSpecs = "width="+windowW+",height="+windowH+",fullscreen=no,left="+(w_section)/2+",top="+(h_section)+",directories=no,titlebar=nostatus=no,toolbar=no,menubar=no,navigationbar=no,location=no,resizable=no,scrollbars=no";
-*/
-
-var popup_Window;
+$.ajax({
+	url : '/screen_res/'+windowW+'/'+windowH,
+	type : 'POST'
+});
 
 Module.showPopUp = function showPopup(link){
 
 	console.log("in showpopup");
 
-	var w = window.innerWidth;
-	var h = window.innerHeight;
-	var w_section = (w/5);
-	var h_section = (h/8);
-	var windowW = w-(w_section);
-	var windowH = h-(h_section);
 
 	var popupSpecs = "width="+windowW+",height="+windowH+",fullscreen=no,left="+(w_section)/2+",top="+(h_section)+",directories=no,titlebar=nostatus=no,toolbar=no,menubar=no,navigationbar=no,location=no,resizable=no,scrollbars=no";
 
-	//popup_Window = new electron.BrowserWindow({width: 800, height: 600, x: 0, y: 0, kiosk:true, darkTheme: true, webPreferences: {nodeIntegration: false}});
 
-	//popup_Window.loadURL(link);
-
-
-
-	//console.log("electron.app: "+ express.app);
-	console.log("popup w: "+windowW);
-
-	popupWindow = window.open(link,"link-popup",popupSpecs,true);
+	window.open(link, '_blank', popupSpecs);
 
 
 	background = createBackground();
 	document.body.appendChild(background);
 
-
-	/*
-	var iframe = createIframe(link);
-
-	background.appendChild(iframe);
-	document.body.appendChild(background);
-	//fadeIn('popup_bg');
-
-	//console.log('iframe.contentWindow =', iframe.contentWindow);
-	showIframe();*/
 };
 
 
@@ -434,14 +411,14 @@ function createBackground() {
 	return background;
 }
 
-function closePopWindow(link) {
+function closePopWindow() {
 
-	popupWindow.close();
-	//fadeOut('bg');
+	window.open("close", '_blank');					//send "close" to close the popup
 	document.body.removeChild(background);
 }
 
 
+/*
 function createIframe(link) {
 
 	var iframe = document.createElement('iframe');
@@ -461,9 +438,9 @@ function createIframe(link) {
 	return iframe;
 
 }
+*/
 
-
-
+/*
 function showIframe() {
 
 	var iframe = document.getElementsByTagName('iframe')[0];
@@ -530,9 +507,7 @@ function showIframe() {
 
 }
 
-var testLink = "https://twitter.com/statuses/796807729901895680";
-
-var testLink = "https://publish.twitter.com/oembed?url=https://twitter.com/lifewithclaire7/status/796807729901895680";
+*/
 
 
 function fadeOut(elementTag) {

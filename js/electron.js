@@ -2,9 +2,14 @@
 
 "use strict";
 
-const Server = require(__dirname + "/server.js");
+const server = require(__dirname + "/server.js");
 const electron = require("electron");
 const core = require(__dirname + "/app.js");
+
+
+//var app = require('app');
+//var BrowserWindow = require('browser-window');
+var ipc = electron.ipcMain;
 
 
 // Config
@@ -14,13 +19,13 @@ const app = electron.app;
 // Module to create native browser window.
 const BrowserWindow = electron.BrowserWindow;
 
-
-
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow;
 
 function createWindow() {
+
+	console.log("creating window");
 	// Create the browser window.
 	if (config.kioskmode) {
 		mainWindow = new BrowserWindow({width: 800, height: 600, x: 0, y: 0, kiosk:true, darkTheme: true, webPreferences: {nodeIntegration: false}});
@@ -57,12 +62,55 @@ function createWindow() {
 			}, 1000);
 		});
 	}
+
+	var child;
+
+
+	mainWindow.webContents.on('new-window', function (event, url) {
+
+		event.preventDefault();
+
+
+		/** Kinda hacky */
+		if(url === "http://localhost:8080/close"){
+			child.close()
+		}
+		else{
+			child = new BrowserWindow(
+				{
+					useContentSize: true,
+					parent: mainWindow,
+					//modal: true,
+					//show: false,
+					autoHideMenuBar: true,
+					frame:false,
+					//'skip-taskbar': true,
+					'alwaysOnTop' : true
+				});
+
+
+			/*
+
+			child.on("closed", function() {
+				//child.hide()
+			});
+			*/
+
+			//console.log("childW: "+server.screenWidth);
+			child.loadURL(url);
+			child.show();
+
+		}
+
+	});
+
 }
 
 
 
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
+
 app.on("ready", function() {
 	console.log("Launching application.");
 	createWindow();
@@ -80,6 +128,9 @@ app.on("activate", function() {
 		createWindow();
 	}
 });
+
+
+
 
 // Start the core application.
 // This starts all node helpers and starts the webserver.

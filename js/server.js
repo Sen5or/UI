@@ -11,7 +11,10 @@ var server = require("http").Server(app);
 var io = require("socket.io")(server);
 var path = require("path");
 
+var screenWidth = -1;
+
 var Server = function(config, callback) {
+	self = this;
 	console.log("Starting server op port " + config.port + " ... ");
 
 	server.listen(config.port);
@@ -23,15 +26,33 @@ var Server = function(config, callback) {
 	app.use("/vendor", express.static(path.resolve(__dirname + "/../vendor")));
 	app.use("/translations", express.static(path.resolve(__dirname + "/../translations")));
 
-	//app.use("/images", express.static(path.resolve(__dirname + "/../images")));
-
 	app.get("/", function(req, res) {
 		res.sendFile(path.resolve(__dirname + "/../index.html"));
 	});
+
+
+	app.get('/LEDon', function(req, res) {
+		console.log('LEDon button pressed!..in electron');
+	});
+
+
 
 	if (typeof callback === "function") {
 		callback(app, io);
 	}
 };
 
-module.exports = Server;
+
+///users/:userId/books/:bookId
+app.post('/screen_res/:width/:height', function(req, res) {
+	console.log('hitting screen_req: '+JSON.stringify(req.params));
+	//TODO set screen
+	self.screenWidth = req.params.width;
+
+});
+
+
+module.exports = {
+	'Server': Server,
+	'screenWidth' : screenWidth };
+
