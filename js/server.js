@@ -17,6 +17,11 @@ var Server = function(config, callback) {
 	self = this;
 	console.log("Starting server op port " + config.port + " ... ");
 
+
+
+
+
+
 	server.listen(config.port);
 	app.use("/js", express.static(__dirname));
 	app.use("/config", express.static(path.resolve(__dirname + "/../config")));
@@ -31,8 +36,23 @@ var Server = function(config, callback) {
 	});
 
 
-	app.get('/LEDon', function(req, res) {
-		console.log('LEDon button pressed!..in electron');
+	app.get('/startGesture', function (req, res) {
+
+		var exec = require('child_process').exec, child;
+
+		var child = function () {
+			exec('python ./python/handHaar.py',
+				function (error, stdout, stderr) {
+					console.log('stdout: ' + stdout);
+					console.log('stderr: ' + stderr);
+					if (error !== null) {
+						console.log('exec error: ' + error);
+					}
+				});
+		};
+
+		child();
+
 	});
 
 

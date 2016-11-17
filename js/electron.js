@@ -72,12 +72,37 @@ function createWindow() {
 
 
 		/** Kinda hacky */
+
+
+
+
 		if(url === "http://localhost:8080/close"){
 			child.close()
 		}
 		else{
-			child = new BrowserWindow(
+
+			console.log("Url: "+url);
+
+			var width = url.slice(url.indexOf('***'), (url.indexOf('****')+4));
+			url = url.replace(width, '***');
+			width = width.substring(3, (width.length-4));
+			var height = url.slice(url.indexOf('***'), url.indexOf('****')+4);
+			url = url.replace(height, '');
+			height = height.substring(3, (height.length-4));
+
+			var w_section = (width/4);
+			var h_section = (height/8);
+			var windowW = width-(w_section);
+			var windowH = height-(h_section);
+
+			console.log("width: "+windowW);
+			console.log("height: "+windowH);
+			console.log("Url: "+url);
+
+				child = new BrowserWindow(
 				{
+					width: windowW,
+					height: windowH,
 					useContentSize: true,
 					parent: mainWindow,
 					//modal: true,

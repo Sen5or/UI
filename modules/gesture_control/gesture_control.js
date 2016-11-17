@@ -2,6 +2,7 @@
 
 Module.register("gesture_control",{
 
+
 	// Override dom generator.
 	getDom: function() {
 
@@ -18,9 +19,39 @@ Module.register("gesture_control",{
 
 		return container;
 
+	},
+
+
+	// Override start method.
+	start: function() {
+		Log.log("Starting module: " + this.name);
+
+		Log.log("Calling python script ");
+
+		/*
+		$.ajax({
+			url: "/modules/gesture_control/handHaar.py",
+			success: function(response) {
+				Log.log("success: "+response);
+			},
+			error: function(response) {
+				Log.log("error: "+response);
+			}
+		});*/
+
 	}
 
 });
+
+
+/*
+$.ajax({
+	url: "/path/to/your/script",
+	success: function(response) {
+		// here you do whatever you want with the response variable
+	}
+});*/
+
 
 var timeout;
 document.onmousemove = function(){
