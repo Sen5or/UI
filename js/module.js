@@ -380,13 +380,26 @@ $.ajax({
 
 Module.showPopUp = function showPopup(link){
 
-	console.log("in showpopup");
-
 	link = link.concat( '***' + w + '****' + h + '****' );
 	console.log("link: "+link);
 
 	window.open(link, '_blank');
 
+	background = createBackground();
+	document.body.appendChild(background);
+
+};
+
+
+Module.changeSetting = function showPopup(link){
+
+	console.log("in change setting");
+
+
+	//link = link.concat( '***' + w + '****' + h + '****' );
+	//console.log("link: "+link);
+
+	//window.open(link, '_blank');
 
 	background = createBackground();
 	document.body.appendChild(background);

@@ -166,6 +166,7 @@ sup {
 .region.top.left,
 .region.top.center {
   top: 100%;
+  max-width: 35%;
 }
 
 .region.bottom {

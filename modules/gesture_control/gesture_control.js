@@ -6,16 +6,14 @@ Module.register("gesture_control",{
 	// Override dom generator.
 	getDom: function() {
 
-		var container = document.createElement("container_test");
+
+        var canvas_container = document.createElement('canvas');
+        canvas_container.id = "videoCanvas";
+
+        var container = document.createElement("container_test");
 		container.id = "gesture_container";
 
-		var image = document.createElement("img");
-		image.id = "gesture_image";
-		image.src = "/modules/gesture_control/ic_pan_tool_white_36dp_1x.png";
-		image.style.opacity = "0.0";
-		image.style.filter  = 'alpha(opacity=0)'; // IE fallback
-
-		container.appendChild(image);
+        container.appendChild(canvas_container);
 
 		return container;
 
@@ -25,43 +23,45 @@ Module.register("gesture_control",{
 	// Override start method.
 	start: function() {
 		Log.log("Starting module: " + this.name);
+		this.startStream();
 
-		Log.log("Calling python script ");
+	},
 
-		/*
-		$.ajax({
-			url: "/modules/gesture_control/handHaar.py",
-			success: function(response) {
-				Log.log("success: "+response);
-			},
-			error: function(response) {
-				Log.log("error: "+response);
-			}
-		});*/
+	startStream: function(){
+		Log.info(this.config);
+		this.sendSocketNotification("START_GESTURE_STREAM", {config: this.config});
+	},
 
-	}
+    socketNotificationReceived: function(notification, payload){
+
+        console.log("GESTURE Notification recieved: " + notification + " Payload: " + payload);
+
+
+        if(notification === "WEB_SOCKET_CONNECTED"){            //this gets fired after the backend has initialized helper scripts
+            client = new WebSocket( 'ws:localhost:8084/' );
+            var canvas = document.getElementById('videoCanvas');
+            player = new jsmpeg(client, {canvas:canvas});
+
+        }
+    }
 
 });
 
 
+var client = null;
+var player;
 /*
-$.ajax({
-	url: "/path/to/your/script",
-	success: function(response) {
-		// here you do whatever you want with the response variable
-	}
-});*/
-
-
 var timeout;
 document.onmousemove = function(){
+
 	showIcon();
+
 	clearTimeout(timeout);
 	timeout = setTimeout(function(){
 		hideIcon();
 	}, 1000);
 };
-
+*/
 
 
 
@@ -71,7 +71,6 @@ var showIcon = function() {
 	image.style.opacity = "0.9";
 	image.style.filter  = 'alpha(opacity=90)'; // IE fallback
 
-	//fadeIn(image);
 };
 
 var hideIcon = function() {

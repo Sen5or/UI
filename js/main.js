@@ -947,26 +947,3 @@ if (typeof Object.assign != "function") {
 }
 
 MM.init();
-
-/*
-var remote  = require('remote');
-var Menu    = remote.require('menu');
-var ipc     = require('ipc');
-
-var menu = Menu.buildFromTemplate([
-	{
-		label: 'Electron',
-		submenu: [
-			{
-				label: 'Options',
-				click: function() {
-					ipc.send('display-options');
-				}
-			}
-		]
-	}
-]);
-
-Menu.setApplicationMenu(menu);
-
-	*/

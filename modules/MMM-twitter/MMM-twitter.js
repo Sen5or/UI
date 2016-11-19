@@ -1,6 +1,6 @@
 Module.register("MMM-twitter",{
 
-	// Default module config.
+
 	defaults: {
 		maxNumTweets: 0,
 		api_keys: {
@@ -8,7 +8,7 @@ Module.register("MMM-twitter",{
 			consumer_secret: '',
 			access_token_key: '',
 			access_token_secret: ''
-		},
+		}
 	},
 	
 	start: function() {

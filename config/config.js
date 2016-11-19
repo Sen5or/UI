@@ -12,10 +12,7 @@ var config = {
 
 	modules: [
 
-		{
-			module: 'gesture_control',
-			position: 'top_bar'
-		},
+
 		{
 			module: 'youtube',
 			position: 'top_center', // This can be any of the regions, best results in center regions.
@@ -34,7 +31,7 @@ var config = {
 			module: 'MMM-twitter',
 			position: 'top_left',
 			config: {
-				maxNumTweets: 3,
+				maxNumTweets: 5,
 				keywords: {track: 'science, ucsd'},
 				api_keys: {
 					consumer_key: 'GCNRascd1LbQMYXr9Se1MpQEB',
@@ -82,7 +79,7 @@ var config = {
 		},
 		{
 			module: 'newsfeed',
-			position: 'bottom_bar',
+			position: 'bottom_center',
 			config: {
 				feeds: [
 					{
@@ -93,6 +90,10 @@ var config = {
 				showSourceTitle: true,
 				showPublishDate: true
 			}
+		},
+		{
+			module: 'gesture_control',
+			position: 'bottom_right'
 		},
 	]
 

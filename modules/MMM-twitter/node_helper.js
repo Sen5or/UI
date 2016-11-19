@@ -37,6 +37,7 @@ module.exports = NodeHelper.create({
 		});
 
 		stream.on('error', function(error) {
+			console.log("twitter stream api error");
 			throw error;
 		});
 

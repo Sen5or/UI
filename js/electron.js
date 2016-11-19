@@ -1,4 +1,7 @@
-/* jshint esversion: 6 */
+/**
+ * Server side electron
+ */
+
 
 "use strict";
 
@@ -6,10 +9,6 @@ const server = require(__dirname + "/server.js");
 const electron = require("electron");
 const core = require(__dirname + "/app.js");
 
-
-//var app = require('app');
-//var BrowserWindow = require('browser-window');
-var ipc = electron.ipcMain;
 
 
 // Config
@@ -19,9 +18,11 @@ const app = electron.app;
 // Module to create native browser window.
 const BrowserWindow = electron.BrowserWindow;
 
+var loadedModules = [];
+
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
-let mainWindow;
+var mainWindow;
 
 function createWindow() {
 
@@ -74,14 +75,12 @@ function createWindow() {
 		/** Kinda hacky */
 
 
-
-
 		if(url === "http://localhost:8080/close"){
 			child.close()
 		}
 		else{
 
-			console.log("Url: "+url);
+			//console.log("Url: "+url);
 
 			var width = url.slice(url.indexOf('***'), (url.indexOf('****')+4));
 			url = url.replace(width, '***');
@@ -95,15 +94,15 @@ function createWindow() {
 			var windowW = width-(w_section);
 			var windowH = height-(h_section);
 
-			console.log("width: "+windowW);
-			console.log("height: "+windowH);
-			console.log("Url: "+url);
+			//console.log("width: "+windowW);
+			//console.log("height: "+windowH);
+			//console.log("Url: "+url);
 
 				child = new BrowserWindow(
 				{
 					width: windowW,
 					height: windowH,
-					useContentSize: true,
+					//useContentSize: true,
 					parent: mainWindow,
 					//modal: true,
 					//show: false,
@@ -113,13 +112,6 @@ function createWindow() {
 					'alwaysOnTop' : true
 				});
 
-
-			/*
-
-			child.on("closed", function() {
-				//child.hide()
-			});
-			*/
 
 			//console.log("childW: "+server.screenWidth);
 			child.loadURL(url);
@@ -161,4 +153,12 @@ app.on("activate", function() {
 // This starts all node helpers and starts the webserver.
 core.start(function(c) {
 	config = c;
+	loadedModules = config.modules;		//This variable is from app.js
+
+	loadedModules.forEach(function(entry) {
+		console.log(JSON.stringify(entry));
+	});
+
+	console.log("communicating with server: "+JSON.stringify(server.mongo))
+
 });

@@ -1,15 +1,11 @@
-/* Magic Mirror
- * The Core App (Server)
- *
- * By Michael Teeuw http://michaelteeuw.nl
- * MIT Licensed.
+
+/**
+ * App.js
  */
 
 
-
-
 var fs = require("fs");
-var Server = require(__dirname + "/server.js").Server;
+var Server = require(__dirname + "/server.js").server;
 var defaultModules = require(__dirname + "/../modules/default/defaultmodules.js");
 var path = require("path");
 
@@ -19,12 +15,14 @@ process.on("uncaughtException", function (err) {
 	console.log("Whoops! There was an uncaught exception...");
 	console.error(err);
 	console.log("MagicMirror will not quit, but it might be a good idea to check why this happened. Maybe no internet connection?");
-	console.log("If you think this really is an issue, please open an issue on GitHub: https://github.com/MichMich/MagicMirror/issues");
 });
 
 /* App - The core app.
  */
 var App = function() {
+
+	var testString = "yo bro";
+	var modules = [];
 	var nodeHelpers = [];
 
 	/* loadConfig(callback)
@@ -34,6 +32,8 @@ var App = function() {
 	 * argument callback function - The callback function.
 	 */
 
+
+	//This happens first
 	var loadConfig = function(callback) {
 		console.log("Loading config ...");
 		var defaults = require(__dirname + "/defaults.js");
@@ -106,6 +106,10 @@ var App = function() {
 		console.log("All module helpers loaded.");
 	};
 
+
+	this.getModules = function () {
+		return "hello this is test";
+	}
 	/* start(callback)
 	 * This methods starts the core app.
 	 * It loads the config, then it loads all modules.
@@ -118,8 +122,10 @@ var App = function() {
 		loadConfig(function(c) {
 			config = c;
 
-			var modules = [];
+			//TODO: dynamic module content
 
+
+			//this will be a list of modules parsed from config file
 			for (var m in config.modules) {
 				var module = config.modules[m];
 				if (modules.indexOf(module.module) === -1) {
@@ -127,8 +133,11 @@ var App = function() {
 				}
 			}
 
+																					//load modules
 			loadModules(modules);
 
+
+																					//create server
 			var server = new Server(config, function(app, io) {
 				console.log("Server started ...");
 
