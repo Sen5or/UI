@@ -64,7 +64,13 @@ var Loader = (function() {
 	 *
 	 * return array - module data as configured in config
 	 */
-	var getAllModules = function() {
+	var getAllModules = function() {  //TODO
+
+
+		//console.log("config modules: ");
+		//console.log(config.modules);
+
+
 		return config.modules;
 	};
 
@@ -74,6 +80,8 @@ var Loader = (function() {
 	 * return array - Module information.
 	 */
 	var getModuleData = function() {
+
+
 		var modules = getAllModules();
 		var moduleFiles = [];
 

@@ -28,8 +28,8 @@ Module.register("compliments",{
 				"Wheres the party at?"
 			]
 		},
-		updateInterval: 30000,
-		fadeSpeed: 4000
+		updateInterval: 30 * 1000,
+		fadeSpeed: 4 * 1000
 	},
 
 	

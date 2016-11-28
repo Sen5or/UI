@@ -129,7 +129,17 @@ var Module = Class.extend({
 		Log.log(this.name + " is resumed.");
 	},
 
-	
+	/*
+	 *  restart()
+	 */
+	restart: function(newconfig) {
+		Log.log(this.name + " is restarting.");
+		this.setConfig(newconfig);
+		this.start()
+
+	},
+
+
 	/*********************************************
 	 * The methods below don"t need subclassing. *
 	 *********************************************/
@@ -329,7 +339,63 @@ var Module = Class.extend({
 	show: function(speed, callback) {
 		this.resume();
 		MM.showModule(this, speed, callback);
+	},
+
+
+	closePopUp: function() {
+
+		window.open("close", '_blank');					//send "close" to close the popup
+		document.body.removeChild(background);
+
+	},
+
+	showPopUp: function() {
+
+
+		var w = screen.width;//window.innerWidth;
+		var h = screen.height;//window.innerHeight;
+
+		var url = "";
+
+		//console.log("args: "+arguments.length)
+		//console.log("args[0]: "+arguments[0])
+		if(this.links[arguments[0]] != undefined){
+			url = this.links[arguments[0]];
+		}
+		else{
+			url = this.links[0]
+		}
+
+
+		the_link = url.concat('***' + w + '****' + h + '****');
+		//console.log("link: " + the_link);
+
+		window.open(the_link, '_blank');
+
+		background = createBackground();
+		document.body.appendChild(background);
+
+		var self = this;
+
+		function createBackground() {
+
+			var background = document.createElement('bg');
+			background.width = window.innerWidth;
+			background.height = window.innerHeight;
+
+			background.onclick = function(event) {
+				console.log("clicked background");
+				//window.open("close", '_blank');					//send "close" to close the popup
+				//document.body.removeChild(background);
+				self.closePopUp();
+			};
+
+			return background;
+		}
+
 	}
+
+
 });
 
 Module.definitions = {};
@@ -365,19 +431,12 @@ Module.register = function(name, moduleDefinition) {
 	Module.definitions[name] = moduleDefinition;
 };
 
+var links = [];
 
 var background;
-var w = window.innerWidth;
-var h = window.innerHeight;
 
 
 /*
-$.ajax({
-	url : '/screen_res/'+windowW+'/'+windowH,
-	type : 'POST'
-});
-*/
-
 Module.showPopUp = function showPopup(link){
 
 	link = link.concat( '***' + w + '****' + h + '****' );
@@ -388,13 +447,13 @@ Module.showPopUp = function showPopup(link){
 	background = createBackground();
 	document.body.appendChild(background);
 
-};
+};*/
 
 
+/*
 Module.changeSetting = function showPopup(link){
 
 	console.log("in change setting");
-
 
 	//link = link.concat( '***' + w + '****' + h + '****' );
 	//console.log("link: "+link);
@@ -404,29 +463,19 @@ Module.changeSetting = function showPopup(link){
 	background = createBackground();
 	document.body.appendChild(background);
 
-};
+};*/
 
 
-function createBackground() {
 
-	var background = document.createElement('bg');
-	background.width = window.innerWidth;
-	background.height = window.innerHeight;
 
-	background.onclick = function(event) {
-		console.log("clicked background");
-		closePopWindow()
-	};
-
-	return background;
-}
-
+/*
 function closePopWindow() {
 
 	window.open("close", '_blank');					//send "close" to close the popup
 	document.body.removeChild(background);
 }
-
+*/
+/*
 
 function fadeOut(elementTag) {
 	var element = document.body.getElementsByTagName(elementTag);
@@ -441,9 +490,9 @@ function fadeOut(elementTag) {
 		element.style.filter = 'alpha(opacity=' + op * 100 + ")";
 		op -= op * 0.1;
 	}, 20);
-}
+}*/
 
-
+/*
 function fadeIn(element) {
 	//var element = document.body.getElementsByTagName(elementTag);
 	var op = 0.1;  // initial opacity
@@ -459,3 +508,4 @@ function fadeIn(element) {
 		}, 10);
 	}
 }
+*/

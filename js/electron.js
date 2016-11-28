@@ -128,10 +128,11 @@ function createWindow() {
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
 
+/*
 app.on("ready", function() {
 	console.log("Launching application.");
 	createWindow();
-});
+});*/
 
 // Quit when all windows are closed.
 app.on("window-all-closed", function() {
@@ -151,14 +152,12 @@ app.on("activate", function() {
 
 // Start the core application.
 // This starts all node helpers and starts the webserver.
-core.start(function(c) {
-	config = c;
-	loadedModules = config.modules;		//This variable is from app.js
+core.start(
+	function (c) {
+		config = c;
+		console.log("ELECTRON CONFIG: ");
+		console.log(config.modules);
+		loadedModules = config.modules;		//This variable is from app.js
 
-	loadedModules.forEach(function(entry) {
-		console.log(JSON.stringify(entry));
+		createWindow()
 	});
-
-	console.log("communicating with server: "+JSON.stringify(server.mongo))
-
-});

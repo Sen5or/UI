@@ -8,9 +8,14 @@
  * MIT Licensed.
  */
 
+
 var MM = (function() {
 
 	var modules = [];
+
+	var currentUser = "default";
+
+
 
 
 	/* createDomObjects()
@@ -43,6 +48,7 @@ var MM = (function() {
 			dom.position = module.data.position;
 
 			console.log("creating: "+ module.identifier + " at " + module.data.position);
+
 
 			if (typeof module.data.classes === "string") {
 				dom.className = "module " + dom.className + " " + module.data.classes;
@@ -456,6 +462,7 @@ var MM = (function() {
 	}
 
 
+
 	/** LOCATION OPTIONS
 	 *
 	 * top_bar,
@@ -699,16 +706,60 @@ var MM = (function() {
 	};
 
 	/* loadConfig()
-	 * Loads the core config and combines it with de system defaults.
+	 * Loads the core config and combines it with the system defaults.
 	 */
 	var loadConfig = function() {
+
 		if (typeof config === "undefined") {
 			config = defaults;
 			Log.error("Config file is missing! Please create a config file.");
 			return;
 		}
 
+
 		config = Object.assign(defaults, config);
+
+
+		console.log("old config");
+		console.log(config.modules);
+
+	};
+
+
+	/**
+	 * Get configs from DB for the currentUser
+	 */
+	var loadConfigsFromDB = function () {
+
+		config = defaults;
+
+		var self = this;
+        console.log('loading configs from DB')
+		var url = "/getCurrentUserFromDB/";
+
+		$.ajax({
+			dataType: "json",
+			url: url,
+			//data: query,
+			success: function(data) {
+				Log.log("success: "+ JSON.stringify(data[0]));
+				self.config.modules = data[0].modules;
+				finishLoading()
+			},
+			response: function(response) {
+				Log.log("error: "+response);
+			}
+		});
+
+
+	};
+
+	var finishLoading = function () {
+
+		console.log("finishing loading")
+		Translator.loadCoreTranslations(config.language);
+		Loader.loadModules();
+
 	};
 
 	/* setSelectionMethodsForModules()
@@ -811,6 +862,9 @@ var MM = (function() {
 		if (typeof modules.enumerate === "undefined") { Object.defineProperty(modules, "enumerate",  {value: enumerate, enumerable: false}); }
 	};
 
+
+
+
 	return {
 		/* Public Methods */
 
@@ -819,10 +873,16 @@ var MM = (function() {
 		 */
 		init: function() {
 			Log.info("Initializing MagicMirror.");
-			loadConfig();
+			//loadConfig();
+
+			loadConfigsFromDB();
+
+
 			Translator.loadCoreTranslations(config.language);
-			Loader.loadModules();
+			Loader.loadModules();										//TODO, can this be called when switching users? to swap modules?
 		},
+
+
 
 		/* modulesStarted(moduleObjects)
 		 * Gets called when all modules are started.
@@ -945,5 +1005,17 @@ if (typeof Object.assign != "function") {
 		};
 	})();
 }
+
+
+
+var getModulesFromDB = function() {
+	console.log("we are getting modules from main!!!!")
+};
+
+
+
+
+
+
 
 MM.init();

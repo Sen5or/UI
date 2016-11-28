@@ -6,41 +6,46 @@ module.exports = NodeHelper.create({
 	
 	start: function() {
 		console.log("Starting module: " + this.name);
-		
 	},
 	
 	socketNotificationReceived: function(notification, payload) {
+
+		var self = this;
+		console.log("TWITTER Notification: " + notification + " Payload: " + payload);
 		
-		console.log("Notification: " + notification + " Payload: " + payload);
-		
-		if(notification === "START_STREAM"){
-			this.startTwitterStream(payload.config);
+		if(notification === "START_TWITTER"){
+
+			this.config = payload.config;
+
+			this.twitterClient = new Twitter({
+				consumer_key: this.config.api_keys.consumer_key,
+				consumer_secret: this.config.api_keys.consumer_secret,
+				access_token_key: this.config.api_keys.access_token_key,
+				access_token_secret: this.config.api_keys.access_token_secret
+			});
+
+			self.queryTwitter();
+
+			setInterval(
+				function () {
+					self.queryTwitter();
+				}, 10000);
+
 		}
 		
 	},
 	
-	startTwitterStream: function(config){
+	queryTwitter: function(){
+
 
 		var self = this;
 
-		var client = new Twitter({
-			consumer_key: config.api_keys.consumer_key,
-			consumer_secret: config.api_keys.consumer_secret,
-			access_token_key: config.api_keys.access_token_key,
-			access_token_secret: config.api_keys.access_token_secret
+		this.twitterClient.get('search/tweets', this.config.query, function(error, tweets, response) {
+			self.sendSocketNotification("TWITTER_DATA", tweets.statuses);
 		});
 
-
-		var stream = client.stream('statuses/filter', config.keywords);  //{track: 'javascript'});
-		stream.on('data', function(event) {
-			self.sendSocketNotification("DATA", event);
-		});
-
-		stream.on('error', function(error) {
-			console.log("twitter stream api error");
-			throw error;
-		});
 
 	}
 
 });
+

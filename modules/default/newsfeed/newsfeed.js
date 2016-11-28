@@ -58,7 +58,7 @@ Module.register("newsfeed",{
 		this.loaded = false;
 		this.activeItem = 0;
 		this.registerFeeds();
-		this.link = "";
+		this.links = [];
 
 	},
 
@@ -157,8 +157,9 @@ Module.register("newsfeed",{
 			title.innerHTML = this.newsItems[this.activeItem].title;
 
 			wrapper.onclick = function(){
-				console.log("clicked news item: "+self.link);
-				Module.showPopUp(self.link);
+				console.log("clicked news item: "+self.links[0]);
+				//Module.showPopUp(self.link);
+				self.showPopUp();
 			};
 
 			wrapper.appendChild(title);
@@ -266,12 +267,12 @@ Module.register("newsfeed",{
 		var self = this;
 
 		self.updateDom(self.config.animationSpeed);
-		self.link = self.newsItems[self.activeItem].link;
+		self.links[0] = self.newsItems[self.activeItem].link
 
 		setInterval(function() {
 			self.activeItem++;
 			self.updateDom(self.config.animationSpeed);
-			self.link = self.newsItems[self.activeItem].link;
+			self.links[0] = self.newsItems[self.activeItem].link;
 
 		}, this.config.updateInterval);
 	},
@@ -285,7 +286,7 @@ Module.register("newsfeed",{
 	 */
 	capitalizeFirstLetter: function(string) {
 		return string.charAt(0).toUpperCase() + string.slice(1);
-	},
+	}
 
 
 });

@@ -37,6 +37,7 @@
     "time-grunt": "latest"
   },
   "dependencies": {
+    "async": "^2.1.4",
     "electron-prebuilt": "latest",
     "express": "^4.14.0",
     "feedme": "latest",
@@ -44,10 +45,10 @@
     "moment": "latest",
     "request": "^2.74.0",
     "rrule": "latest",
+    "snyk": "^1.14.1",
     "socket.io": "^1.4.6",
     "valid-url": "latest",
-    "walk": "latest",
-    "snyk": "^1.14.1"
+    "walk": "latest"
   },
   "snyk": true
 }

@@ -11,19 +11,19 @@ var server = require("http").Server(app);
 var io = require("socket.io")(server);
 var path = require("path");
 
+var async = require("async");
+
 var MongoClient = require('mongodb').MongoClient;
-
-
 var mongoDB = null;
+
+var currentUser = "Default";
 
 var Server = function(config, callback) {
 
 
 	console.log("Starting server op port " + config.port + " ... ");
 
-
-	setupDB();
-
+	connectToDB();
 
 	server.listen(config.port);
 	app.use("/js", express.static(__dirname));
@@ -38,17 +38,10 @@ var Server = function(config, callback) {
 		res.sendFile(path.resolve(__dirname + "/../index.html"));
 	});
 
-	app.get("/testDB", function(req, res) {
-		console.log("in query DB get: "+req);
-		console.log("in query DB get: "+JSON.stringify(req["params"]));
-		console.log("in query DB get: "+JSON.stringify(req["data"]));
-		console.log("in query DB get: "+JSON.stringify(req.data));
-		console.log("in query DB get: "+JSON.stringify(req.params));
-		console.log("in query DB get: "+JSON.stringify(req.body));
-		res.status(status).send(body);
-	});
 
 
+
+	/*
 	app.get('/startGesture', function (req, res) {
 
 		var exec = require('child_process').exec, child;
@@ -67,6 +60,7 @@ var Server = function(config, callback) {
 		child();
 
 	});
+	*/
 
 
 
@@ -77,7 +71,96 @@ var Server = function(config, callback) {
 
 
 
-var setupDB = function () {
+
+
+
+
+app.get('/getUserFromDB/:query', function(req, res) {
+
+	console.log(req.params);
+
+	var the_result = [];
+
+	async.series([
+
+
+		function(callback) {
+
+			//console.log("userName: "+userName);
+			console.log("query:");
+			console.log(req.params.query);
+			console.log(req.query);
+
+			mongoDB.collection("users").find(req.query).toArray(function (err, result) {
+				if (err)
+					throw err;
+				else {
+					console.log("db result: "+result);
+					the_result = result;
+				}
+				callback();
+			});
+
+		},
+		/*
+		function(callback) {
+			db.query('posts', {userId: userId}, function(err, posts) {
+				if (err) return callback(err);
+				locals.posts = posts;
+				callback();
+			});
+		}*/
+	], function(err) { //This function gets called after the two tasks have called their "task callbacks"
+		if (err) return next(err);
+
+		console.log("the_result: "+the_result);
+		res.json(the_result);
+		//res.render('user-profile', result);
+	});
+
+
+});
+
+app.get('/getCurrentUser', function(req, res) {
+	res.send(currentUser);
+});
+
+
+app.get('/getCurrentUserFromDB', function(req, res) {
+
+	var the_result = [];
+
+	async.series([
+
+		function(callback) {
+
+			console.log("getting current user info from DB: "+currentUser);
+			var query = { "name" : currentUser };
+
+			if(mongoDB != null){
+				mongoDB.collection("users").find(query).toArray(function (err, result) {
+					if (err)
+						throw err;
+					else {
+						console.log("db result: "+result);
+						the_result = result;
+					}
+					callback();
+				});
+			}
+
+		}
+	], function(err) { //This function gets called after the two tasks have called their "task callbacks"
+		if (err) return next(err);
+
+		console.log("currentUser the_result: "+the_result);
+		res.json(the_result);
+	});
+
+
+});
+
+var connectToDB = function () {
 
 
 	MongoClient.connect('mongodb://localhost:27017/sen5or', function (err, db) {
@@ -97,14 +180,20 @@ var setupDB = function () {
 					//Add default user if db is empty
 					if (result.length == 0) {
 
+
 						insertToDatabase(
 							{
-								"name": "default",
-								"weather_city": "La jolla"
+								"name"		: "Default",
+								"location"  : config.location,
+								"language"  : config.language,
+								"timeFormat": config.timeFormat,
+								"units" 	: config.units,
+								"modules" 	: config.modules
+
 							}, null);
 					}
 					else {
-						console.log("DB contents: " + JSON.stringify(result));
+						console.log("Found users: " +result.length);
 					}
 				}
 			});
@@ -116,67 +205,64 @@ var setupDB = function () {
 
 };
 
+//{$or:[{"by":"tutorials point"},{"title": "MongoDB Overview"}]}
+app.get('/getUserFromDB', function(req, res) {
+
+    var the_result = [];
+
+    async.series([
+
+        function(callback) {
+
+            console.log("in getUserFromDB: "+req)
+            console.log("in getUserFromDB: "+req.data)
+            console.log("in getUserFromDB: "+req.url)
+            console.log("in getUserFromDB: "+req.query)
+
+            /*
+            console.log("getting user info from DB: "+currentUser);
+            var query = { "name" : currentUser };
+
+            mongoDB.collection("users").find(query).toArray(function (err, result) {
+                if (err)
+                    throw err;
+                else {
+                    console.log("db result: "+result);
+                    the_result = result;
+                }
+                callback();
+            });*/
+
+        }
+    ], function(err) { //This function gets called after the two tasks have called their "task callbacks"
+        if (err) return next(err);
+
+        console.log("currentUser the_result: "+the_result);
+        res.json(the_result);
+    });
+
+
+});
+
+
 
 
 //QUERY - db.user.find({"name":"jim john"})
 
 var insertToDatabase = function (jsonData, callback) {
 
-
-	mongoDB.collection('sen5or').insertOne(
+	mongoDB.collection('users').insertOne(
 		jsonData,
 		function (err, result) {
-			assert.equal(err, null);
-			console.log("Inserted a document into the restaurants collection.");
-			callback();
+			//assert.equal(err, null);
+			if(err){return err;}
+			console.log("Inserted to DB");
+			//callback();
 		});
 };
 
 
-//{$or:[{"by":"tutorials point"},{"title": "MongoDB Overview"}]}
-var queryDatabase = function (db, tableName, query) {
-
-	console.log("tableName: "+tableName)
-	mongoDB.collection(tableName).find().toArray(function (err, result) {
-		if (err)
-			throw err;
-		else {
-			console.log("db: "+result)
-			return result;
-		}
-	})
-
-};
-
-app.post('/queryDatabase', function(req, res) {
-	console.log("in query DB post: "+JSON.stringify(req["params"]));
-	console.log("in query DB post: "+JSON.stringify(req["data"]));
-	console.log("in query DB post: "+JSON.stringify(req.data));
-	console.log("in query DB post: "+JSON.stringify(req.params));
-	console.log("in query DB post: "+JSON.stringify(req.body));
-	return queryDatabase(req.params.table, req.params.params);
-});
-
-app.get('/queryDatabase', function(req, res) {
-	console.log("in query DB get1: "+req);
-	console.log("in query DB get1: "+JSON.stringify(req["params"]));
-	console.log("in query DB get1: "+JSON.stringify(req["data"]));
-	console.log("in query DB get1: "+JSON.stringify(req.data));
-	console.log("in query DB get1: "+JSON.stringify(req.params));
-	console.log("in query DB get1: "+JSON.stringify(req.body));
-	return queryDatabase(req.params.tableName, req.params.query);
-});
-
-app.get('/queryDatabase/:tableName/:query', function(req, res) {
-	console.log("in query DB get: "+JSON.stringify(req["params"]));
-	console.log("in query DB get: "+JSON.stringify(req.data));
-	console.log("in query DB get: "+JSON.stringify(req.params.query));
-	console.log("in query DB get: "+JSON.stringify(req.body));
-	var result = queryDatabase(req.params.tableName, req.params.query);
-	console.log("result: "+ result);
-	return result;
-});
-
+/*
 ///users/:userId/books/:bookId
 app.post('/screen_res/:width/:height', function(req, res) {
 	console.log('hitting screen_req: '+JSON.stringify(req.params));
@@ -194,12 +280,12 @@ app.post('/test', function(req, res) {
 	console.log("in test DB get: "+JSON.stringify(req.body));
 	res.status(status).send(body)
 });
-
+*/
 
 module.exports = {
 	"server" : Server,
-	"db" : mongoDB,
-	"mongo" : MongoClient
+	"mongoDB" : mongoDB,
+	//"mongo" : MongoClient
 };
 
 

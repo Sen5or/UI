@@ -9,6 +9,8 @@ var Server = require(__dirname + "/server.js").server;
 var defaultModules = require(__dirname + "/../modules/default/defaultmodules.js");
 var path = require("path");
 
+var async = require("async");
+
 // The next part is here to prevent a major exception when there
 // is no internet connection. This could probable be solved better.
 process.on("uncaughtException", function (err) {
@@ -21,9 +23,13 @@ process.on("uncaughtException", function (err) {
  */
 var App = function() {
 
-	var testString = "yo bro";
 	var modules = [];
 	var nodeHelpers = [];
+
+	var MongoClient = require('mongodb').MongoClient;
+	var mongoDB = null;
+
+	//var currentUser = "default";
 
 	/* loadConfig(callback)
 	 * Loads the config file. combines it with the defaults,
@@ -36,12 +42,15 @@ var App = function() {
 	//This happens first
 	var loadConfig = function(callback) {
 		console.log("Loading config ...");
+		//console.log("current user: " +currentUser);
+
 		var defaults = require(__dirname + "/defaults.js");
 		var configFilename = path.resolve(__dirname + "/../config/config.js");
 		try {
 			fs.accessSync(configFilename, fs.F_OK);
 			var c = require(configFilename);
 			var config = Object.assign(defaults, c);
+			//console.log(config);
 			callback(config);
 		} catch (e) {
 			if (e.code == "ENOENT") {
@@ -89,6 +98,9 @@ var App = function() {
 			m.setPath(path.resolve(moduleFolder));
 			nodeHelpers.push(m);
 		}
+
+		//console.log("nodeHelpers in loadmodule: " + JSON.stringify(nodeHelpers));
+
 	};
 
 	/* loadModules(modules)
@@ -103,60 +115,172 @@ var App = function() {
 			loadModule(modules[m]);
 		}
 
-		console.log("All module helpers loaded.");
+		console.log("All  module helpers loaded.");
 	};
 
-
-	this.getModules = function () {
-		return "hello this is test";
-	}
 	/* start(callback)
 	 * This methods starts the core app.
 	 * It loads the config, then it loads all modules.
-	 * When it"s done it executs the callback with the config as argument.
+	 * When it"s done it executes the callback with the config as argument.
 	 *
 	 * argument callback function - The callback function.
 	 */
-	this.start = function(callback) {
-
-		loadConfig(function(c) {
-			config = c;
-
-			//TODO: dynamic module content
+	this.start = function (callback) {
 
 
-			//this will be a list of modules parsed from config file
-			for (var m in config.modules) {
-				var module = config.modules[m];
-				if (modules.indexOf(module.module) === -1) {
-					modules.push(module.module);
+		loadConfig(function (c) {
+			this.config = c;
+
+			connectToDB(function() {
+				new Server(this.config, function (app, io) {
+						console.log("Server started ...");
+						console.log("nodeHelpers: " + JSON.stringify(nodeHelpers));
+
+						for (var h in nodeHelpers) {
+							var nodeHelper = nodeHelpers[h];
+							nodeHelper.setExpressApp(app);
+							nodeHelper.setSocketIO(io);
+							nodeHelper.start();
+						}
+
+						console.log("Sockets connected & modules started ...");
+
+
+						console.log("FINAL CONFIG: " + JSON.stringify(this.config));
+
+						if (typeof callback === "function") {
+							callback(this.config);
+						}
+
+					})
 				}
+			);
+
+
+
+		});
+
+
+	};
+
+	function connectToDBTest2(){
+		console.log("connecting DB Test2")
+	}
+
+	var connectToDBTest = function(){
+		console.log("FUNCTION TESTING")
+
+		var server = new Server(config, function (app, io) {
+			console.log("Server started ...");
+
+			console.log("nodeHelpers: " + JSON.stringify(nodeHelpers));
+
+			for (var h in nodeHelpers) {
+				var nodeHelper = nodeHelpers[h];
+				nodeHelper.setExpressApp(app);
+				nodeHelper.setSocketIO(io);
+				nodeHelper.start();
 			}
 
-																					//load modules
-			loadModules(modules);
+			console.log("Sockets connected & modules started ...");
 
+			if (typeof callback === "function") {
+				callback(this.config);
+			}
 
-																					//create server
-			var server = new Server(config, function(app, io) {
-				console.log("Server started ...");
-
-				for (var h in nodeHelpers) {
-					var nodeHelper = nodeHelpers[h];
-					nodeHelper.setExpressApp(app);
-					nodeHelper.setSocketIO(io);
-					nodeHelper.start();
-				}
-
-				console.log("Sockets connected & modules started ...");
-
-				if (typeof callback === "function") {
-					callback(config);
-				}
-
-			});
 		});
+
+
 	};
+
+
+/*
+	function createServer(callback) {
+		console.log("in create server")
+
+		var server = new Server(config, function (app, io) {
+			console.log("Server started ...");
+
+			for (var h in nodeHelpers) {
+				var nodeHelper = nodeHelpers[h];
+				nodeHelper.setExpressApp(app);
+				nodeHelper.setSocketIO(io);
+				nodeHelper.start();
+			}
+
+			console.log("Sockets connected & modules started ...");
+
+			if (typeof callback === "function") {
+				callback(config);
+			}
+
+		});
+
+	}*/
+
+
+
+	function connectToDB(callback) {
+		MongoClient.connect('mongodb://localhost:27017/sen5or', function (err, db) {
+			if (err) {
+				console.log("Error connecting to mongodb");
+				throw err;
+			}
+
+			else {
+				console.log("Connected to DB ....");
+				mongoDB = db;
+				getUserInfo(callback);
+			}
+		});
+	}
+
+	function getUserInfo(callback) {
+		var self = this;
+		var userName = "Default";
+
+		console.log("checking DB for: "+userName);
+
+		mongoDB.collection('users').find({"name" : userName}).toArray(function (err, result) {
+			if (err)
+				throw err;
+			else {
+
+
+				//console.log("Found user: " +JSON.stringify(result[0]));
+
+				self.config = Object.assign(config, result[0])
+				console.log("CURRENT CONFIG2: " + JSON.stringify(self.config));
+
+				//this will be a list of modules parsed from config
+
+
+				for (var m in self.config.modules) {
+					var module = self.config.modules[m];
+					if (modules.indexOf(module.module) === -1) {
+						modules.push(module.module);
+					}
+				}
+
+
+				console.log("modules: " + JSON.stringify(self.config.modules));
+				console.log("loading modules by name: " + JSON.stringify(modules));
+
+				//load modules
+				loadModules(modules);
+
+
+				if(typeof callback === "function"){
+					callback()
+				}else{
+					console.log("cannot execute callback")
+				}
+				//startServer(callback);
+
+			}
+		});
+	}
+
 
 };
 

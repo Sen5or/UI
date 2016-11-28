@@ -199,53 +199,6 @@ Module.register("currentweather",{
 	 */
 	getParams: function() {
 
-		//{$or:[{"by":"tutorials point"},{"title": "MongoDB Overview"}]}
-		//console.log("DB: "+this.config.queryDatabase("users", {"name": "default"}));
-
-		var userName = "default";
-		var query = {"name": "default"};
-
-		console.log("calling ajax")
-
-		$.ajax({
-			method: "get",
-			url: "/queryDatabase/users/"+query,
-			error: function(response) {
-				Log.log("error: "+response);
-			},
-			success: function(data) {
-				Log.log("success: "+data);
-			}
-		});
-
-		/*
-		$.ajax({
-			url: "/queryDatabase",
-			type: "get",
-			data: query, //{'data' : query },
-			dataType: 'json',
-			contentType : 'application/json',
-			error: function(response) {
-				Log.log("error: "+response);
-			},
-			success: function(data) {
-				Log.log("success: "+data);
-			}
-		});*/
-
-		/*
-		$.ajax({
-			url: '/queryDatabase/users/'+query,
-			type: 'get',
-			error: function(response) {
-				Log.log("error: "+response);
-			},
-			//dataType: 'json',
-			success: function(data) {
-				Log.log("success: "+data);
-			}
-		});
-*/
 
 		var params = "?";
 		if(this.config.locationID !== "") {

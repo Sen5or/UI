@@ -16,14 +16,29 @@ module.exports = NodeHelper.create({
 	socketNotificationReceived: function(notification, payload) {
 		
 		console.log("Notification: " + notification + " Payload: " + payload);
-		
+
+
+
 		if(notification === "START_GESTURE_STREAM"){
 
             if(socketServer != null){
                 this.sendSocketNotification("WEB_SOCKET_CONNECTED", null);
             }
-            else
-                this.startGestureStream(payload.config);
+            else{
+
+				//is a camera available?
+				var fs = require('fs');
+				var path = "/dev/video0";
+
+				try {
+					fs.accessSync(path, fs.F_OK);
+					console.log("found device to use!");
+					this.startGestureStream(payload.config);
+				} catch (e) {
+					console.log("no accessible camera found")
+				}
+
+			}
 		}
 		
 	},
@@ -104,7 +119,8 @@ module.exports = NodeHelper.create({
 
 		exec = require('child_process').exec, child;
 
-		var shellCommand = 'ffmpeg -s 320x240 -f video4linux2 -i /dev/video0 -vf "hflip" -f mpeg1video -b 800k -r 30 http://localhost:8082/yourpassword/320/240/';
+
+		var shellCommand = 'ffmpeg -s 320x240 -i /dev/video0 -vf "hflip" -f mpeg1video -b 800k -r 30 http://localhost:8082/yourpassword/320/240/somefile';
 
 		child = function () {
 			exec(shellCommand,

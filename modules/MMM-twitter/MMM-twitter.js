@@ -4,20 +4,28 @@ Module.register("MMM-twitter",{
 	defaults: {
 		maxNumTweets: 0,
 		api_keys: {
-			consumer_key: '',
-			consumer_secret: '',
-			access_token_key: '',
-			access_token_secret: ''
-		}
+			consumer_key: 'GCNRascd1LbQMYXr9Se1MpQEB',
+			consumer_secret: 'aWtJSOIhZUh3yD4N68pjwPlqhLUAWnW6mC4ktqSggC9uJai3uh',
+			access_token_key: '1528289544-7mtiB0PN0cTH07gsfRo6KwHKZisB1wdXdLrAVy0',
+			access_token_secret: 'm4yRpvZtXd6mx3gyUZe5O0muz7Fb1sDV2BS6UJgOJBmCl'
+		},
+		reloadInterval:  5 * 60 * 1000, // every 5 minutes
+		updateInterval: 5 * 1000,
+		animationSpeed: 2.5 * 1000
 	},
+
+
 	
 	start: function() {
-		Log.info(this.config);
 		Log.info("Starting module: " + this.name);
+
 		if(this.config.maxNumTweets < 1){
-			this.config.maxNumTweets = 0;
+			this.config.maxNumTweets = 1;
 		}
+		this.links = [];
 		this.startStream();
+
+
 	},
 	
 	// Define required scripts.
@@ -26,38 +34,20 @@ Module.register("MMM-twitter",{
 	},
 	
 	startStream: function(){
-		Log.info(this.config);
+		console.log("Starting twitter stream with: ");
+		console.log(this.config)
 		this.tweets = [];
-		this.sendSocketNotification("START_STREAM", {config: this.config});
+		this.sendSocketNotification("START_TWITTER", {config: this.config});
 	},
 
 
+	socketNotificationReceived: function (notification, payload) {
 
-	socketNotificationReceived: function(notification, payload){
+		//console.log("Twitter Notification: " + notification + " Payload: " + payload);
 
-		//console.log("got socket notification");
-
-		var self = this;
-
-		var currentDate = new Date().getTime();
-		var diff = (currentDate - lastUpdate.getTime());
-		//console.log("currentDate: "+ diff);
-
-		//if(lastUpdate)
-		//setInterval(function () {
-		if(diff > 5000) {
-			if (notification === "DATA") {
-				if (payload.text != null) {
-					payload.date = new Date();
-					self.tweets.push(payload);
-					if (self.tweets.length > self.config.maxNumTweets && self.config.maxNumTweets != 0) {
-						self.tweets.splice(0, 1);
-					}
-					lastUpdate = new Date();
-					self.updateDom(2 * 1000);
-				}
-			}
-			//}, 5000);
+		if (notification === "TWITTER_DATA") {
+				this.tweets = payload;
+				this.updateDom(1.5 * 1000);
 		}
 
 
@@ -77,7 +67,7 @@ Module.register("MMM-twitter",{
 				var tweetElement = document.createElement("div");
 				tweetElement.className = "bright xsmall light";
 				tweetElement.innerHTML = this.tweets[t].text;						//Using text
-				tweetElement.tweetId = t;
+				tweetElement.tweetIndex = t;
 
 				var author = document.createElement("div");
 				author.className = "xsmall light";
@@ -89,25 +79,23 @@ Module.register("MMM-twitter",{
 				//spacer.innerHTML = "<br>";
 
 
+				var twitterId = this.tweets[t].id_str;
+				self.links[t] = "https://twitter.com/statuses/"+twitterId;
+
 				tweetElement.onclick = function(){
 					//console.log("t: "+tweetElement.tweetId);
 					//console.log("t: "+self.tweetId);
-					console.log("t: "+this.tweetId);
-					//console.log("clicked twitter item: "+JSON.stringify(self.tweets[t].text));
-					var twitterId = self.tweets[this.tweetId].id_str;
-					var link = "https://twitter.com/statuses/"+twitterId;
-					Module.showPopUp(link);
+					//console.log("t: "+this.tweetIndex);
+					self.showPopUp(this.tweetIndex);
 				};
-
-
 
 				wrapper.appendChild(tweetElement);
 				wrapper.appendChild(author);
 				wrapper.appendChild(spacer);
-				wrapper.link = this.tweets[t].id_str;
 		}
 		return wrapper;
 	}
 });
 
+var counter = 0;
 var lastUpdate = new Date();
