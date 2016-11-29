@@ -13,22 +13,22 @@ Module.register("compliments",{
 	defaults: {
 		compliments: {
 			morning: [
-				"Good morning!",
-				"Enjoy your day!",
-				"How was your sleep?"
+				"Good morning",
+				"Enjoy your day",
+				"How was your sleep"
 			],
 			afternoon: [
-				"Hello human!",
-				"Whats up, bro?",
-				"Looking good today!"
+				"Hello",
+				"What's up",
+				"Looking good today"
 			],
 			evening: [
-				"Wow, looking good!",
-				"You look nice!",
-				"Wheres the party at?"
+				"Wow, looking good",
+				"You look nice",
+				"Where's the party at"
 			]
 		},
-		updateInterval: 30 * 1000,
+		updateInterval: 10 * 1000,
 		fadeSpeed: 4 * 1000
 	},
 
@@ -43,6 +43,7 @@ Module.register("compliments",{
 	start: function() {
 		Log.info("Starting module: " + this.name);
 
+		this.currentUser = "";
 		this.lastComplimentIndex = -1;
 
 		// Schedule update timer.
@@ -111,13 +112,47 @@ Module.register("compliments",{
 	// Override dom generator.
 	getDom: function() {
 		var complimentText = this.randomCompliment();
+		var compliment;
+		console.log("compliment userName: " + this.currentUser);
+		var userName = this.currentUser;
 
-		var compliment = document.createTextNode(complimentText);
+		//Only show compliments if a name is available
+
+		if(!userName.localeCompare("")){
+			complimentText = "";
+		}
+		else{
+			userName = userName.charAt(0).toUpperCase() + userName.slice(1);
+			complimentText = complimentText + ", "+ userName
+		}
+
+		console.log("compliment to show: " + JSON.stringify(complimentText));
+
+		compliment = document.createTextNode(complimentText);
+
 		var wrapper = document.createElement("div");
 		wrapper.className = "thin xlarge bright";
 		wrapper.appendChild(compliment);
 
+		this.currentUser = "";
+
 		return wrapper;
+	},
+
+
+
+	notificationReceived: function(notification, payload){
+
+
+		console.log("Notification recieved in compliments: " + notification + " Payload: " + payload);
+
+
+		if (notification === "HELLO_USER") {
+			console.log("hello user: "+payload)
+			this.currentUser = payload;
+			this.updateDom(self.config.fadeSpeed);
+		}
+
 	}
 
 });

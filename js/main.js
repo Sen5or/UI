@@ -16,8 +16,6 @@ var MM = (function() {
 	var currentUser = "default";
 
 
-
-
 	/* createDomObjects()
 	 * Create dom objects for all modules that
 	 * are configured for a specific position.
@@ -75,224 +73,13 @@ var MM = (function() {
 	};
 
 
-	/*
-	var swapModules = function(module1, module2){
-
-		console.log("Mod1: "+ module1.id + " at " + module1.position);
-		console.log("Mod2: "+ module2.id + " at " + module2.position);
-
-		var tempLocation = module1.position;
-
-		//attach mod1
-		module1.position = module2.position;
-		var wrapper1 = selectWrapper(module1.position);
-		module1.opacity = 0;
-		wrapper1.appendChild(module1);
-
-		//var element = document.getElementById(module1.id);
-		//element.parentNode.removeChild(element);
-
-
-		module2.position = tempLocation;
-		var wrapper2 = selectWrapper(module2.position);
-		module2.opacity = 0;
-		wrapper2.appendChild(module2);
-
-	};*/
-
-
-	var followCursor = false;
-	/***
-	 *
-	 * Determine start location, determine which region cursor has moved to,
-	 * update selected module location, and location of module that is in the new place. --- just swap them for now?
-	 * @param dom
-	 * @param position
-     */
-
-	var addClickListenerToDom = function(dom, module) {      // This should actually become active when gestures are sensed....
-		dom.onclick = function(event) {
-
-			console.log("clicked: " + dom.id + " at "+ module.data.position);
-
-			console.log("news: " + JSON.stringify(module.clickable));
-
-			if(module.clickable != null)
-				showPopup(module.clickable);
-
-			/*
-			if(selected == null){
-				selectElement(dom, event);
-			}
-
-			if(document.onmousemove == null) {
-				startHoverChecker();
-			}
-			else{
-				//console.log("SWAP: " + selected.id + " from "+ selected.data.position +" with "+ dom.id + " at " + module.data.position);
-				swapModules(selected, dom);
-				stopHoverChecker();
-			}*/
-
-		};
-	};
-
 	var page1 = "http://www.nytimes.com/pages/index.html?partner=rss&emc=rss";
 	var page = "http://www.nytimes.com/2016/11/08/business/international/china-cyber-security-regulations.html?partner=rss&emc=rss";
 	var ytube = "https://www.youtube.com/watch?v=NVHiI2azL7U";
 	ytube = ytube.replace("watch?v=", "embed/");
 
 
-	/*
-	var background;
 
-	function createBackground() {
-
-		background = document.createElement('bg');
-		background.width = window.innerWidth;
-		background.height = window.innerHeight;
-
-		background.onclick = function(event) {
-			console.log("clicked background")
-			fadeOut(background);
-			//document.body.removeChild(background);
-		};
-
-		return background;
-	}
-
-	function createIframe(link) {
-
-		var iframe = document.createElement('iframe');
-		var w = window.innerWidth;
-		var h = window.innerHeight;
-		var divW = w-250;
-		var divH = h-250;
-
-		iframe.id = "popUpNews";
-
-		var html = link;
-		//iframe.src = 'data:text/html;charset=utf-8,' + encodeURI(html);
-		iframe.src = html;
-
-		console.log("html_link: " +html);
-
-		return iframe;
-
-	}
-
-
-
-	function showIframe() {
-
-		var iframe = document.getElementsByTagName('iframe')[0];
-		var url = iframe.src;
-
-
-		var getData = function (data) {
-
-			try{
-				console.log("Getting data");
-				if (data && data.query && data.query.results &&
-					data.query.results.resources &&
-					data.query.results.resources.content &&
-					data.query.results.resources.status == 200) {
-					console.log("Success loaded");
-					loadHTML(data.query.results.resources.content);
-				}
-				else if (data && data.error && data.error.description){
-					console.log("Error loaded");
-					loadHTML(data.error.description);
-				}
-				else {
-					console.log("HTML error loaded");
-					loadHTML('Error: Cannot load ' + url);
-				}
-			}
-			catch (error){
-				console.log("caught error loading data:");
-				console.log(error);
-			}
-
-
-		};
-		var loadURL = function (src) {
-			url = src;
-			var script = document.createElement('script');
-			script.src = 'http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20data.headers%20where%20url%3D%22' + encodeURIComponent(url) + '%22&format=json&diagnostics=true&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=getData';
-			console.log("loadurl result: "+script.src);
-			document.body.appendChild(script);
-		};
-		var loadHTML = function (html) {
-			console.log("loading html");
-			iframe.src = 'about:blank';
-			iframe.contentWindow.document.open();
-			iframe.contentWindow.document.write(html.replace(/<head>/i, '<head><base href="' + url + '"><scr' + 'ipt>document.addEventListener("click", iframeClick);</scr' + 'ipt>'));
-			iframe.contentWindow.document.close();
-		};
-		loadURL(iframe.src);
-
-
-		var iframeClick = function(e) {
-			if(e.target && e.target.nodeName == "A") {
-				e.preventDefault(); parent.loadURL(e.target.href);
-			}
-		};
-
-		iframe.onload=function(){
-			console.log('laoded the iframe')
-		};
-
-	}
-
-	function showPopup(link){
-
-		var background = createBackground();
-		var iframe = createIframe(link);
-
-		background.appendChild(iframe);
-		document.body.appendChild(background);
-		fadeIn(background);
-
-		//console.log('iframe.contentWindow =', iframe.contentWindow);
-		showIframe();
-	}
-
-*/
-	/**
-	 * The currently selected element gets a copy made of it for "floating" effect
-	 * @param dom
-	 * @param event
-	 */
-	/*
-	var selectElement = function (dom, event) {
-		console.log("Selected: " + dom);
-		selected = dom;
-		selected.style.backgroundColor = 'red';
-
-
-		selectedCopy = selected.cloneNode(true);
-		selectedCopy.style.position = "absolute";
-		selectedCopy.height = selected.offsetHeight;
-		selectedCopy.width = selected.offsetWidth;
-		selectedCopy.style.left = selected.style.left;
-		selectedCopy.style.top = selected.style.top;
-		selectedCopy.id = "selected-copy";
-		selectedCopy.style.margin = -50 + "px";
-
-		document.body.appendChild(selectedCopy);
-
-		selectedCopy.style.left = selected.style.left;
-		selectedCopy.style.top = selected.style.top;
-		placeDiv(event.pageX, event.pageY);
-
-	};
-
-	var selected = null;
-	var selectedCopy = null;
-	var previous_hover = null;
-	var current_hover = null;
-	*/
 
 	function fadeOut(element) {
 		var op = 1;  // initial opacity
@@ -321,128 +108,6 @@ var MM = (function() {
 			op += op * 0.1;
 		}, 10);
 	}
-
-	/**
-	 * Starts tracking the location of the cursor, moves the selectedCopy to the x,y coord
-	 */
-	/*
-	var startHoverChecker = function () {
-
-		document.onmousemove = handleMouseMove;
-
-		var myElement = document.querySelector("html");
-		myElement.style.cursor = "move";
-
-
-		function handleMouseMove(event) {
-			var dot, eventDoc, doc, body, pageX, pageY;
-
-			event = event || window.event; // IE-ism
-
-			// If pageX/Y aren't available and clientX/Y are,
-			// calculate pageX/Y - logic taken from jQuery.
-			// (This is to support old IE)
-			if (event.pageX == null && event.clientX != null) {
-				eventDoc = (event.target && event.target.ownerDocument) || document;
-				doc = eventDoc.documentElement;
-				body = eventDoc.body;
-
-				event.pageX = event.clientX +
-					(doc && doc.scrollLeft || body && body.scrollLeft || 0) -
-					(doc && doc.clientLeft || body && body.clientLeft || 0);
-				event.pageY = event.clientY +
-					(doc && doc.scrollTop || body && body.scrollTop || 0) -
-					(doc && doc.clientTop || body && body.clientTop || 0 );
-			}
-
-			var element = document.elementFromPoint(event.pageX, event.pageY);
-			// Use event.pageX / event.pageY here
-			//console.log(event.pageX + ", " + event.pageY);
-
-
-			var temp = isDescendant(element);
-			if(temp[0] && selected != temp[1]){
-
-				console.log("Hover: "+ temp[1].id  + ". (" + temp[1].offsetWidth + ", " +temp[1].offsetHeight + ")");
-
-
-				if(temp[1] != current_hover){
-
-					if(current_hover != null)
-						current_hover.style.backgroundColor = 'transparent';
-
-					previous_hover = current_hover;
-					current_hover = temp[1];
-					current_hover.style.backgroundColor = '#035207';
-
-				}
-			}
-			placeDiv(event.pageX, event.pageY);
-		}
-
-	};
-
-*/
-
-/*
-	function getMouseCoords(event) {
-		var dot, eventDoc, doc, body, pageX, pageY;
-
-		document.onmou
-		event = event || window.event; // IE-ism
-
-		// If pageX/Y aren't available and clientX/Y are,
-		// calculate pageX/Y - logic taken from jQuery.
-		// (This is to support old IE)
-		if (event.pageX == null && event.clientX != null) {
-			eventDoc = (event.target && event.target.ownerDocument) || document;
-			doc = eventDoc.documentElement;
-			body = eventDoc.body;
-
-			event.pageX = event.clientX +
-				(doc && doc.scrollLeft || body && body.scrollLeft || 0) -
-				(doc && doc.clientLeft || body && body.clientLeft || 0);
-			event.pageY = event.clientY +
-				(doc && doc.scrollTop || body && body.scrollTop || 0) -
-				(doc && doc.clientTop || body && body.clientTop || 0 );
-		}
-
-		var element = document.elementFromPoint(event.pageX, event.pageY);
-		// Use event.pageX / event.pageY here
-		//console.log(event.pageX + ", " + event.pageY);
-
-		placeDiv(event.pageX, event.pageY);
-	}
-*/
-
-
-	/**
-	 * Stops tracking cursor, resets any selected backgrounds, and removes selectedCopy from the UI
-	 */
-	/*
-	var stopHoverChecker = function () {
-
-		document.onmousemove = null;
-
-		var myElement = document.querySelector("html");
-		myElement.style.cursor = "default";
-
-		if(selected != null)
-			selected.style.backgroundColor = 'transparent';
-
-		if(current_hover != null)
-			current_hover.style.backgroundColor = 'transparent';
-
-		if(previous_hover != null)
-				previous_hover.style.backgroundColor = 'transparent';
-
-		document.body.removeChild(selectedCopy);
-
-		previous_hover = null;
-		current_hover = null;
-		selected = null;
-
-	};*/
 
 
 	/**
@@ -480,78 +145,6 @@ var MM = (function() {
 	 * fullscreen_below
 	 *
 	 */
-
-
-/*
-	var listenToCursor = function (dom, position) {
-
-			document.onmousemove = handleMouseMove;
-
-
-			function handleMouseMove(event) {
-				var dot, eventDoc, doc, body, pageX, pageY;
-
-				event = event || window.event; // IE-ism
-
-				// If pageX/Y aren't available and clientX/Y are,
-				// calculate pageX/Y - logic taken from jQuery.
-				// (This is to support old IE)
-				if (event.pageX == null && event.clientX != null) {
-					eventDoc = (event.target && event.target.ownerDocument) || document;
-					doc = eventDoc.documentElement;
-					body = eventDoc.body;
-
-					event.pageX = event.clientX +
-						(doc && doc.scrollLeft || body && body.scrollLeft || 0) -
-						(doc && doc.clientLeft || body && body.clientLeft || 0);
-					event.pageY = event.clientY +
-						(doc && doc.scrollTop || body && body.scrollTop || 0) -
-						(doc && doc.clientTop || body && body.clientTop || 0 );
-				}
-
-				// Use event.pageX / event.pageY here
-				console.log(event.pageX + ", " + event.pageY);
-
-
-				console.log("followCursor inside: "+followCursor);
-
-				if (!followCursor) {
-					document.onmousemove = null;
-				}
-				else{
-					orig_width = document.getElementById('module_3_calendar').offsetWidth;
-					orig_height = document.getElementById('module_3_calendar').offsetHeight;
-					placeDiv(document.getElementById('module_3_calendar'), event.pageX, event.pageY);
-				}
-
-			}
-	};
-*/
-
-	/**
-	 * Moves a div to the coordinate location
-	 * @param div
-	 * @param x_pos
-	 * @param y_pos
-     */
-	function placeDiv(x_pos, y_pos) {
-
-
-		var vertical_adjust = 0; //((selectedCopy.offsetHeight)/2);
-		var horizontal_adjust = ((selectedCopy.offsetWidth)/2);
-
-		//console.log("offsetWidth: "+selectedCopy.offsetWidth + ". x_pos : "+x_pos);
-		//console.log("offsetHeight: "+selectedCopy.offsetHeight + ". y_pos : "+y_pos);
-
-		selectedCopy.style.left = (x_pos-horizontal_adjust)+'px'; //-(200)
-		selectedCopy.style.top = (y_pos-vertical_adjust)+'px'; //(y_pos)-(300)+'px';  //300
-
-	}
-
-
-
-
-
 
 
 
@@ -729,13 +322,15 @@ var MM = (function() {
 	/**
 	 * Get configs from DB for the currentUser
 	 */
+
+
 	var loadConfigsFromDB = function () {
 
 		config = defaults;
 
 		var self = this;
-        console.log('loading configs from DB')
-		var url = "/getCurrentUserFromDB/";
+        console.log('loading default configs from DB')
+		var url = "/getDefaultUserFromDB/";
 
 		$.ajax({
 			dataType: "json",
@@ -750,15 +345,15 @@ var MM = (function() {
 				Log.log("error: "+response);
 			}
 		});
-
-
 	};
 
 	var finishLoading = function () {
 
-		console.log("finishing loading")
+		console.log("finishing loading");
 		Translator.loadCoreTranslations(config.language);
 		Loader.loadModules();
+
+
 
 	};
 
@@ -873,16 +468,20 @@ var MM = (function() {
 		 */
 		init: function() {
 			Log.info("Initializing MagicMirror.");
+
 			//loadConfig();
 
 			loadConfigsFromDB();
-
-
-			Translator.loadCoreTranslations(config.language);
-			Loader.loadModules();										//TODO, can this be called when switching users? to swap modules?
 		},
 
 
+		getCurrentUser: function () {
+			return currentUser;
+		},
+
+		setCurrentUser: function (username) {
+			currentUser = username;
+		},
 
 		/* modulesStarted(moduleObjects)
 		 * Gets called when all modules are started.
@@ -1011,9 +610,6 @@ if (typeof Object.assign != "function") {
 var getModulesFromDB = function() {
 	console.log("we are getting modules from main!!!!")
 };
-
-
-
 
 
 

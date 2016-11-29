@@ -39,6 +39,10 @@ var config = {
 					{
 						title: "New York Times",
 						url: "http://www.nytimes.com/services/xml/rss/nyt/HomePage.xml"
+					},
+					{
+						title: "BBC",
+						url: "http://feeds.bbci.co.uk/news/video_and_audio/news_front_page/rss.xml?edition=uk",
 					}
 				],
 				showSourceTitle: true,

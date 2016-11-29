@@ -10,12 +10,11 @@
 var defaults = {
 	port: 8080,
 	kioskmode: false,
-
 	language: "en",
 	timeFormat: 24,
-	units: "metric",
-
-	modules: [
+	units: "imperial",
+	modules: [],
+	/*
 		{
 			module: "helloworld",
 			position: "upper_third",
@@ -55,7 +54,7 @@ var defaults = {
 				text: "www.michaelteeuw.nl"
 			}
 		},
-	],
+	],*/
 
 	paths: {
 		modules: "modules",

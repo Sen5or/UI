@@ -26,7 +26,7 @@ var mainWindow;
 
 function createWindow() {
 
-	console.log("creating window");
+	console.log("creating electron window");
 	// Create the browser window.
 	if (config.kioskmode) {
 		mainWindow = new BrowserWindow({width: 800, height: 600, x: 0, y: 0, kiosk:true, darkTheme: true, webPreferences: {nodeIntegration: false}});
@@ -171,8 +171,8 @@ app.on("activate", function() {
 core.start(
 	function (c) {
 		config = c;
-		console.log("ELECTRON CONFIG: ");
-		console.log(config.modules);
+		//console.log("ELECTRON CONFIG: ");
+		//console.log(config.modules);
 		loadedModules = config.modules;		//This variable is from app.js
 
 		createWindow()

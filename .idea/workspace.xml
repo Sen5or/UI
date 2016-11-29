@@ -2,26 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dd6c07f0-5826-4e15-be35-2349f1b52b31" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/voice_control/Identification/CreateProfile.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/voice_control/Identification/DeleteProfile.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/voice_control/Identification/EnrollProfile.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/voice_control/Identification/EnrollmentResponse.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/voice_control/Identification/GetProfile.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/voice_control/Identification/IdentificationProfile.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/voice_control/Identification/IdentificationResponse.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/voice_control/Identification/IdentificationServiceHttpClientHelper.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/voice_control/Identification/IdentifyFile.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/voice_control/Identification/IdentifySpeaker.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/voice_control/Identification/IdentifyVoice.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/voice_control/Identification/PrintAllProfiles.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/voice_control/Identification/ProfileCreationResponse.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/voice_control/Identification/ResetEnrollments.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/voice_control/test.py" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/config.js" afterPath="$PROJECT_DIR$/config/config.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/config_shit.js" afterPath="$PROJECT_DIR$/config/config_shit.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/app.js" afterPath="$PROJECT_DIR$/js/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/defaults.js" afterPath="$PROJECT_DIR$/js/defaults.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/electron.js" afterPath="$PROJECT_DIR$/js/electron.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/main.js" afterPath="$PROJECT_DIR$/js/main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/module.js" afterPath="$PROJECT_DIR$/js/module.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/server.js" afterPath="$PROJECT_DIR$/js/server.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/MMM-twitter/MMM-twitter.js" afterPath="$PROJECT_DIR$/modules/MMM-twitter/MMM-twitter.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/MMM-twitter/node_helper.js" afterPath="$PROJECT_DIR$/modules/MMM-twitter/node_helper.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/default/compliments/compliments.js" afterPath="$PROJECT_DIR$/modules/default/compliments/compliments.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/default/currentweather/currentweather.js" afterPath="$PROJECT_DIR$/modules/default/currentweather/currentweather.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/node_helper.js" afterPath="$PROJECT_DIR$/modules/gesture_control/node_helper.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/voice_control/Record.py" afterPath="$PROJECT_DIR$/modules/voice_control/Record.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/voice_control/node_helper.js" afterPath="$PROJECT_DIR$/modules/voice_control/node_helper.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/voice_control/output.wav" afterPath="$PROJECT_DIR$/modules/voice_control/output.wav" />
@@ -54,11 +47,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="voice_control.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="voice_control.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/modules/voice_control/voice_control.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="35" column="52" selection-start-line="35" selection-start-column="52" selection-end-line="35" selection-end-column="52" />
+            <state relative-caret-position="397">
+              <caret line="99" column="0" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -67,8 +60,8 @@
       <file leaf-file-name="module.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/module.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="350" column="0" selection-start-line="350" selection-start-column="0" selection-end-line="350" selection-end-column="0" />
+            <state relative-caret-position="135">
+              <caret line="99" column="24" selection-start-line="99" selection-start-column="4" selection-end-line="99" selection-end-column="24" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -76,41 +69,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="electron.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/js/electron.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="86" column="0" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MMM-twitter.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/MMM-twitter/MMM-twitter.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
-              <caret line="84" column="28" selection-start-line="84" selection-start-column="16" selection-end-line="84" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="node_helper.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modules/voice_control/node_helper.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="114" column="28" selection-start-line="114" selection-start-column="28" selection-end-line="114" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1770">
-              <caret line="118" column="6" selection-start-line="118" selection-start-column="6" selection-end-line="118" selection-end-column="6" />
+            <state relative-caret-position="185">
+              <caret line="102" column="64" selection-start-line="102" selection-start-column="12" selection-end-line="102" selection-end-column="64" />
               <folding />
             </state>
           </provider>
@@ -119,8 +82,8 @@
       <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="13125">
-              <caret line="875" column="14" selection-start-line="875" selection-start-column="14" selection-end-line="875" selection-end-column="14" />
+            <state relative-caret-position="195">
+              <caret line="232" column="29" selection-start-line="232" selection-start-column="29" selection-end-line="232" selection-end-column="29" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -156,23 +119,25 @@
         <option value="$PROJECT_DIR$/modules/gesture_control/gestures.css" />
         <option value="$PROJECT_DIR$/modules/voice_control/test.py" />
         <option value="$PROJECT_DIR$/modules/gesture_control/gesture_control.js" />
-        <option value="$PROJECT_DIR$/modules/default/currentweather/currentweather.js" />
         <option value="$PROJECT_DIR$/config/old_config.js" />
         <option value="$PROJECT_DIR$/js/loader.js" />
         <option value="$PROJECT_DIR$/modules/default/newsfeed/newsfeed.js" />
-        <option value="$PROJECT_DIR$/modules/default/compliments/compliments.js" />
-        <option value="$PROJECT_DIR$/modules/gesture_control/node_helper.js" />
-        <option value="$PROJECT_DIR$/config/config.js" />
-        <option value="$PROJECT_DIR$/js/server.js" />
-        <option value="$PROJECT_DIR$/js/main.js" />
-        <option value="$PROJECT_DIR$/js/app.js" />
-        <option value="$PROJECT_DIR$/modules/voice_control/Record.py" />
         <option value="$PROJECT_DIR$/modules/MMM-twitter/node_helper.js" />
-        <option value="$PROJECT_DIR$/modules/MMM-twitter/MMM-twitter.js" />
-        <option value="$PROJECT_DIR$/modules/voice_control/node_helper.js" />
-        <option value="$PROJECT_DIR$/modules/voice_control/voice_control.js" />
-        <option value="$PROJECT_DIR$/js/module.js" />
+        <option value="$PROJECT_DIR$/modules/voice_control/Record.py" />
+        <option value="$PROJECT_DIR$/config/config.js" />
         <option value="$PROJECT_DIR$/js/electron.js" />
+        <option value="$PROJECT_DIR$/modules/MMM-twitter/MMM-twitter.js" />
+        <option value="$PROJECT_DIR$/js/defaults.js" />
+        <option value="$PROJECT_DIR$/modules/default/currentweather/currentweather.js" />
+        <option value="$PROJECT_DIR$/js/app.js" />
+        <option value="$PROJECT_DIR$/js/main.js" />
+        <option value="$PROJECT_DIR$/config/config_shit.js" />
+        <option value="$PROJECT_DIR$/js/server.js" />
+        <option value="$PROJECT_DIR$/modules/gesture_control/node_helper.js" />
+        <option value="$PROJECT_DIR$/js/module.js" />
+        <option value="$PROJECT_DIR$/modules/voice_control/node_helper.js" />
+        <option value="$PROJECT_DIR$/modules/default/compliments/compliments.js" />
+        <option value="$PROJECT_DIR$/modules/voice_control/voice_control.js" />
       </list>
     </option>
   </component>
@@ -195,10 +160,9 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-4" />
     <option name="y" value="52" />
-    <option name="width" value="1928" />
-    <option name="height" value="996" />
+    <option name="width" value="1920" />
+    <option name="height" value="992" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -225,6 +189,11 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane">
+        <subPane />
+      </pane>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="Scope">
         <subPane subId="Project Files">
           <PATH>
@@ -264,7 +233,7 @@
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="voice_control">
+            <PATH_ELEMENT USER_OBJECT="gesture_control">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
@@ -282,7 +251,51 @@
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="MMM-twitter">
+            <PATH_ELEMENT USER_OBJECT="default">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="UI">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="modules">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="default">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="currentweather">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="UI">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="modules">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="default">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="compliments">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
@@ -317,11 +330,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane />
-      </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1032,7 +1040,10 @@
       <workItem from="1480374745767" duration="185000" />
       <workItem from="1480374951717" duration="709000" />
       <workItem from="1480377838662" duration="5989000" />
-      <workItem from="1480384097675" duration="5570000" />
+      <workItem from="1480384097675" duration="5596000" />
+      <workItem from="1480433396736" duration="10600000" />
+      <workItem from="1480444018095" duration="988000" />
+      <workItem from="1480447395055" duration="9385000" />
     </task>
     <task id="LOCAL-00001" summary="fixed and renamed twitter module to MMM-twitter">
       <created>1478933440081</created>
@@ -1076,15 +1087,22 @@
       <option name="project" value="LOCAL" />
       <updated>1480364882701</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Working voice script">
+      <created>1480390226523</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1480390226523</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="185598000" />
+    <option name="totallyTimeSpent" value="206597000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="52" width="1928" height="996" extended-state="6" />
-    <editor active="false" />
+    <frame x="0" y="52" width="1920" height="992" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1094,8 +1112,8 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293979" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.09899417" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40462428" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.098185696" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35028902" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24866596" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1110,7 +1128,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32821724" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32716763" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1131,7 +1149,8 @@
     <MESSAGE value="Dynamic popup resizing gets passed through url link to electron for processing and sizing" />
     <MESSAGE value="Added streaming video from camera to gesture module" />
     <MESSAGE value="Dynamic DB configs, testing voice script" />
-    <option name="LAST_COMMIT_MESSAGE" value="Dynamic DB configs, testing voice script" />
+    <MESSAGE value="Working voice script" />
+    <option name="LAST_COMMIT_MESSAGE" value="Working voice script" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1166,6 +1185,9 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/default/currentweather/README.md">
+      <provider editor-type-id="MarkdownFxPreviewEditor">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
           <first_editor relative-caret-position="225">
@@ -1173,9 +1195,6 @@
           </first_editor>
           <second_editor />
         </state>
-      </provider>
-      <provider editor-type-id="MarkdownFxPreviewEditor">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/default/newsfeed/node_helper.js">
@@ -1272,20 +1291,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/default/compliments/compliments.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="61" column="40" selection-start-line="61" selection-start-column="40" selection-end-line="61" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/loader.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-690">
-          <caret line="23" column="38" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/iconv-lite/encodings/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -1297,13 +1302,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-555">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/default/currentweather/currentweather.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1170">
-          <caret line="78" column="28" selection-start-line="78" selection-start-column="22" selection-end-line="78" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -1342,28 +1340,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/gesture_control/node_helper.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-507">
-          <caret line="64" column="24" selection-start-line="64" selection-start-column="12" selection-end-line="64" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/gesture_control/gesture_control.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="52" column="2" selection-start-line="52" selection-start-column="2" selection-end-line="52" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/config.js.sample">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/defaults.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1384,31 +1361,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="13125">
-          <caret line="875" column="14" selection-start-line="875" selection-start-column="14" selection-end-line="875" selection-end-column="14" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="150" column="0" selection-start-line="150" selection-start-column="0" selection-end-line="150" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1770">
-          <caret line="118" column="6" selection-start-line="118" selection-start-column="6" selection-end-line="118" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/modules/voice_control/output.wav">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1416,28 +1368,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/voice_control/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="8" column="22" selection-start-line="7" selection-start-column="4" selection-end-line="8" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/config_shit.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/voice_control/test.py" />
     <entry file="file://$PROJECT_DIR$/modules/voice_control/Identification/GetProfile.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1447,60 +1378,153 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/voice_control/Record.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="50" column="55" selection-start-line="50" selection-start-column="55" selection-end-line="50" selection-end-column="55" />
+        <state relative-caret-position="-24">
+          <caret line="30" column="22" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/electron.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="471">
+          <caret line="161" column="20" selection-start-line="161" selection-start-column="8" selection-end-line="161" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/loader.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-910">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#14#0" expanded="false" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/MMM-twitter/node_helper.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="77">
-          <caret line="31" column="20" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
-          <folding />
+        <state relative-caret-position="-135">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/MMM-twitter/MMM-twitter.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="84" column="28" selection-start-line="84" selection-start-column="16" selection-end-line="84" selection-end-column="28" />
+        <state relative-caret-position="360">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/voice_control/node_helper.js">
+    <entry file="file://$PROJECT_DIR$/js/defaults.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="114" column="28" selection-start-line="114" selection-start-column="28" selection-end-line="114" selection-end-column="28" />
-          <folding />
+        <state relative-caret-position="210">
+          <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/voice_control/voice_control.js">
+    <entry file="file://$PROJECT_DIR$/modules/default/currentweather/currentweather.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="35" column="52" selection-start-line="35" selection-start-column="52" selection-end-line="35" selection-end-column="52" />
-          <folding />
+        <state relative-caret-position="61">
+          <caret line="176" column="118" selection-start-line="176" selection-start-column="118" selection-end-line="176" selection-end-column="118" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/module.js">
+    <entry file="file://$PROJECT_DIR$/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="350" column="0" selection-start-line="350" selection-start-column="0" selection-end-line="350" selection-end-column="0" />
+          <caret line="131" column="44" selection-start-line="131" selection-start-column="44" selection-end-line="131" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/config_shit.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="50" column="10" selection-start-line="33" selection-start-column="8" selection-end-line="50" selection-end-column="10" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="427">
+          <caret line="111" column="26" selection-start-line="111" selection-start-column="26" selection-end-line="111" selection-end-column="26" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/electron.js">
+    <entry file="file://$PROJECT_DIR$/modules/gesture_control/gesture_control.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="86" column="0" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+        <state relative-caret-position="-270">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/gesture_control/node_helper.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="120" column="0" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="232" column="29" selection-start-line="232" selection-start-column="29" selection-end-line="232" selection-end-column="29" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/voice_control/node_helper.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="102" column="64" selection-start-line="102" selection-start-column="12" selection-end-line="102" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="99" column="24" selection-start-line="99" selection-start-column="4" selection-end-line="99" selection-end-column="24" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/default/compliments/compliments.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="129" column="0" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/voice_control/voice_control.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="397">
+          <caret line="99" column="0" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
           <folding />
         </state>
       </provider>

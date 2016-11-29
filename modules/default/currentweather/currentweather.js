@@ -11,7 +11,7 @@ Module.register("currentweather",{
 
 	// Default module config.
 	defaults: {
-		location: "",
+		location: "lajolla",
 		locationID: "",
 		appid: "",
 		units: config.units,
@@ -51,6 +51,7 @@ Module.register("currentweather",{
 			"13n": "wi-night-snow",
 			"50n": "wi-night-alt-cloudy-windy"
 		}
+
 	},
 
 	// Define required scripts.
@@ -84,6 +85,7 @@ Module.register("currentweather",{
 		this.sunriseSunsetIcon = null;
 		this.temperature = null;
 		this.weatherType = null;
+		this.locationName = null;
 
 		this.loaded = false;
 		this.scheduleUpdate(this.config.initialLoadDelay);
@@ -117,6 +119,7 @@ Module.register("currentweather",{
 		var small = document.createElement("div");
 		small.className = "normal medium";
 
+
 		var windIcon = document.createElement("span");
 		windIcon.className = "wi wi-strong-wind dimmed";
 		small.appendChild(windIcon);
@@ -142,6 +145,8 @@ Module.register("currentweather",{
 		sunriseSunsetTime.innerHTML = " " + this.sunriseSunsetTime;
 		small.appendChild(sunriseSunsetTime);
 
+
+
 		var large = document.createElement("div");
 		large.className = "large light";
 
@@ -154,6 +159,11 @@ Module.register("currentweather",{
 		temperature.innerHTML = " " + this.temperature + "&deg;";
 		large.appendChild(temperature);
 
+		var nameDiv = document.createElement("span");
+		nameDiv.className = "bright";
+		nameDiv.innerHTML = " " + this.locationName;
+
+		wrapper.appendChild(nameDiv);
 		wrapper.appendChild(small);
 		wrapper.appendChild(large);
 		return wrapper;
@@ -201,10 +211,15 @@ Module.register("currentweather",{
 
 
 		var params = "?";
-		if(this.config.locationID !== "") {
-			params += "id=" + this.config.locationID;
-		} else {
+
+		if(this.config.location !== "") {
 			params += "q=" + this.config.location;
+		}
+		else if(this.config.locationID !== ""){
+			params += "id=" + this.config.locationID;
+		}
+		else{
+			params += "q=" + "losangeles";
 		}
 		params += "&units=" + this.config.units;
 		params += "&lang=" + this.config.lang;
@@ -267,6 +282,7 @@ Module.register("currentweather",{
 		this.sunriseSunsetIcon = (sunrise < now && sunset > now) ? "wi-sunset" : "wi-sunrise";
 
 
+		this.locationName = data.name;
 
 		this.loaded = true;
 		this.updateDom(this.config.animationSpeed);

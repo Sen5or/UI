@@ -164,7 +164,13 @@ var Module = Class.extend({
 	 * argument config obejct - Module config.
 	 */
 	setConfig: function(config) {
-		this.config = Object.assign(this.defaults, config);
+
+
+		//if (this.config != null)
+		//	this.config = Object.assign(this.config, config);
+		//else
+			this.config = Object.assign(this.defaults, config);
+
 	},
 
 	/* socket()

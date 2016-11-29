@@ -5,10 +5,9 @@ var config = {
 	timeFormat: 12,
 	units: 'imperial',  //metric,imperial
 	location: "la jolla",
-
-	modules: [
-	]
+	modules: []
 };
+
 
 
 

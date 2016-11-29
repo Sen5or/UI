@@ -18,7 +18,8 @@ Module.register("voice_control",{
 	// Override start method.
 	start: function() {
 		Log.log("Starting module: " + this.name);
-		this.sendSocketNotification("START_VOICE_CONTROL", {config: this.config});
+        //console.log("currentUser from MM: "+MM.getCurrentUser())
+		this.sendSocketNotification("START_VOICE_CONTROL", {config: this.config, currentUser : MM.getCurrentUser() });
 
 	},
 
@@ -31,18 +32,30 @@ Module.register("voice_control",{
 
             var action = payload.action;
 
-            console.log(payload)
+            console.log(payload);
 
-            var modName = isModule(payload.modName);
+            var modulesToEnumerate = null;
+            if(payload.hasOwnProperty("modName"))
+                modulesToEnumerate = payload.modName;
+            else if(payload.hasOwnProperty("modules"))
+                modulesToEnumerate = payload.modules;
+            else{
+
+            }
+
+
+
+
 
 
             if (action === "close" || action === "clothes") {         //Any module can close the global popup
                 this.closePopUp()
             }
-            else if(modName != null){
+            else if(modulesToEnumerate != null){
 
+                console.log("enumerating modules ")
                 var counter = 0;
-                MM.getModules().withClass(modName).enumerate(function (module) {
+                MM.getModules().withClass(modulesToEnumerate).enumerate(function (module) {
 
 
                     console.log("enumerating: " + counter);
@@ -63,30 +76,21 @@ Module.register("voice_control",{
                         });
                     }
                     else if (action === "restart") {
-                        module.restart(payload.configs[counter], function () {
+                        var newConfig = Object.assign(module.config, payload.configs[counter])
+                        module.restart(newConfig, function () {
                             //Module reloaded
                         });
                     }
                     counter += 1;
                 });
 
+            }else{
+                console.log("no modules to enumerate")
             }
 
         }
-
-
-        function isModule(word) {
-
-
-            for (var m in config.modules) {
-
-                if (config.modules[m].module.includes(word)) {
-                    console.log("matched " + config.modules[m].module);
-                    return config.modules[m].module;
-                }
-
-            }
-            return null;
+        else if (notification === "HELLO_USER") {
+            this.sendNotification("HELLO_USER", payload);
         }
 
     }

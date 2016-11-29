@@ -120,7 +120,7 @@ module.exports = NodeHelper.create({
 		exec = require('child_process').exec, child;
 
 
-		var shellCommand = 'ffmpeg -s 320x240 -i /dev/video0 -vf "hflip" -f mpeg1video -b 800k -r 30 http://localhost:8082/yourpassword/320/240/somefile';
+		var shellCommand = 'ffmpeg -s 320x240 -i /dev/video0 -vf "hflip" -f mpeg1video -b 800k -r 30 http://localhost:8082/yourpassword/320/240/';
 
 		child = function () {
 			exec(shellCommand,

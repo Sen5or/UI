@@ -13,7 +13,7 @@ CHUNK = 1024
 FORMAT = pyaudio.paInt16
 CHANNELS = 1
 RATE = 16000
-RECORD_SECONDS = 5
+RECORD_SECONDS = 3
 WAVE_OUTPUT_FILENAME = "output.wav"
 AUDIO_FILE = path.join(path.dirname(path.realpath(__file__)), WAVE_OUTPUT_FILENAME)
 

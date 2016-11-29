@@ -2,7 +2,7 @@ Module.register("MMM-twitter",{
 
 
 	defaults: {
-		maxNumTweets: 0,
+		maxNumTweets: 5,
 		api_keys: {
 			consumer_key: 'GCNRascd1LbQMYXr9Se1MpQEB',
 			consumer_secret: 'aWtJSOIhZUh3yD4N68pjwPlqhLUAWnW6mC4ktqSggC9uJai3uh',
@@ -19,9 +19,10 @@ Module.register("MMM-twitter",{
 	start: function() {
 		Log.info("Starting module: " + this.name);
 
-		if(this.config.maxNumTweets < 1){
-			this.config.maxNumTweets = 1;
-		}
+
+
+		this.config = Object.assign(this.config, defaults);
+
 		this.links = [];
 		this.startStream();
 
