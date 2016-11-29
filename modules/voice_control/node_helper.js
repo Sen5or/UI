@@ -26,30 +26,24 @@ module.exports = NodeHelper.create({
 
 	startVoiceScript: function(config){
 
-
-
-/*
         var self = this;
-
-        // TODO this will recieve voice commands and perform operations
-		var spawn = require('child_process').spawn,
-			py    = spawn('python',['./modules/voice_control/Record.py']);
-
-		py.stdout.on('data', function (data) {
-			console.log('STDOUT: ' + data);
-		});
-		py.stderr.on('data', function (data) {
-			console.log('stderr: ' + data);
-		});
-*/
+        var command = "";
 
         var util    = require('util'),
             spawn   = require('child_process').spawn,
-            //ls    = spawn('ls', ['-lh', '/usr']);
-            py      = spawn('python',['./modules/voice_control/Record.py']);
+            py      = spawn('python3',['./modules/voice_control/Record.py']);
 
         py.stdout.on('data', function (data) {
-            console.log('stdout: ' + data.toString());
+            console.log("stdout: "+data.toString())
+            command = data.toString().toLowerCase();
+
+            if(command != ""){
+                command = command.replace(/(\r\n|\n|\r)/gm,"");
+                var words = command.split(" ");
+                self.analyzeVoiceCommand(words);
+            }
+
+
         });
 
         py.stderr.on('data', function (data) {
@@ -61,13 +55,9 @@ module.exports = NodeHelper.create({
         });
 
 
-        this.sendSocketNotification("VOICE_SCRIPT_STARTED", null);
 
 
 		/**Catch voice commands here**/
-
-
-
 
         //var command = "show weather as user1";
 
@@ -84,20 +74,16 @@ module.exports = NodeHelper.create({
         }, 4000);
 */
 
+        this.sendSocketNotification("VOICE_SCRIPT_STARTED", null);
 
 	},
 
-    analyzeVoiceCommand: function (command) {
+    analyzeVoiceCommand: function (words) {
 
+
+        console.log('wordsArray: ' + words);
 
         var self = this;
-        var words = command.split(" ");
-
-
-        if(words.length < 2) {
-            return
-        }
-
 
 
         /** check to see if command should be run as a certain user **/
@@ -121,12 +107,12 @@ module.exports = NodeHelper.create({
 
         else if(isActionWord(words[0])){                        //Action
 
-            var modName = isModule(words[1]);
+            var modName = words[1];
             if(modName != null){                                //Module name to perform action on
 
                 var jsonCommand = {
                     "action" : words[0],
-                    "modules" : modName
+                    "modName" : modName
                 };
 
                 this.sendCommandToFrontEnd(jsonCommand);
@@ -134,7 +120,7 @@ module.exports = NodeHelper.create({
 
             }
             else{
-                console.log("Module '"+words[1]+"' is not recognized")
+                console.log("Module '"+words[1]+"' is missing")
             }
 
         }
@@ -149,13 +135,13 @@ module.exports = NodeHelper.create({
             if(word === "open"){
                 return true;
             }
-            else if(word === "hide"){
+            else if(word === "hide" || word == "hyde"){
                 return true;
             }
             else if(word === "show"){
                 return true;
             }
-            else if(word === "close"){
+            else if(word === "close" || word === "clothes"){
                 return true;
             }
             else if(word === "move"){
@@ -165,19 +151,8 @@ module.exports = NodeHelper.create({
                 return false;
         }
 
-        function isModule(word) {
 
 
-            for (var m in config.modules) {
-
-                if (config.modules[m].module.includes(word)) {
-                    console.log("matched " + config.modules[m].module);
-                    return config.modules[m].module;
-                }
-
-            }
-            return null;
-        }
 
         function queryDbForUser(userName) {
 

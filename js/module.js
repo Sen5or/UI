@@ -344,14 +344,21 @@ var Module = Class.extend({
 
 	closePopUp: function() {
 
+		try{
+			document.body.removeChild(background);
+		}
+		catch(err){
+
+		}
+
 		window.open("close", '_blank');					//send "close" to close the popup
-		document.body.removeChild(background);
+
 
 	},
 
-	showPopUp: function() {
+	showPopUp: function () {
 
-
+		var self = this;
 		var w = screen.width;//window.innerWidth;
 		var h = screen.height;//window.innerHeight;
 
@@ -372,16 +379,20 @@ var Module = Class.extend({
 
 		window.open(the_link, '_blank');
 
-		background = createBackground();
-		document.body.appendChild(background);
 
-		var self = this;
+		//If BG is already displayed, dont add another...
+		if(document.getElementById("black_bg") == null){
+			background = createBackground();
+			document.body.appendChild(background);
+		}
+
 
 		function createBackground() {
 
 			var background = document.createElement('bg');
 			background.width = window.innerWidth;
 			background.height = window.innerHeight;
+			background.id = "black_bg";
 
 			background.onclick = function(event) {
 				console.log("clicked background");

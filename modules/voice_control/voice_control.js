@@ -27,48 +27,66 @@ Module.register("voice_control",{
         console.log("VOICE Notification recieved: " + notification + " Payload: " + payload);
 
 
-        if(notification === "VOICE_COMMAND"){
+        if (notification === "VOICE_COMMAND") {
 
             var action = payload.action;
 
-            var counter = 0;
-            MM.getModules().withClass(payload.modules).enumerate(function(module) {
+            console.log(payload)
 
-                counter += 1;
-                console.log("enumerating: "+counter);
-                if(action === "open"){
-                    module.showPopUp();
+            var modName = isModule(payload.modName);
+
+
+            if (action === "close" || action === "clothes") {         //Any module can close the global popup
+                this.closePopUp()
+            }
+            else if(modName != null){
+
+                var counter = 0;
+                MM.getModules().withClass(modName).enumerate(function (module) {
+
+
+                    console.log("enumerating: " + counter);
+                    if (action === "open") {
+                        module.showPopUp();
+                    }
+                    else if(action === "close" || action === "clothes"){
+                     module.closePopUp()
+                     }
+                    else if (action === "show") {
+                        module.show(1000, function () {
+                            //Module shown.
+                        });
+                    }
+                    else if (action === "hide" || action === "hyde") {
+                        module.hide(1000, function () {
+                            //Module hidden
+                        });
+                    }
+                    else if (action === "restart") {
+                        module.restart(payload.configs[counter], function () {
+                            //Module reloaded
+                        });
+                    }
+                    counter += 1;
+                });
+
+            }
+
+        }
+
+
+        function isModule(word) {
+
+
+            for (var m in config.modules) {
+
+                if (config.modules[m].module.includes(word)) {
+                    console.log("matched " + config.modules[m].module);
+                    return config.modules[m].module;
                 }
-                else if(action === "close"){
-                    module.closePopUp()
-                }
-                else if(action === "show"){
-                    module.show(1000, function() {
-                        //Module shown.
-                    });
-                }
-                else if(action === "hide"){
-                    module.hide(1000, function() {
-                        //Module hidden
-                    });
-                }
-                else if(action === "restart"){
-                    module.restart(payload.configs[counter], function() {
-                        //Module reloaded
-                    });
 
-                }
-
-
-
-                /*else if(action === "move"){
-                    module.move(1000, function() {
-
-                    });
-                }*/
-
-            });
-
+            }
+            return null;
         }
 
     }

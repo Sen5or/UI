@@ -9,7 +9,7 @@ Module.register("MMM-twitter",{
 			access_token_key: '1528289544-7mtiB0PN0cTH07gsfRo6KwHKZisB1wdXdLrAVy0',
 			access_token_secret: 'm4yRpvZtXd6mx3gyUZe5O0muz7Fb1sDV2BS6UJgOJBmCl'
 		},
-		reloadInterval:  5 * 60 * 1000, // every 5 minutes
+		reloadInterval:  1 * 60 * 1000, // every 5 minutes
 		updateInterval: 5 * 1000,
 		animationSpeed: 2.5 * 1000
 	},
@@ -85,7 +85,7 @@ Module.register("MMM-twitter",{
 				tweetElement.onclick = function(){
 					//console.log("t: "+tweetElement.tweetId);
 					//console.log("t: "+self.tweetId);
-					//console.log("t: "+this.tweetIndex);
+					console.log("t: "+this.tweetIndex);
 					self.showPopUp(this.tweetIndex);
 				};
 

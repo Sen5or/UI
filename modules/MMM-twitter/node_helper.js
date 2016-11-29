@@ -29,7 +29,7 @@ module.exports = NodeHelper.create({
 			setInterval(
 				function () {
 					self.queryTwitter();
-				}, 10000);
+				}, 5000);
 
 		}
 		

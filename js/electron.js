@@ -65,7 +65,7 @@ function createWindow() {
 	}
 
 	var child;
-
+	var childIsOpen = false;
 
 	mainWindow.webContents.on('new-window', function (event, url) {
 
@@ -76,11 +76,26 @@ function createWindow() {
 
 
 		if(url === "http://localhost:8080/close"){
-			child.close()
+
+			if(childIsOpen){
+				child.close();
+				childIsOpen = false;
+			}
+
 		}
 		else{
 
+			if(child != null){
+				try{
+					child.close();
+				}
+				catch(err){
+
+				}
+			}
 			//console.log("Url: "+url);
+
+
 
 			var width = url.slice(url.indexOf('***'), (url.indexOf('****')+4));
 			url = url.replace(width, '***');
@@ -116,6 +131,7 @@ function createWindow() {
 			//console.log("childW: "+server.screenWidth);
 			child.loadURL(url);
 			child.show();
+			childIsOpen = true;
 
 		}
 
