@@ -1,29 +1,25 @@
+Module.register("voice_control", {
 
 
-Module.register("voice_control",{
+    // Override dom generator.
+    getDom: function () {
 
 
-	// Override dom generator.
-	getDom: function() {
+        var container = document.createElement("voice_container");
+        return container;
+
+    },
 
 
-
-
-		var container = document.createElement("voice_container");
-		return container;
-
-	},
-
-
-	// Override start method.
-	start: function() {
-		Log.log("Starting module: " + this.name);
+    // Override start method.
+    start: function () {
+        Log.log("Starting module: " + this.name);
         //console.log("currentUser from MM: "+MM.getCurrentUser())
-		this.sendSocketNotification("START_VOICE_CONTROL", {config: this.config, currentUser : MM.getCurrentUser() });
+        this.sendSocketNotification("START_VOICE_CONTROL", {config: this.config, currentUser: MM.getCurrentUser()});
 
-	},
+    },
 
-    socketNotificationReceived: function(notification, payload){
+    socketNotificationReceived: function (notification, payload) {
 
         console.log("VOICE Notification recieved: " + notification + " Payload: " + payload);
 
@@ -35,23 +31,19 @@ Module.register("voice_control",{
             console.log(payload);
 
             var modulesToEnumerate = null;
-            if(payload.hasOwnProperty("modName"))
+            if (payload.hasOwnProperty("modName"))
                 modulesToEnumerate = payload.modName;
-            else if(payload.hasOwnProperty("modules"))
+            else if (payload.hasOwnProperty("modules"))
                 modulesToEnumerate = payload.modules;
-            else{
+            else {
 
             }
-
-
-
-
 
 
             if (action === "close" || action === "clothes") {         //Any module can close the global popup
                 this.closePopUp()
             }
-            else if(modulesToEnumerate != null){
+            else if (modulesToEnumerate != null) {
 
                 console.log("enumerating modules ")
                 var counter = 0;
@@ -62,9 +54,9 @@ Module.register("voice_control",{
                     if (action === "open") {
                         module.showPopUp();
                     }
-                    else if(action === "close" || action === "clothes"){
-                     module.closePopUp()
-                     }
+                    else if (action === "close" || action === "clothes") {
+                        module.closePopUp()
+                    }
                     else if (action === "show") {
                         module.show(1000, function () {
                             //Module shown.
@@ -84,7 +76,7 @@ Module.register("voice_control",{
                     counter += 1;
                 });
 
-            }else{
+            } else {
                 console.log("no modules to enumerate")
             }
 
@@ -99,16 +91,16 @@ Module.register("voice_control",{
 
 
 /*
-var timeout;
-document.onmousemove = function(){
+ var timeout;
+ document.onmousemove = function(){
 
-	showIcon();
+ showIcon();
 
-	clearTimeout(timeout);
-	timeout = setTimeout(function(){
-		hideIcon();
-	}, 1000);
-};
-*/
+ clearTimeout(timeout);
+ timeout = setTimeout(function(){
+ hideIcon();
+ }, 1000);
+ };
+ */
 
 

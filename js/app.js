@@ -20,7 +20,6 @@ process.on("uncaughtException", function (err) {
  */
 var App = function () {
 
-    var appUserName = "wtf";
     var modules = [];
     var nodeHelpers = [];
 

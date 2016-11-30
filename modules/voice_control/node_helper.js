@@ -8,7 +8,7 @@ module.exports = NodeHelper.create({
 
     start: function () {
         console.log("Starting module: " + this.name);
-        this.currentUser = ""
+
 
     },
 
@@ -61,13 +61,9 @@ module.exports = NodeHelper.create({
         });
 
 
-
-         setTimeout(function () {
-         console.log("currentUser from main: "+ self.currentUser);
-
-         self.analyzeVoiceCommand(["user:deagan"]);
-         },5000);
-
+        setTimeout(function () {
+            self.analyzeVoiceCommand(["user:deagan"]);
+        }, 5000);
 
 
         this.sendSocketNotification("VOICE_SCRIPT_STARTED", null);
@@ -212,8 +208,8 @@ module.exports = NodeHelper.create({
                             //return null;
                         }
                         else {
-                            console.log("Found user: " + JSON.stringify(result[0].name));
-                            console.log(result[0]);
+                            //console.log("Found user: " + JSON.stringify(result[0].name));
+                            //console.log(result[0]);
 
 
                             var module_list = result[0].modules;
@@ -256,8 +252,8 @@ module.exports = NodeHelper.create({
                     }
 
                     return {
-                        moduleNames : moduleNames,
-                        configs : configs
+                        moduleNames: moduleNames,
+                        configs: configs
                     }
                 }
             }

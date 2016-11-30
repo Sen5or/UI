@@ -10,7 +10,7 @@ Module.register("MMM-twitter",{
 			access_token_secret: 'm4yRpvZtXd6mx3gyUZe5O0muz7Fb1sDV2BS6UJgOJBmCl'
 		},
 		reloadInterval:  10 * 1000,
-		updateInterval: 5 * 1000,
+		//updateInterval: 5 * 1000,
 		animationSpeed: 2.5 * 1000
 	},
 
@@ -48,7 +48,7 @@ Module.register("MMM-twitter",{
 
 		if (notification === "TWITTER_DATA") {
 				this.tweets = payload;
-				this.updateDom(1.5 * 1000);
+				this.updateDom(5 * 1000);
 		}
 
 
