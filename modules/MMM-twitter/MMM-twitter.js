@@ -9,7 +9,7 @@ Module.register("MMM-twitter",{
 			access_token_key: '1528289544-7mtiB0PN0cTH07gsfRo6KwHKZisB1wdXdLrAVy0',
 			access_token_secret: 'm4yRpvZtXd6mx3gyUZe5O0muz7Fb1sDV2BS6UJgOJBmCl'
 		},
-		reloadInterval:  1 * 60 * 1000, // every 5 minutes
+		reloadInterval:  10 * 1000,
 		updateInterval: 5 * 1000,
 		animationSpeed: 2.5 * 1000
 	},
@@ -35,8 +35,8 @@ Module.register("MMM-twitter",{
 	},
 	
 	startStream: function(){
-		console.log("Starting twitter stream with: ");
-		console.log(this.config)
+		//console.log("Starting twitter stream with: ");
+		//console.log(this.config)
 		this.tweets = [];
 		this.sendSocketNotification("START_TWITTER", {config: this.config});
 	},
@@ -97,6 +97,3 @@ Module.register("MMM-twitter",{
 		return wrapper;
 	}
 });
-
-var counter = 0;
-var lastUpdate = new Date();
