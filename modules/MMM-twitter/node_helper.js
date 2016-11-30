@@ -42,7 +42,7 @@ module.exports = NodeHelper.create({
 
 		this.twitterClient.get('search/tweets', this.config.query, function(error, tweets, response) {
 
-			console.log("updating twitter: "+JSON.stringify(response))
+			console.log("updating twitter")
 			self.sendSocketNotification("TWITTER_DATA", tweets.statuses);
 		});
 

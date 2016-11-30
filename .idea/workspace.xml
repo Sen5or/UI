@@ -3,14 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="dd6c07f0-5826-4e15-be35-2349f1b52b31" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/config.js" afterPath="$PROJECT_DIR$/config/config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/app.js" afterPath="$PROJECT_DIR$/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/server.js" afterPath="$PROJECT_DIR$/js/server.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/MMM-twitter/MMM-twitter.js" afterPath="$PROJECT_DIR$/modules/MMM-twitter/MMM-twitter.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/MMM-twitter/node_helper.js" afterPath="$PROJECT_DIR$/modules/MMM-twitter/node_helper.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/voice_control/node_helper.js" afterPath="$PROJECT_DIR$/modules/voice_control/node_helper.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/voice_control/output.wav" afterPath="$PROJECT_DIR$/modules/voice_control/output.wav" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/voice_control/voice_control.js" afterPath="$PROJECT_DIR$/modules/voice_control/voice_control.js" />
     </list>
     <ignored path="UI.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -59,21 +54,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MMM-twitter.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MMM-twitter.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/modules/MMM-twitter/MMM-twitter.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+            <state relative-caret-position="300">
+              <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="node_helper.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="node_helper.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modules/MMM-twitter/node_helper.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="46" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
+            <state relative-caret-position="645">
+              <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -177,8 +172,8 @@
         <option value="$PROJECT_DIR$/config/config.js" />
         <option value="$PROJECT_DIR$/js/server.js" />
         <option value="$PROJECT_DIR$/modules/voice_control/node_helper.js" />
-        <option value="$PROJECT_DIR$/modules/MMM-twitter/MMM-twitter.js" />
         <option value="$PROJECT_DIR$/modules/MMM-twitter/node_helper.js" />
+        <option value="$PROJECT_DIR$/modules/MMM-twitter/MMM-twitter.js" />
       </list>
     </option>
   </component>
@@ -1110,7 +1105,7 @@
       <workItem from="1480461107715" duration="674000" />
       <workItem from="1480462028690" duration="3134000" />
       <workItem from="1480470590361" duration="28000" />
-      <workItem from="1480544354936" duration="4598000" />
+      <workItem from="1480544354936" duration="4754000" />
     </task>
     <task id="LOCAL-00001" summary="fixed and renamed twitter module to MMM-twitter">
       <created>1478933440081</created>
@@ -1175,11 +1170,18 @@
       <option name="project" value="LOCAL" />
       <updated>1480465381365</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Reduced twitter interval to 60 sec">
+      <created>1480549108127</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1480549108127</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="217796000" />
+    <option name="totallyTimeSpent" value="217952000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="56" width="1920" height="988" extended-state="6" />
@@ -1233,7 +1235,8 @@
     <MESSAGE value="Working voice script" />
     <MESSAGE value="dynamic compliments, automatic module swapping based on voice recognition" />
     <MESSAGE value="Working demo version" />
-    <option name="LAST_COMMIT_MESSAGE" value="Working demo version" />
+    <MESSAGE value="Reduced twitter interval to 60 sec" />
+    <option name="LAST_COMMIT_MESSAGE" value="Reduced twitter interval to 60 sec" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1590,18 +1593,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/MMM-twitter/MMM-twitter.js">
+    <entry file="file://$PROJECT_DIR$/modules/MMM-twitter/node_helper.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+        <state relative-caret-position="645">
+          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/MMM-twitter/node_helper.js">
+    <entry file="file://$PROJECT_DIR$/modules/MMM-twitter/MMM-twitter.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="46" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
+        <state relative-caret-position="300">
+          <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
           <folding />
         </state>
       </provider>

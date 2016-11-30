@@ -3,12 +3,19 @@ Module.register("MMM-twitter",{
 
 	defaults: {
 		maxNumTweets: 5,
+
+		api_keys: {
+			consumer_key: 'otHoJRFFX0hId2UiOVrtfHG2b',
+			consumer_secret: 'PdgUOeY99obxV0kuVFlNCso8Fx2tO6vZNzXIhQMZt0LVpQ89Eo',
+			access_token_key: '1528289544-54Cc7S3enRX8HDCGRoyPgeRb3qoCpnUUkuWlTFb',
+			access_token_secret: 'B5GfeT5h1IBdU33SxZxhY31QIJsFLMQ6rJGyP2nSDADuE'
+		},/*
 		api_keys: {
 			consumer_key: 'GCNRascd1LbQMYXr9Se1MpQEB',
 			consumer_secret: 'aWtJSOIhZUh3yD4N68pjwPlqhLUAWnW6mC4ktqSggC9uJai3uh',
 			access_token_key: '1528289544-7mtiB0PN0cTH07gsfRo6KwHKZisB1wdXdLrAVy0',
 			access_token_secret: 'm4yRpvZtXd6mx3gyUZe5O0muz7Fb1sDV2BS6UJgOJBmCl'
-		},
+		},*/
 		reloadInterval:  10 * 1000,
 		//updateInterval: 5 * 1000,
 		animationSpeed: 2.5 * 1000
