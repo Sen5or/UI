@@ -29,7 +29,7 @@ module.exports = NodeHelper.create({
 			setInterval(
 				function () {
 					self.queryTwitter();
-				}, 60000);
+				}, 3 * 60 * 1000);		//3 min
 
 		}
 		
@@ -42,7 +42,7 @@ module.exports = NodeHelper.create({
 
 		this.twitterClient.get('search/tweets', this.config.query, function(error, tweets, response) {
 
-			console.log("updating twitter")
+			//console.log("updating twitter")
 			self.sendSocketNotification("TWITTER_DATA", tweets.statuses);
 		});
 

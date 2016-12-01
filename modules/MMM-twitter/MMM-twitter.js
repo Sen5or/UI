@@ -26,10 +26,7 @@ Module.register("MMM-twitter",{
 	start: function() {
 		Log.info("Starting module: " + this.name);
 
-
-
 		this.config = Object.assign(this.config, defaults);
-
 		this.links = [];
 		this.startStream();
 
@@ -55,7 +52,7 @@ Module.register("MMM-twitter",{
 
 		if (notification === "TWITTER_DATA") {
 				this.tweets = payload;
-				this.updateDom(5 * 1000);
+				this.updateDom(2.5 * 1000);
 		}
 
 

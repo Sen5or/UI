@@ -26,7 +26,7 @@ module.exports = NodeHelper.create({
     startVoiceScript: function (config) {
 
 
-        console.log(config);
+        //console.log(config);
         this.currentUser = config.currentUser;
 
         var self = this;
@@ -39,7 +39,9 @@ module.exports = NodeHelper.create({
             py = spawn('python3', ['./modules/voice_control/Record.py']);
 
         py.stdout.on('data', function (data) {
-            console.log("stdout: " + data.toString());
+            //console.log("stdout: " + data.toString());
+            
+            self.sendRawText(data.toString());
             rawCommandNew = data.toString().toLowerCase();
 
             if (rawCommandNew.localeCompare("") && rawCommandOld.localeCompare(rawCommandNew)) {
@@ -73,32 +75,23 @@ module.exports = NodeHelper.create({
     analyzeVoiceCommand: function (words) {
 
 
-        console.log('wordsArray: ' + words);
+        //console.log('voice wordsArray: ' + words);
 
         var self = this;
 
-
         /** check to see if command should be run as a certain user **/
 
-        var indexOfAs = words.indexOf("as");
-
-        if (words.indexOf("as") > -1) {
-
-            if (words.length > (indexOfAs + 1)) {
-
-                var userName = words[indexOfAs + 1];
-                queryDbForUser(userName)
-
-            }
-
-        }
-        else if (words[0].startsWith("user:")) {
+        if (words[0].startsWith("user:")) {
 
             var userName = words[0].replace("user:", '');
 
-            this.sendSocketNotification("HELLO_USER", userName);
-
-            queryDbForUser(userName)
+            if(!userName.localeCompare(self.userName)){
+                //same name
+            }else{
+                self.userName = userName;
+                this.sendSocketNotification("HELLO_USER", userName);
+                queryDbForUser(self.userName)
+            }
 
         }
 
@@ -107,7 +100,6 @@ module.exports = NodeHelper.create({
         else if (isActionWord(words[0])) {                        //Action
 
             var modName = isModule(words[1]);
-            //TODOD
 
             if (modName != null) {                                //Module name to perform action on
 
@@ -117,7 +109,6 @@ module.exports = NodeHelper.create({
                 };
 
                 this.sendCommandToFrontEnd(jsonCommand);
-
 
             }
             else {
@@ -144,9 +135,6 @@ module.exports = NodeHelper.create({
             else if (word === "close" || word === "clothes") {
                 return true;
             }
-            else if (word === "move") {
-                return true;
-            }
             else if (word.localeCompare("sleep")) {
                 //sleep 1; xset dpms force off
             }
@@ -167,15 +155,15 @@ module.exports = NodeHelper.create({
             return null;
         }
 
-        function queryDbForUser(userName) {
+        function queryDbForUser() {
 
 
             if (mongoDB === null) {
-                connectToDB(getUserInfo);
+                connectToDB();
 
             }
             else {
-                getUserInfo()
+                getUserInfo(self.userName)
             }
 
 
@@ -190,14 +178,14 @@ module.exports = NodeHelper.create({
                         console.log("Connected to DB ....");
                         mongoDB = db;
 
-                        callback();
+                        getUserInfo(self.userName);
                     }
                 });
             }
 
 
-            function getUserInfo() {
-                console.log("checking DB for: " + userName);
+            function getUserInfo(userName) {
+                console.log("voice checking DB for: " + userName);
                 mongoDB.collection('users').find({"name": userName}).toArray(function (err, result) {
                     if (err)
                         throw err;
@@ -205,18 +193,12 @@ module.exports = NodeHelper.create({
 
                         if (result.length == 0) {
                             console.log("User " + userName + " does not exist");
-                            //return null;
                         }
                         else {
-                            //console.log("Found user: " + JSON.stringify(result[0].name));
-                            //console.log(result[0]);
-
 
                             var module_list = result[0].modules;
-
                             var modules_obj = getModuleNames(module_list)
 
-                            //return module_list;
                             var jsonCommand = {
                                 "action": "restart",
                                 "modules": modules_obj.moduleNames,
@@ -322,6 +304,10 @@ module.exports = NodeHelper.create({
         console.log("sending command: " + JSON.stringify(jsonCommand));
         this.sendSocketNotification("VOICE_COMMAND", jsonCommand);
 
+    },
+    
+    sendRawText: function (text) {
+        this.sendSocketNotification("RAW_TEXT", text);
     }
 
 

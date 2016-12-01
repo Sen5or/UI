@@ -43,6 +43,22 @@ Module.register("gesture_control",{
             player = new jsmpeg(client, {canvas:canvas});
 
         }
+		else if (notification === "HELLO_USER") {
+			this.sendNotification("HELLO_USER", payload);
+		}
+		else if (notification === "FACE_COMMAND") {
+
+			var modulesToEnumerate = payload.modules;
+			var counter = 0;
+			MM.getModules().withClass(modulesToEnumerate).enumerate(function (module) {
+
+				var newConfig = Object.assign(module.config, payload.configs[counter])
+				module.restart(newConfig, function () {
+					//Module reloaded
+				});
+				counter+=1;
+			});
+		}
     }
 
 });
@@ -50,71 +66,3 @@ Module.register("gesture_control",{
 
 var client = null;
 var player;
-/*
-var timeout;
-document.onmousemove = function(){
-
-	showIcon();
-
-	clearTimeout(timeout);
-	timeout = setTimeout(function(){
-		hideIcon();
-	}, 1000);
-};
-*/
-
-
-
-var showIcon = function() {
-
-	var image = document.getElementById("gesture_image");
-	image.style.opacity = "0.9";
-	image.style.filter  = 'alpha(opacity=90)'; // IE fallback
-
-};
-
-var hideIcon = function() {
-
-	var image = document.getElementById("gesture_image");
-	//image.style.opacity = "0.0";
-	//image.style.filter  = 'alpha(opacity=0)'; // IE fallback
-
-	fadeOut(image);
-
-};
-
-
-function fadeOut(element) {
-	var op = 1;  // initial opacity
-	var timer = setInterval(function () {
-		if (op <= 0.1){
-			clearInterval(timer);
-		}
-		if(element.style != null){
-			element.style.opacity = op;
-			element.style.filter = 'alpha(opacity=' + op * 100 + ")";
-			op -= op * 0.1;
-		}
-
-	}, 20);
-}
-
-
-function fadeIn(element) {
-	var op = 0.1;  // initial opacity
-	if (element.style != null) {
-		element.style.display = 'block';
-		var timer = setInterval(function () {
-			if (op >= .9){
-				clearInterval(timer);
-			}
-			element.style.opacity = op;
-			element.style.filter = 'alpha(opacity=' + op * 100 + ")";
-			op += op * 0.1;
-		}, 10);
-
-	}
-
-}
-
-

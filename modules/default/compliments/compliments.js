@@ -148,7 +148,7 @@ Module.register("compliments",{
 
 
 		if (notification === "HELLO_USER") {
-			console.log("hello user: "+payload)
+			//console.log("hello user: "+payload)
 			this.currentUser = payload;
 			this.updateDom(self.config.fadeSpeed);
 		}

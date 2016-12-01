@@ -1,7 +1,10 @@
 
 var NodeHelper = require("node_helper");
 var WebSocket = require('ws');
+var MongoClient = require('mongodb').MongoClient;
+var mongoDB = null;
 
+var userName = "";
 var child;
 var exec;
 var socketServer;
@@ -48,6 +51,7 @@ module.exports = NodeHelper.create({
 
 		var self = this;
 
+		/*
 		var STREAM_SECRET = "yourpassword";
 		var STREAM_PORT = 8082,
 			WEBSOCKET_PORT = 8084,
@@ -115,11 +119,55 @@ module.exports = NodeHelper.create({
 
 		console.log('Listening for MPEG Stream on http://127.0.0.1:'+STREAM_PORT+'/<secret>/<width>/<height>');
 		console.log('Awaiting WebSocket connections on ws://127.0.0.1:'+WEBSOCKET_PORT+'/');
+*/
 
+
+
+		//TODO
+
+
+		var util = require('util'),
+			spawn = require('child_process').spawn,
+			py = spawn('python', ['./modules/gesture_control/face_recognize.py']);
+
+		py.stdout.on('data', function (data) {
+
+			//console.log("FR stdout: " + data.toString());
+
+			var rawInput = data.toString().replace(/(\r\n|\n|\r)/gm, "");
+			rawInput = rawInput.toLowerCase();
+
+			if(!rawInput.localeCompare(self.userName)){
+				//console.log("same use found. not changing")
+			}else{
+
+				self.sendSocketNotification("HELLO_USER", data.toString());
+				self.userName = data.toString().toLowerCase();
+				self.userName = self.userName.replace(/(\r\n|\n|\r)/gm, "");
+
+				queryDbForUser()
+			}
+
+
+
+		});
+
+		py.stderr.on('data', function (data) {
+			//console.log('stderr: ' + data.toString());
+		});
+
+		py.on('exit', function (code) {
+			console.log('child process exited with code ' + code.toString());
+		});
+
+
+
+
+
+
+		/*
 
 		exec = require('child_process').exec, child;
-
-
 		var shellCommand = 'ffmpeg -s 320x240 -i /dev/video0 -vf "hflip" -f mpeg1video -b 800k -r 30 http://localhost:8082/yourpassword/320/240/';
 
 		child = function () {
@@ -133,13 +181,106 @@ module.exports = NodeHelper.create({
 				});
 		};
 
-		child();
+		child();*/
 
-        self.sendSocketNotification("WEB_SOCKET_CONNECTED", null);
-
-
+        //self.sendSocketNotification("WEB_SOCKET_CONNECTED", null);
 
 
+		function queryDbForUser() {
+
+
+			if (mongoDB === null) {
+				connectToDB(getUserInfo);
+
+			}
+			else {
+				getUserInfo()
+			}
+
+
+			function connectToDB(callback) {
+				MongoClient.connect('mongodb://localhost:27017/sen5or', function (err, db) {
+					if (err) {
+						console.log("Error connecting to mongodb");
+						throw err;
+					}
+
+					else {
+						console.log("Connected to DB ....");
+						mongoDB = db;
+
+						callback();
+					}
+				});
+			}
+
+
+			function getUserInfo() {
+				console.log("checking DB for: " + self.userName);
+				mongoDB.collection('users').find({"name": self.userName}).toArray(function (err, result) {
+					if (err)
+						throw err;
+					else {
+
+						if (result.length == 0) {
+							console.log("User " + self.userName + " does not exist");
+							//return null;
+						}
+						else {
+
+							var module_list = result[0].modules;
+
+							var modules_obj = getModuleNames(module_list)
+
+							//return module_list;
+							var jsonCommand = {
+								"action": "restart",
+								"modules": modules_obj.moduleNames,
+								"configs": modules_obj.configs
+							};
+
+							self.sendCommandToFrontEnd(jsonCommand);
+
+						}
+					}
+				});
+			}
+
+
+			function getModuleNames(module_list) {
+
+				if (module_list.length > 0) {                     //user modules were found, lets try to pass new configs, and restart modules
+
+					var moduleNames = [];
+					var configs = [];
+					//get module class names
+					for (var index in module_list) {
+						//console.log("module: " + JSON.stringify(module_list[index]))
+
+						// add modules that have configs attached to them
+						if (module_list[index].config != undefined) {
+
+							configs.push(module_list[index].config);
+							moduleNames.push(module_list[index].module)
+						}
+					}
+
+					return {
+						moduleNames: moduleNames,
+						configs: configs
+					}
+				}
+			}
+
+		}
+
+
+
+	},
+	sendCommandToFrontEnd: function (jsonCommand) {
+
+		console.log("sending command: " + JSON.stringify(jsonCommand));
+		this.sendSocketNotification("FACE_COMMAND", jsonCommand);
 
 	}
 

@@ -109,7 +109,7 @@ var connectToDB = function (config) {
 					}
 					else {
 
-						insertToDatabase(getDefaultUser(config), null);
+						//insertToDatabase(getDefaultUser(config), null);
 						//insertToDatabase(newUser(config));
 
 						console.log("Found users: " +result.length);

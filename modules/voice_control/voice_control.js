@@ -4,17 +4,60 @@ Module.register("voice_control", {
     // Override dom generator.
     getDom: function () {
 
-
         var container = document.createElement("voice_container");
+
+        for(var t in this.rawText){
+
+
+            if(t > 2){
+                break;
+            }
+
+            var textEntry = document.createElement("div");
+            textEntry.className = "bright xsmall light";
+            textEntry.innerHTML = this.rawText[t];
+
+            /*
+            var author = document.createElement("div");
+            author.className = "xsmall light";
+            author.innerHTML = "@"+this.tweets[t].user.screen_name;
+            //author.innerHTML += " | " + this.tweets[t].date.prototype.toLocaleString();
+
+            var spacer = document.createElement("div");
+            spacer.className = "bright xsmall light";
+            //spacer.innerHTML = "<br>";
+
+
+            var twitterId = this.tweets[t].id_str;
+            self.links[t] = "https://twitter.com/statuses/"+twitterId;
+
+            tweetElement.onclick = function(){
+                //console.log("t: "+tweetElement.tweetId);
+                //console.log("t: "+self.tweetId);
+                console.log("t: "+this.tweetIndex);
+                self.showPopUp(this.tweetIndex);
+            };
+*/
+            container.appendChild(textEntry);
+            //container.appendChild(author);
+            //container.appendChild(spacer);
+
+
+
+        }
+
+
         return container;
 
     },
 
 
+
     // Override start method.
     start: function () {
         Log.log("Starting module: " + this.name);
-        //console.log("currentUser from MM: "+MM.getCurrentUser())
+
+        this.rawText = [];
         this.sendSocketNotification("START_VOICE_CONTROL", {config: this.config, currentUser: MM.getCurrentUser()});
 
     },
@@ -24,11 +67,28 @@ Module.register("voice_control", {
         console.log("VOICE Notification recieved: " + notification + " Payload: " + payload);
 
 
-        if (notification === "VOICE_COMMAND") {
+
+        if (notification === "RAW_TEXT") {
+
+            //Add raw text to datastructure...at the front
+            this.rawText.unshift(payload);
+            this.updateDom(1000);
+            var self = this;
+
+
+            //hide old voice commands after a few seconds
+            clearInterval(this.timer);
+            this.timer = setTimeout(function () {
+                self.rawText = [];
+                self.updateDom(1000);
+            }, 5000);
+
+        }
+        else if (notification === "VOICE_COMMAND") {
 
             var action = payload.action;
 
-            console.log(payload);
+            //console.log(payload);
 
             var modulesToEnumerate = null;
             if (payload.hasOwnProperty("modName"))
@@ -84,6 +144,19 @@ Module.register("voice_control", {
         else if (notification === "HELLO_USER") {
             this.sendNotification("HELLO_USER", payload);
         }
+
+    },
+    
+    hideContainer: function () {
+
+        var x = document.getElementsByTagName("voice_container");
+
+        //console.log("x")
+        //console.log(x)
+
+        this.hide();
+
+
 
     }
 
