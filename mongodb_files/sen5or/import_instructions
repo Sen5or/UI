@@ -1,0 +1,9 @@
+
+
+export:
+
+mongodump -d sen5or -o <directory_backup>
+
+
+import:
+mongorestore -d sen5or sen5or_backup
