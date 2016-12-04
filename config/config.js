@@ -14,7 +14,7 @@ var config = {
 			module: 'currentweather',
 			position: 'top_right',
 			config: {
-				location: config.location,
+				location: "la jolla",
 				locationID: '5342353',  //ID from http://www.openweathermap.org  //5342353 - del mar
 				appid: 'ff5b188249eab39338f5d1eb9e28922f'
 			}
@@ -50,6 +50,10 @@ var config = {
 		},
 		{
 			module: 'voice_control',
+			position: 'bottom_right'
+		},
+		{
+			module: 'bluetooth_control',
 			position: 'bottom_right'
 		}
 	]

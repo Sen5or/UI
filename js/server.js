@@ -142,7 +142,7 @@ function getDefaultUser(config){
 		language: 'en',
 		timeFormat: 12,
 		units: 'imperial',
-		location: "la jolla",
+		location: "San Diego",
 		modules 	: [
 			{
 				module: 'clock',
@@ -152,7 +152,7 @@ function getDefaultUser(config){
 				module: 'currentweather',
 				position: 'top_right',
 				config: {
-					location: "la jolla",
+					location: "San Diego",
 					locationID: '5342353',  //ID from http://www.openweathermap.org  //5342353 - del mar
 					appid: 'ff5b188249eab39338f5d1eb9e28922f'
 				}
@@ -179,7 +179,7 @@ function getDefaultUser(config){
 				module: 'MMM-twitter',
 				position: 'top_left',
 				config: {
-					query: {q: "nhl OR 'drones'", count: 5},
+					query: {q: "UCSD OR 'berkeley'", count: 5},
 				}
 			},
 			{
@@ -188,6 +188,10 @@ function getDefaultUser(config){
 			},
 			{
 				module: 'voice_control',
+				position: 'bottom_right'
+			},
+			{
+				module: 'bluetooth_control',
 				position: 'bottom_right'
 			}
 		]
@@ -202,12 +206,12 @@ function getDefaultUser(config){
 function newUser(config){
 
 	var user = {
-		"name"		: "deagan",
-		"location"  : "hong kong",
-		"language"  : "en",
-		"timeFormat": 12,
-		"units" 	: "imperial",
-		"modules" 	: [
+		name		: "isaac",
+		language: 'en',
+		timeFormat: 12,
+		units: 'imperial',
+		location: "del mar",
+		modules 	: [
 			{
 				module: 'clock',
 				position: 'top_left'
@@ -216,12 +220,25 @@ function newUser(config){
 				module: 'currentweather',
 				position: 'top_right',
 				config: {
-					location: "hong kong",
-					locationID: '',
+					location: "del mar",
+					locationID: '5342353',  //ID from http://www.openweathermap.org  //5342353 - del mar
 					appid: 'ff5b188249eab39338f5d1eb9e28922f'
 				}
 			},
-
+			{
+				module: 'newsfeed',
+				position: 'bottom_center',
+				config: {
+					feeds: [
+						{
+							title: "BBC",
+							url: "http://feeds.bbci.co.uk/news/video_and_audio/news_front_page/rss.xml?edition=uk",
+						}
+					],
+					showSourceTitle: true,
+					showPublishDate: true
+				}
+			},
 			{
 				module: 'compliments',
 				position: 'lower_third'
@@ -230,7 +247,7 @@ function newUser(config){
 				module: 'MMM-twitter',
 				position: 'top_left',
 				config: {
-					query: {q: "cadillac OR trending", count: 5},
+					query: {q: "'del mar' OR 'fashion'", count: 5},
 				}
 			},
 			{
@@ -256,11 +273,11 @@ module.exports = {
 
 /**
  db.users.insert({
-		name		: "default",
+		name		: "isaac",
 		language: 'en',
 		timeFormat: 12,
 		units: 'imperial',
-		location: "la jolla",
+		location: "del mar",
 		modules 	: [
 			{
 				module: 'clock',
@@ -270,7 +287,7 @@ module.exports = {
 				module: 'currentweather',
 				position: 'top_right',
 				config: {
-					location: "la jolla",
+					location: "del mar",
 					locationID: '5342353',  //ID from http://www.openweathermap.org  //5342353 - del mar
 					appid: 'ff5b188249eab39338f5d1eb9e28922f'
 				}
@@ -281,9 +298,9 @@ module.exports = {
 				config: {
 					feeds: [
 						{
-							title: "New York Times",
-							url: "http://www.nytimes.com/services/xml/rss/nyt/HomePage.xml"
-						}
+                    		title: "BBC",
+                    		url: "http://feeds.bbci.co.uk/news/video_and_audio/news_front_page/rss.xml?edition=uk",
+                		}
 					],
 					showSourceTitle: true,
 					showPublishDate: true

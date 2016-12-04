@@ -113,7 +113,7 @@ Module.register("compliments",{
 	getDom: function() {
 		var complimentText = this.randomCompliment();
 		var compliment;
-		console.log("compliment userName: " + this.currentUser);
+		//console.log("compliment userName: " + this.currentUser);
 		var userName = this.currentUser;
 
 		//Only show compliments if a name is available
@@ -126,7 +126,7 @@ Module.register("compliments",{
 			complimentText = complimentText + ", "+ userName
 		}
 
-		console.log("compliment to show: " + JSON.stringify(complimentText));
+		//console.log("compliment to show: " + JSON.stringify(complimentText));
 
 		compliment = document.createTextNode(complimentText);
 

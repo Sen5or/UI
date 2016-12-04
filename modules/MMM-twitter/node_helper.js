@@ -11,7 +11,7 @@ module.exports = NodeHelper.create({
 	socketNotificationReceived: function(notification, payload) {
 
 		var self = this;
-		console.log("TWITTER Notification: " + notification + " Payload: " + payload);
+		//console.log("TWITTER Notification: " + notification + " Payload: " + payload);
 		
 		if(notification === "START_TWITTER"){
 

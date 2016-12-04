@@ -43,6 +43,7 @@
     "feedme": "latest",
     "iconv-lite": "latest",
     "moment": "latest",
+    "node-bluetooth": "^1.1.0",
     "request": "^2.74.0",
     "rrule": "latest",
     "snyk": "^1.14.1",

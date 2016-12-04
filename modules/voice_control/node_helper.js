@@ -62,11 +62,11 @@ module.exports = NodeHelper.create({
             console.log('child process exited with code ' + code.toString());
         });
 
-
+/*
         setTimeout(function () {
             self.analyzeVoiceCommand(["user:deagan"]);
         }, 5000);
-
+*/
 
         this.sendSocketNotification("VOICE_SCRIPT_STARTED", null);
 

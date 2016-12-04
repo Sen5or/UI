@@ -2,199 +2,45 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dd6c07f0-5826-4e15-be35-2349f1b52b31" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/10.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/11.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/12.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/13.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/14.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/15.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/16.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/17.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/18.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/19.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/20.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/21.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/22.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/23.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/24.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/25.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/26.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/27.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/28.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/29.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/30.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/6.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/7.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/8.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/10.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/11.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/12.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/13.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/14.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/15.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/16.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/17.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/18.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/19.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/20.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/21.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/22.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/23.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/24.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/25.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/26.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/27.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/28.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/29.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/30.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/6.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/7.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/8.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/10.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/11.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/12.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/13.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/14.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/15.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/16.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/17.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/18.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/19.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/20.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/21.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/22.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/23.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/24.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/25.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/26.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/27.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/28.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/29.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/30.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/6.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/7.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/8.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/10.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/11.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/12.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/13.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/14.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/15.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/16.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/17.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/18.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/19.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/20.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/21.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/22.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/23.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/24.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/25.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/26.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/27.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/28.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/29.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/30.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/6.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/7.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/8.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/10.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/11.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/12.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/13.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/14.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/15.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/16.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/17.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/18.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/19.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/20.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/21.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/22.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/23.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/24.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/25.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/26.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/27.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/28.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/29.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/30.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/6.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/7.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/8.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/woman/10.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/woman/11.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/woman/12.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/woman/13.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/woman/14.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/woman/15.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/woman/16.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/woman/17.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/woman/18.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/woman/19.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/woman/2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/woman/20.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/woman/21.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/woman/22.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/woman/23.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/woman/24.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/woman/25.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/woman/26.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/woman/27.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/woman/28.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/woman/29.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/woman/30.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/woman/4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/woman/5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/woman/6.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/woman/7.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/woman/8.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/woman/9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/datasets.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/face_recognize.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/gesture_control/haarcascade_frontalface_default.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/config/config_shit.js" afterPath="$PROJECT_DIR$/config/old_config2.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/bluetooth_control/BTsignal.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/bluetooth_control/bluetooth_control.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/bluetooth_control/gestures.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/bluetooth_control/node_helper.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/node_modules/node_helper/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/node_modules/oauth/.npmignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/node_modules/oauth/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/node_modules/oauth/Makefile" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/node_modules/oauth/Readme.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/node_modules/oauth/examples/express-gdata/server.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/node_modules/oauth/examples/express-gdata/views/google_calendars.ejs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/node_modules/oauth/examples/express-gdata/views/google_contacts.ejs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/node_modules/oauth/examples/express-gdata/views/layout.ejs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/node_modules/oauth/examples/term.ie.oauth-HMAC-SHA1.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/node_modules/oauth/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/node_modules/oauth/lib/_utils.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/node_modules/oauth/lib/oauth.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/node_modules/oauth/lib/oauth2.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/node_modules/oauth/lib/sha1.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/node_modules/oauth/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/node_modules/oauth/tests/oauth.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/node_modules/oauth/tests/oauth2.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/node_modules/oauth/tests/sha1.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/node_modules/user-stream/.npmignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/node_modules/user-stream/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/node_modules/user-stream/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/node_modules/user-stream/lib/user-stream.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/node_modules/user-stream/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/node_modules/user-stream/test/stream.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/custom.css" afterPath="$PROJECT_DIR$/css/custom.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/config.js" afterPath="$PROJECT_DIR$/config/config.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/module.js" afterPath="$PROJECT_DIR$/js/module.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/server.js" afterPath="$PROJECT_DIR$/js/server.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/MMM-twitter/MMM-twitter.js" afterPath="$PROJECT_DIR$/modules/MMM-twitter/MMM-twitter.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/MMM-twitter/node_helper.js" afterPath="$PROJECT_DIR$/modules/MMM-twitter/node_helper.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/default/compliments/compliments.js" afterPath="$PROJECT_DIR$/modules/default/compliments/compliments.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/gesture_control.js" afterPath="$PROJECT_DIR$/modules/gesture_control/gesture_control.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/node_helper.js" afterPath="$PROJECT_DIR$/modules/gesture_control/node_helper.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/voice_control/node_helper.js" afterPath="$PROJECT_DIR$/modules/voice_control/node_helper.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/voice_control/output.wav" afterPath="$PROJECT_DIR$/modules/voice_control/output.wav" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/voice_control/voice_control.js" afterPath="$PROJECT_DIR$/modules/voice_control/voice_control.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
     </list>
     <ignored path="UI.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -223,21 +69,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="voice_control.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/voice_control/voice_control.js">
+      <file leaf-file-name="bluetooth_control.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/modules/bluetooth_control/bluetooth_control.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="292">
-              <caret line="83" column="16" selection-start-line="83" selection-start-column="16" selection-end-line="83" selection-end-column="16" />
+            <state relative-caret-position="285">
+              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/main.js">
+      <file leaf-file-name="module.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/module.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="208" column="22" selection-start-line="208" selection-start-column="12" selection-end-line="208" selection-end-column="22" />
+            <state relative-caret-position="1125">
+              <caret line="75" column="38" selection-start-line="75" selection-start-column="38" selection-end-line="75" selection-end-column="38" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -245,34 +91,32 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MMM-twitter.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/MMM-twitter/MMM-twitter.js">
+      <file leaf-file-name="node_helper.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modules/bluetooth_control/node_helper.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="292">
-              <caret line="54" column="34" selection-start-line="54" selection-start-column="34" selection-end-line="54" selection-end-column="34" />
+            <state relative-caret-position="180">
+              <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gesture_control.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/gesture_control/gesture_control.js">
+      <file leaf-file-name="BTsignal.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modules/bluetooth_control/BTsignal.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="307">
-              <caret line="59" column="15" selection-start-line="59" selection-start-column="15" selection-end-line="59" selection-end-column="15" />
+            <state relative-caret-position="60">
+              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="old_config2.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/config/old_config2.js">
+      <file leaf-file-name="node_helper.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modules/voice_control/node_helper.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+            <state relative-caret-position="2070">
+              <caret line="138" column="46" selection-start-line="138" selection-start-column="16" selection-end-line="138" selection-end-column="46" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -305,26 +149,29 @@
         <option value="$PROJECT_DIR$/modules/voice_control/test.py" />
         <option value="$PROJECT_DIR$/config/old_config.js" />
         <option value="$PROJECT_DIR$/js/loader.js" />
-        <option value="$PROJECT_DIR$/modules/default/newsfeed/newsfeed.js" />
         <option value="$PROJECT_DIR$/js/electron.js" />
         <option value="$PROJECT_DIR$/js/defaults.js" />
         <option value="$PROJECT_DIR$/modules/default/currentweather/currentweather.js" />
         <option value="$PROJECT_DIR$/js/main.js" />
         <option value="$PROJECT_DIR$/config/config_shit.js" />
-        <option value="$PROJECT_DIR$/js/module.js" />
         <option value="$PROJECT_DIR$/modules/voice_control/Record.py" />
         <option value="$PROJECT_DIR$/js/app.js" />
-        <option value="$PROJECT_DIR$/config/config.js" />
         <option value="$PROJECT_DIR$/modules/gesture_control/face_recognize.py" />
-        <option value="$PROJECT_DIR$/modules/default/compliments/compliments.js" />
-        <option value="$PROJECT_DIR$/modules/MMM-twitter/node_helper.js" />
-        <option value="$PROJECT_DIR$/js/server.js" />
         <option value="$PROJECT_DIR$/modules/MMM-twitter/MMM-twitter.js" />
         <option value="$PROJECT_DIR$/css/custom.css" />
-        <option value="$PROJECT_DIR$/modules/voice_control/voice_control.js" />
-        <option value="$PROJECT_DIR$/modules/voice_control/node_helper.js" />
         <option value="$PROJECT_DIR$/modules/gesture_control/node_helper.js" />
         <option value="$PROJECT_DIR$/modules/gesture_control/gesture_control.js" />
+        <option value="$PROJECT_DIR$/modules/MMM-twitter/node_helper.js" />
+        <option value="$PROJECT_DIR$/modules/voice_control/voice_control.js" />
+        <option value="$PROJECT_DIR$/modules/voice_control/node_helper.js" />
+        <option value="$PROJECT_DIR$/modules/default/newsfeed/newsfeed.js" />
+        <option value="$PROJECT_DIR$/js/server.js" />
+        <option value="$PROJECT_DIR$/config/config.js" />
+        <option value="$PROJECT_DIR$/js/module.js" />
+        <option value="$PROJECT_DIR$/modules/bluetooth_control/bluetooth_control.js" />
+        <option value="$PROJECT_DIR$/modules/default/compliments/compliments.js" />
+        <option value="$PROJECT_DIR$/modules/bluetooth_control/BTsignal.sh" />
+        <option value="$PROJECT_DIR$/modules/bluetooth_control/node_helper.js" />
       </list>
     </option>
   </component>
@@ -342,15 +189,13 @@
     </option>
   </component>
   <component name="NodeModulesDirectoryManager">
-    <handled-path value="$PROJECT_DIR$/modules/gesture_control/node_modules" />
     <handled-path value="$PROJECT_DIR$/modules/node_modules" />
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-4" />
     <option name="y" value="56" />
-    <option name="width" value="1928" />
-    <option name="height" value="988" />
+    <option name="width" value="1914" />
+    <option name="height" value="984" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -377,6 +222,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane />
@@ -438,50 +284,13 @@
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="default">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="UI">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="modules">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="default">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="weatherforecast">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="UI">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="config">
+            <PATH_ELEMENT USER_OBJECT="bluetooth_control">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -495,18 +304,19 @@
     <property name="js-jscs-nodeInterpreter" value="/usr/bin/node" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="DDL Data Source" />
+    <property name="jsx.switch.disabled" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/modules/gesture_control" />
-      <recent name="$PROJECT_DIR$/modules/voice_control" />
-      <recent name="$PROJECT_DIR$/modules/MMM-twitter" />
-      <recent name="$PROJECT_DIR$/config" />
-      <recent name="$PROJECT_DIR$/modules" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/modules/voice_control" />
       <recent name="$PROJECT_DIR$/python" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/modules/bluetooth_control" />
+      <recent name="$PROJECT_DIR$/modules" />
+      <recent name="$PROJECT_DIR$/modules/gesture_control" />
+      <recent name="$PROJECT_DIR$/modules/voice_control" />
+      <recent name="$PROJECT_DIR$/modules/MMM-twitter" />
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.stream-example.html">
@@ -1200,7 +1010,13 @@
       <workItem from="1480462028690" duration="3134000" />
       <workItem from="1480470590361" duration="28000" />
       <workItem from="1480544354936" duration="11198000" />
-      <workItem from="1480606803701" duration="5889000" />
+      <workItem from="1480606803701" duration="10835000" />
+      <workItem from="1480619032399" duration="3000" />
+      <workItem from="1480619058041" duration="8097000" />
+      <workItem from="1480634639600" duration="112000" />
+      <workItem from="1480634830681" duration="5067000" />
+      <workItem from="1480641191403" duration="1674000" />
+      <workItem from="1480814431583" duration="959000" />
     </task>
     <task id="LOCAL-00001" summary="fixed and renamed twitter module to MMM-twitter">
       <created>1478933440081</created>
@@ -1279,29 +1095,36 @@
       <option name="project" value="LOCAL" />
       <updated>1480549247416</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Face recognition and voice recognition both working&#10;">
+      <created>1480612728428</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1480612728428</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="230285000" />
+    <option name="totallyTimeSpent" value="251143000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="56" width="1928" height="988" extended-state="6" />
+    <frame x="0" y="56" width="1914" height="984" extended-state="4" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31271878" sideWeight="0.50213444" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293979" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.09711846" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36172694" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.09699526" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31271878" sideWeight="0.49786553" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24653149" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24569893" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329582" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1315,6 +1138,9 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32716763" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.sh" />
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -1339,7 +1165,8 @@
     <MESSAGE value="Working demo version" />
     <MESSAGE value="Reduced twitter interval to 60 sec" />
     <MESSAGE value="Reduced twitter interval to 60 sec, changed tokens" />
-    <option name="LAST_COMMIT_MESSAGE" value="Reduced twitter interval to 60 sec, changed tokens" />
+    <MESSAGE value="Face recognition and voice recognition both working&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Face recognition and voice recognition both working&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1352,34 +1179,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/modules/default/newsfeed/node_helper.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/default/defaultmodules.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/default/helloworld/helloworld.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-501">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/gesture_control/node_modules/ws/lib/Sender.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -1414,13 +1213,6 @@
     <entry file="file://$PROJECT_DIR$/modules/gesture_control/gestures.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/default/newsfeed/fetcher.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1305">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
@@ -1538,13 +1330,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-322">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/modules/voice_control/Identification/IdentificationServiceHttpClientHelper.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -1563,7 +1348,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1571,25 +1355,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
           <caret line="54" column="35" selection-start-line="54" selection-start-column="35" selection-end-line="54" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/default/compliments/compliments.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="667">
-          <caret line="150" column="14" selection-start-line="150" selection-start-column="14" selection-end-line="150" selection-end-column="14" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/MMM-twitter/node_helper.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="44" column="14" selection-start-line="44" selection-start-column="14" selection-end-line="44" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1597,31 +1362,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-585">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#14#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1635">
-          <caret line="115" column="38" selection-start-line="115" selection-start-column="38" selection-end-line="115" selection-end-column="38" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-            <element signature="e#3122#3174#0" expanded="false" />
-            <element signature="e#3179#3426#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/default/newsfeed/newsfeed.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1042">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1629,37 +1369,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1598">
           <caret line="156" column="6" selection-start-line="88" selection-start-column="4" selection-end-line="156" selection-end-column="6" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/MMM-twitter/MMM-twitter.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="54" column="34" selection-start-line="54" selection-start-column="34" selection-end-line="54" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="208" column="22" selection-start-line="208" selection-start-column="12" selection-end-line="208" selection-end-column="22" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/module.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5310">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1667,39 +1376,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="403">
           <caret line="58" column="1" selection-start-line="58" selection-start-column="1" selection-end-line="58" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/voice_control/voice_control.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="83" column="16" selection-start-line="83" selection-start-column="16" selection-end-line="83" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/voice_control/node_helper.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="37">
-          <caret line="77" column="10" selection-start-line="77" selection-start-column="10" selection-end-line="77" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/gesture_control/node_helper.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-45">
-          <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/gesture_control/gesture_control.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="59" column="15" selection-start-line="59" selection-start-column="15" selection-end-line="59" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1707,9 +1383,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1208">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1717,9 +1390,132 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/gesture_control/gesture_control.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="885">
+          <caret line="59" column="15" selection-start-line="59" selection-start-column="15" selection-end-line="59" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/MMM-twitter/node_helper.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="13" column="10" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/MMM-twitter/MMM-twitter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1103">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="208" column="22" selection-start-line="208" selection-start-column="12" selection-end-line="208" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/default/newsfeed/newsfeed.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="30" column="26" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/default/newsfeed/fetcher.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="115" column="38" selection-start-line="115" selection-start-column="38" selection-end-line="115" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="36" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/voice_control/voice_control.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/default/compliments/compliments.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="128" column="10" selection-start-line="128" selection-start-column="10" selection-end-line="128" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1125">
+          <caret line="75" column="38" selection-start-line="75" selection-start-column="38" selection-end-line="75" selection-end-column="38" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/node_modules/oauth/lib/sha1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/gesture_control/node_helper.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="454">
+          <caret line="161" column="0" selection-start-line="128" selection-start-column="8" selection-end-line="161" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/voice_control/node_helper.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2070">
+          <caret line="138" column="46" selection-start-line="138" selection-start-column="16" selection-end-line="138" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/bluetooth_control/node_helper.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/bluetooth_control/BTsignal.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/bluetooth_control/bluetooth_control.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

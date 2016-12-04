@@ -75,8 +75,6 @@ var Module = Class.extend({
 		var name = document.createTextNode(this.name);
 		nameWrapper.appendChild(name);
 
-		console.log("NameWrapper name: "+name);
-
 		var identifierWrapper = document.createElement("div");
 		var identifier = document.createTextNode(this.identifier);
 		identifierWrapper.appendChild(identifier);
