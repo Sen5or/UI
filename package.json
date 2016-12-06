@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/MichMich/MagicMirror#readme",
   "devDependencies": {
+    "electron": "^1.4.10",
     "grunt": "latest",
     "grunt-eslint": "latest",
     "grunt-jsonlint": "latest",
@@ -43,7 +44,6 @@
     "feedme": "latest",
     "iconv-lite": "latest",
     "moment": "latest",
-    "node-bluetooth": "^1.1.0",
     "request": "^2.74.0",
     "rrule": "latest",
     "snyk": "^1.14.1",

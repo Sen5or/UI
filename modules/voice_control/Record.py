@@ -17,6 +17,7 @@ RECORD_SECONDS = 3
 WAVE_OUTPUT_FILENAME = "output.wav"
 AUDIO_FILE = path.join(path.dirname(path.realpath(__file__)), WAVE_OUTPUT_FILENAME)
 
+
 def content():
     r = sr.Recognizer()
     with sr.AudioFile(AUDIO_FILE) as source:
@@ -30,7 +31,10 @@ def content():
 
     sys.stdout.flush()
 
+
 def speaker():
+    "ok"
+'''
     #path = "output.wav"
 
     profile_ids = ["2ec9f081-5188-438a-b7f7-d374f9bbf88f", "99ef319e-a9a5-4a46-b679-cf2e7e4ca5f7",
@@ -60,6 +64,7 @@ def speaker():
         sys.stderr.write('Error Return')
 
     sys.stdout.flush()
+'''
 
 threads = []
 frames = []

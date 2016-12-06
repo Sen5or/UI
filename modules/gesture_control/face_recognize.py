@@ -38,11 +38,15 @@ model.train(images, labels)
 # Part 2: Use fisherRecognizer on camera stream
 face_cascade = cv2.CascadeClassifier(haar_file)
 webcam = cv2.VideoCapture(0)
+cv2.namedWindow('OpenCV',cv2.WINDOW_NORMAL)
+cv2.resizeWindow('OpenCV', 400,400)
 a = time.time()
 while True:
     (_, im) = webcam.read()
+    im = cv2.flip(im,1)
     gray = cv2.cvtColor(im, cv2.COLOR_BGR2GRAY)
     faces = face_cascade.detectMultiScale(gray, 1.3, 5)
+    
     for (x,y,w,h) in faces:
         cv2.rectangle(im,(x,y),(x+w,y+h),(255,0,0),2)
         face = gray[y:y + h, x:x + w]
@@ -52,7 +56,7 @@ while True:
         cv2.rectangle(im, (x, y), (x + w, y + h), (0, 255, 0), 3)
 
         if prediction[1]<500:
-            if(time.time()-a > 10):
+            if(time.time()-a > 60):
                 print(names[prediction[0]])
                 sys.stdout.flush()
                 a = time.time()
@@ -60,8 +64,7 @@ while True:
         else:
             cv2.putText(im,'not recognized',(x-10, y-10), cv2.FONT_HERSHEY_PLAIN,1,(0, 255, 0))
 
-    cv2.namedWindow('OpenCV',cv2.WINDOW_NORMAL)
-    cv2.resizeWindow('OpenCV', 200,200)
+    
     cv2.imshow('OpenCV', im)
     key = cv2.waitKey(10)
     if key == 27:

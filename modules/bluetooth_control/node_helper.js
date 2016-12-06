@@ -1,67 +1,66 @@
-
-
 var NodeHelper = require("node_helper");
 
-var exec;
+var child;
+
+var screenStatus = false;
 
 module.exports = NodeHelper.create({
-	
-	start: function() {
-		console.log("Starting module: " + this.name);
-		
-	},
-	
-	socketNotificationReceived: function(notification, payload) {
-		
-		console.log("Notification: " + notification + " Payload: " + payload);
-
-		if(notification === "START_BLUETOOTH_LISTENER"){
-
-            this.startBTListener();
-		}
-		
-	},
-
-	startBTListener: function(){
-
-		console.log("starting bluetooth");
-
-		var child;
-		var exec = require('child_process').exec, child;
-
-		setInterval(function(){
-			child = exec('./modules/bluetooth_control/BTsignal.sh',
-				function (error, stdout, stderr) {
-
-					//VALUES: http://bluez-users.narkive.com/5nAqoY4A/hcitool-and-rssi-value-0
-					//outputs
-					//  0/1 : good
-					// -1 : bad?
-
-					if(stdout.localeCompare("")){  //connected
-
-						var signal = stdout.replace("RSSI return value: ", "");
-						console.log(signal);
-					}
-					else{
-						//not connected
-					}
 
 
 
+    start: function () {
+        console.log("Starting module: " + this.name);
+        var self = this;
 
-				});
-		}, 3000);
+        this.expressApp.post('/ScreenOn', function (req, res) {
+            //console.log("Received ScreenOn from android!!");
+            self.doScreenStatusUpdate(true);
+            res.send('success');
+        });
 
-	},
+        this.expressApp.post('/ScreenOff', function (req, res) {
+            //console.log("Received ScreenOff from android!!");
+            self.doScreenStatusUpdate(false);
+            res.send('success');
+        });
 
-	sendCommandToFrontEnd: function (jsonCommand) {
+    },
 
-		console.log("sending command: " + JSON.stringify(jsonCommand));
-		this.sendSocketNotification("BT_COMMAND", jsonCommand);
+    socketNotificationReceived: function (notification, payload) {
 
-	}
+        console.log("Notification: " + notification + " Payload: " + payload);
 
+        if (notification === "START_BLUETOOTH_LISTENER") {
+        }
+
+    },
+
+    doScreenStatusUpdate: function (freshStatus) {
+
+
+        if (!screenStatus && freshStatus) {                               //Screen is off, but turn on is recieved
+            //Turn on screen
+            console.log("Received ScreenOn from android!!");
+            var exec = require('child_process').exec, child;
+            child = exec('./modules/bluetooth_control/TurnOnScreen.sh',
+                function (error, stdout, stderr) {
+
+                });
+
+            screenStatus = freshStatus;
+        }
+        else if (screenStatus && !freshStatus) {                          //Screen is on, but turn off is recieved
+            console.log("Received ScreenOff from android!!");
+            //Turn off screen
+            var exec = require('child_process').exec, child;
+            child = exec('./modules/bluetooth_control/TurnOffScreen.sh',
+                function (error, stdout, stderr) {
+
+                });
+
+            screenStatus = freshStatus;
+        }
+    }
 
 
 });

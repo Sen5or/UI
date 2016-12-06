@@ -10,13 +10,12 @@ Based on the **MagicMirror²** project at `https://github.com/MichMich/MagicMirr
 ### Manual Installation
 
 1. Download and install the latest Node.js version.
-2. Clone the repository and check out the beta branch: `git clone https://github.com/Sen5or/UI.git`
-3. Enter the repository: `cd ~/UI`
-4. Install and run the app: `npm install && npm start`
+2. sudo npm install -g snyk
+3. sudo npm install -g electron
 
-**Important:** `npm start` does **not** work via SSH, use `DISPLAY=:0 nohup npm start &` instead. This starts the mirror on the remote display.
-
-**Note:** if you want to debug on Raspberry Pi you can use `npm start dev` which will start the MagicMirror app with Dev Tools enabled.
+4. Clone the repository and check out the beta branch: `git clone https://github.com/Sen5or/UI.git`
+5. Enter the repository: `cd ~/UI`
+6. Install and run the app: `npm install && npm start`
 
 
 ## Configuration

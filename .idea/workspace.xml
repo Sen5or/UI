@@ -2,11 +2,479 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dd6c07f0-5826-4e15-be35-2349f1b52b31" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mongodb_files/sen5or/system.indexes.bson" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mongodb_files/sen5or/users.bson" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mongodb_files/sen5or/import_instructions" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mongodb_files/sen5or/users.metadata.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/bluetooth_control/TurnOffScreen.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/bluetooth_control/TurnOnScreen.sh" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CHANGELOG.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/woman/10.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/woman/11.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/woman/12.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/woman/13.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/woman/14.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/woman/15.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/woman/16.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/woman/17.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/woman/18.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/woman/19.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/woman/2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/woman/20.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/woman/21.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/woman/22.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/woman/23.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/woman/24.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/woman/25.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/woman/26.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/woman/27.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/woman/28.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/woman/29.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/woman/30.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/woman/4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/woman/5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/woman/6.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/woman/7.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/woman/8.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/woman/9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/python/fist.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/python/handHaar.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/python/palm.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fonts/Roboto-Black/Roboto-Black.ttf" afterPath="$PROJECT_DIR$/fonts/Roboto-Black/Roboto-Black.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fonts/Roboto-Black/Roboto-Black.woff" afterPath="$PROJECT_DIR$/fonts/Roboto-Black/Roboto-Black.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fonts/Roboto-Black/Roboto-Black.woff2" afterPath="$PROJECT_DIR$/fonts/Roboto-Black/Roboto-Black.woff2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fonts/Roboto-BlackItalic/Roboto-BlackItalic.ttf" afterPath="$PROJECT_DIR$/fonts/Roboto-BlackItalic/Roboto-BlackItalic.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fonts/Roboto-BlackItalic/Roboto-BlackItalic.woff" afterPath="$PROJECT_DIR$/fonts/Roboto-BlackItalic/Roboto-BlackItalic.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fonts/Roboto-BlackItalic/Roboto-BlackItalic.woff2" afterPath="$PROJECT_DIR$/fonts/Roboto-BlackItalic/Roboto-BlackItalic.woff2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fonts/Roboto-Bold/Roboto-Bold.ttf" afterPath="$PROJECT_DIR$/fonts/Roboto-Bold/Roboto-Bold.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fonts/Roboto-Bold/Roboto-Bold.woff" afterPath="$PROJECT_DIR$/fonts/Roboto-Bold/Roboto-Bold.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fonts/Roboto-Bold/Roboto-Bold.woff2" afterPath="$PROJECT_DIR$/fonts/Roboto-Bold/Roboto-Bold.woff2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fonts/Roboto-BoldItalic/Roboto-BoldItalic.ttf" afterPath="$PROJECT_DIR$/fonts/Roboto-BoldItalic/Roboto-BoldItalic.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fonts/Roboto-BoldItalic/Roboto-BoldItalic.woff" afterPath="$PROJECT_DIR$/fonts/Roboto-BoldItalic/Roboto-BoldItalic.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fonts/Roboto-BoldItalic/Roboto-BoldItalic.woff2" afterPath="$PROJECT_DIR$/fonts/Roboto-BoldItalic/Roboto-BoldItalic.woff2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fonts/Roboto-Italic/Roboto-Italic.ttf" afterPath="$PROJECT_DIR$/fonts/Roboto-Italic/Roboto-Italic.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fonts/Roboto-Italic/Roboto-Italic.woff" afterPath="$PROJECT_DIR$/fonts/Roboto-Italic/Roboto-Italic.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fonts/Roboto-Italic/Roboto-Italic.woff2" afterPath="$PROJECT_DIR$/fonts/Roboto-Italic/Roboto-Italic.woff2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fonts/Roboto-Light/Roboto-Light.ttf" afterPath="$PROJECT_DIR$/fonts/Roboto-Light/Roboto-Light.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fonts/Roboto-Light/Roboto-Light.woff" afterPath="$PROJECT_DIR$/fonts/Roboto-Light/Roboto-Light.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fonts/Roboto-Light/Roboto-Light.woff2" afterPath="$PROJECT_DIR$/fonts/Roboto-Light/Roboto-Light.woff2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fonts/Roboto-LightItalic/Roboto-LightItalic.ttf" afterPath="$PROJECT_DIR$/fonts/Roboto-LightItalic/Roboto-LightItalic.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fonts/Roboto-LightItalic/Roboto-LightItalic.woff" afterPath="$PROJECT_DIR$/fonts/Roboto-LightItalic/Roboto-LightItalic.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fonts/Roboto-LightItalic/Roboto-LightItalic.woff2" afterPath="$PROJECT_DIR$/fonts/Roboto-LightItalic/Roboto-LightItalic.woff2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fonts/Roboto-Medium/Roboto-Medium.ttf" afterPath="$PROJECT_DIR$/fonts/Roboto-Medium/Roboto-Medium.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fonts/Roboto-Medium/Roboto-Medium.woff" afterPath="$PROJECT_DIR$/fonts/Roboto-Medium/Roboto-Medium.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fonts/Roboto-Medium/Roboto-Medium.woff2" afterPath="$PROJECT_DIR$/fonts/Roboto-Medium/Roboto-Medium.woff2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fonts/Roboto-MediumItalic/Roboto-MediumItalic.ttf" afterPath="$PROJECT_DIR$/fonts/Roboto-MediumItalic/Roboto-MediumItalic.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fonts/Roboto-MediumItalic/Roboto-MediumItalic.woff" afterPath="$PROJECT_DIR$/fonts/Roboto-MediumItalic/Roboto-MediumItalic.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fonts/Roboto-MediumItalic/Roboto-MediumItalic.woff2" afterPath="$PROJECT_DIR$/fonts/Roboto-MediumItalic/Roboto-MediumItalic.woff2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fonts/Roboto-Regular/Roboto-Regular.ttf" afterPath="$PROJECT_DIR$/fonts/Roboto-Regular/Roboto-Regular.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fonts/Roboto-Regular/Roboto-Regular.woff" afterPath="$PROJECT_DIR$/fonts/Roboto-Regular/Roboto-Regular.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fonts/Roboto-Regular/Roboto-Regular.woff2" afterPath="$PROJECT_DIR$/fonts/Roboto-Regular/Roboto-Regular.woff2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fonts/Roboto-Thin/Roboto-Thin.ttf" afterPath="$PROJECT_DIR$/fonts/Roboto-Thin/Roboto-Thin.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fonts/Roboto-Thin/Roboto-Thin.woff" afterPath="$PROJECT_DIR$/fonts/Roboto-Thin/Roboto-Thin.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fonts/Roboto-Thin/Roboto-Thin.woff2" afterPath="$PROJECT_DIR$/fonts/Roboto-Thin/Roboto-Thin.woff2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fonts/Roboto-ThinItalic/Roboto-ThinItalic.ttf" afterPath="$PROJECT_DIR$/fonts/Roboto-ThinItalic/Roboto-ThinItalic.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fonts/Roboto-ThinItalic/Roboto-ThinItalic.woff" afterPath="$PROJECT_DIR$/fonts/Roboto-ThinItalic/Roboto-ThinItalic.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fonts/Roboto-ThinItalic/Roboto-ThinItalic.woff2" afterPath="$PROJECT_DIR$/fonts/Roboto-ThinItalic/Roboto-ThinItalic.woff2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fonts/RobotoCondensed-Bold/RobotoCondensed-Bold.ttf" afterPath="$PROJECT_DIR$/fonts/RobotoCondensed-Bold/RobotoCondensed-Bold.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fonts/RobotoCondensed-Bold/RobotoCondensed-Bold.woff" afterPath="$PROJECT_DIR$/fonts/RobotoCondensed-Bold/RobotoCondensed-Bold.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fonts/RobotoCondensed-Bold/RobotoCondensed-Bold.woff2" afterPath="$PROJECT_DIR$/fonts/RobotoCondensed-Bold/RobotoCondensed-Bold.woff2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fonts/RobotoCondensed-BoldItalic/RobotoCondensed-BoldItalic.ttf" afterPath="$PROJECT_DIR$/fonts/RobotoCondensed-BoldItalic/RobotoCondensed-BoldItalic.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fonts/RobotoCondensed-BoldItalic/RobotoCondensed-BoldItalic.woff" afterPath="$PROJECT_DIR$/fonts/RobotoCondensed-BoldItalic/RobotoCondensed-BoldItalic.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fonts/RobotoCondensed-BoldItalic/RobotoCondensed-BoldItalic.woff2" afterPath="$PROJECT_DIR$/fonts/RobotoCondensed-BoldItalic/RobotoCondensed-BoldItalic.woff2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fonts/RobotoCondensed-Italic/RobotoCondensed-Italic.ttf" afterPath="$PROJECT_DIR$/fonts/RobotoCondensed-Italic/RobotoCondensed-Italic.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fonts/RobotoCondensed-Italic/RobotoCondensed-Italic.woff" afterPath="$PROJECT_DIR$/fonts/RobotoCondensed-Italic/RobotoCondensed-Italic.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fonts/RobotoCondensed-Italic/RobotoCondensed-Italic.woff2" afterPath="$PROJECT_DIR$/fonts/RobotoCondensed-Italic/RobotoCondensed-Italic.woff2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fonts/RobotoCondensed-Light/RobotoCondensed-Light.ttf" afterPath="$PROJECT_DIR$/fonts/RobotoCondensed-Light/RobotoCondensed-Light.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fonts/RobotoCondensed-Light/RobotoCondensed-Light.woff" afterPath="$PROJECT_DIR$/fonts/RobotoCondensed-Light/RobotoCondensed-Light.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fonts/RobotoCondensed-Light/RobotoCondensed-Light.woff2" afterPath="$PROJECT_DIR$/fonts/RobotoCondensed-Light/RobotoCondensed-Light.woff2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fonts/RobotoCondensed-LightItalic/RobotoCondensed-LightItalic.ttf" afterPath="$PROJECT_DIR$/fonts/RobotoCondensed-LightItalic/RobotoCondensed-LightItalic.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fonts/RobotoCondensed-LightItalic/RobotoCondensed-LightItalic.woff" afterPath="$PROJECT_DIR$/fonts/RobotoCondensed-LightItalic/RobotoCondensed-LightItalic.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fonts/RobotoCondensed-LightItalic/RobotoCondensed-LightItalic.woff2" afterPath="$PROJECT_DIR$/fonts/RobotoCondensed-LightItalic/RobotoCondensed-LightItalic.woff2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fonts/RobotoCondensed-Regular/RobotoCondensed-Regular.ttf" afterPath="$PROJECT_DIR$/fonts/RobotoCondensed-Regular/RobotoCondensed-Regular.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fonts/RobotoCondensed-Regular/RobotoCondensed-Regular.woff" afterPath="$PROJECT_DIR$/fonts/RobotoCondensed-Regular/RobotoCondensed-Regular.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fonts/RobotoCondensed-Regular/RobotoCondensed-Regular.woff2" afterPath="$PROJECT_DIR$/fonts/RobotoCondensed-Regular/RobotoCondensed-Regular.woff2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/1.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/10.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/10.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/11.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/11.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/12.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/12.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/13.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/13.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/14.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/14.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/15.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/15.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/16.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/16.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/17.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/17.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/18.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/18.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/19.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/19.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/2.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/20.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/20.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/21.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/21.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/22.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/22.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/23.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/23.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/24.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/24.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/25.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/25.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/26.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/26.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/27.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/27.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/28.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/28.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/29.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/29.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/3.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/30.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/30.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/4.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/4.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/5.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/5.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/6.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/6.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/7.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/7.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/8.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/8.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/9.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Daisy/9.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/1.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/10.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/10.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/11.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/11.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/12.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/12.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/13.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/13.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/14.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/14.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/15.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/15.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/16.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/16.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/17.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/17.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/18.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/18.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/19.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/19.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/2.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/20.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/20.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/21.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/21.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/22.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/22.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/23.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/23.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/24.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/24.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/25.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/25.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/26.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/26.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/27.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/27.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/28.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/28.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/29.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/29.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/3.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/30.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/30.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/4.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/4.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/5.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/5.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/6.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/6.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/7.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/7.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/8.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/8.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/9.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Dhanesh/9.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/1.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/10.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/10.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/11.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/11.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/12.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/12.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/13.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/13.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/14.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/14.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/15.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/15.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/16.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/16.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/17.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/17.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/18.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/18.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/19.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/19.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/2.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/20.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/20.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/21.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/21.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/22.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/22.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/23.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/23.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/24.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/24.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/25.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/25.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/26.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/26.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/27.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/27.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/28.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/28.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/29.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/29.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/3.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/30.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/30.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/4.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/4.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/5.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/5.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/6.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/6.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/7.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/7.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/8.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/8.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/9.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Isaac/9.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/1.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/10.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/10.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/11.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/11.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/12.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/12.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/13.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/13.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/14.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/14.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/15.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/15.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/16.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/16.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/17.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/17.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/18.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/18.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/19.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/19.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/2.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/20.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/20.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/21.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/21.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/22.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/22.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/23.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/23.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/24.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/24.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/25.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/25.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/26.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/26.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/27.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/27.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/28.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/28.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/29.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/29.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/3.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/30.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/30.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/4.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/4.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/5.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/5.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/6.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/6.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/7.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/7.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/8.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/8.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/9.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/Yidan/9.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/1.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/10.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/10.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/11.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/11.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/12.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/12.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/13.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/13.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/14.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/14.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/15.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/15.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/16.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/16.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/17.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/17.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/18.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/18.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/19.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/19.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/2.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/20.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/20.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/21.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/21.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/22.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/22.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/23.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/23.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/24.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/24.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/25.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/25.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/26.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/26.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/27.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/27.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/28.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/28.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/29.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/29.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/3.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/30.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/30.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/4.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/4.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/5.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/5.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/6.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/6.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/7.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/7.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/8.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/8.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/9.png" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/deagan/9.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/voice_control/output.wav" afterPath="$PROJECT_DIR$/modules/voice_control/output.wav" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mongodb_files/sen5or/system.indexes.bson" afterPath="$PROJECT_DIR$/mongodb_files/sen5or/system.indexes.bson" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mongodb_files/sen5or/users.bson" afterPath="$PROJECT_DIR$/mongodb_files/sen5or/users.bson" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/font-awesome-4.5.0/fonts/FontAwesome.otf" afterPath="$PROJECT_DIR$/vendor/font-awesome-4.5.0/fonts/FontAwesome.otf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/font-awesome-4.5.0/fonts/fontawesome-webfont.eot" afterPath="$PROJECT_DIR$/vendor/font-awesome-4.5.0/fonts/fontawesome-webfont.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/font-awesome-4.5.0/fonts/fontawesome-webfont.ttf" afterPath="$PROJECT_DIR$/vendor/font-awesome-4.5.0/fonts/fontawesome-webfont.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/font-awesome-4.5.0/fonts/fontawesome-webfont.woff" afterPath="$PROJECT_DIR$/vendor/font-awesome-4.5.0/fonts/fontawesome-webfont.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/font-awesome-4.5.0/fonts/fontawesome-webfont.woff2" afterPath="$PROJECT_DIR$/vendor/font-awesome-4.5.0/fonts/fontawesome-webfont.woff2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/weather-icons/font/weathericons-regular-webfont.eot" afterPath="$PROJECT_DIR$/vendor/weather-icons/font/weathericons-regular-webfont.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/weather-icons/font/weathericons-regular-webfont.ttf" afterPath="$PROJECT_DIR$/vendor/weather-icons/font/weathericons-regular-webfont.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/weather-icons/font/weathericons-regular-webfont.woff" afterPath="$PROJECT_DIR$/vendor/weather-icons/font/weathericons-regular-webfont.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/weather-icons/font/weathericons-regular-webfont.woff2" afterPath="$PROJECT_DIR$/vendor/weather-icons/font/weathericons-regular-webfont.woff2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.eslintignore" afterPath="$PROJECT_DIR$/.eslintignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.eslintrc.json" afterPath="$PROJECT_DIR$/.eslintrc.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/UI.iml" afterPath="$PROJECT_DIR$/.idea/UI.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.snyk" afterPath="$PROJECT_DIR$/.snyk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.stylelintrc" afterPath="$PROJECT_DIR$/.stylelintrc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.travis.yml" afterPath="$PROJECT_DIR$/.travis.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gruntfile.js" afterPath="$PROJECT_DIR$/Gruntfile.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LICENSE.md" afterPath="$PROJECT_DIR$/LICENSE.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UI.iml" afterPath="$PROJECT_DIR$/UI.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UI_test.iml" afterPath="$PROJECT_DIR$/UI_test.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/config.js" afterPath="$PROJECT_DIR$/config/config.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/config.js.sample" afterPath="$PROJECT_DIR$/config/config.js.sample" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/old_config.js" afterPath="$PROJECT_DIR$/config/old_config.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/old_config2.js" afterPath="$PROJECT_DIR$/config/old_config2.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/custom.css" afterPath="$PROJECT_DIR$/css/custom.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/main.css" afterPath="$PROJECT_DIR$/css/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fonts/LICENSE.txt" afterPath="$PROJECT_DIR$/fonts/LICENSE.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fonts/roboto.css" afterPath="$PROJECT_DIR$/fonts/roboto.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/installers/raspberry.sh" afterPath="$PROJECT_DIR$/installers/raspberry.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/app.js" afterPath="$PROJECT_DIR$/js/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/class.js" afterPath="$PROJECT_DIR$/js/class.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/defaults.js" afterPath="$PROJECT_DIR$/js/defaults.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/electron.js" afterPath="$PROJECT_DIR$/js/electron.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/loader.js" afterPath="$PROJECT_DIR$/js/loader.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/logger.js" afterPath="$PROJECT_DIR$/js/logger.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/main.js" afterPath="$PROJECT_DIR$/js/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/module.js" afterPath="$PROJECT_DIR$/js/module.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/server.js" afterPath="$PROJECT_DIR$/js/server.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/socket.js" afterPath="$PROJECT_DIR$/js/socket.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/socketclient.js" afterPath="$PROJECT_DIR$/js/socketclient.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/translator.js" afterPath="$PROJECT_DIR$/js/translator.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/MMM-twitter/MMM-twitter.js" afterPath="$PROJECT_DIR$/modules/MMM-twitter/MMM-twitter.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/MMM-twitter/node_helper.js" afterPath="$PROJECT_DIR$/modules/MMM-twitter/node_helper.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/README.md" afterPath="$PROJECT_DIR$/modules/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/bluetooth_control/BTsignal.sh" afterPath="$PROJECT_DIR$/modules/bluetooth_control/BTsignal.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/bluetooth_control/bluetooth_control.js" afterPath="$PROJECT_DIR$/modules/bluetooth_control/bluetooth_control.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/bluetooth_control/gestures.css" afterPath="$PROJECT_DIR$/modules/bluetooth_control/gestures.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/bluetooth_control/node_helper.js" afterPath="$PROJECT_DIR$/modules/bluetooth_control/node_helper.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/default/alert/README.md" afterPath="$PROJECT_DIR$/modules/default/alert/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/default/alert/alert.js" afterPath="$PROJECT_DIR$/modules/default/alert/alert.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/default/alert/classie.js" afterPath="$PROJECT_DIR$/modules/default/alert/classie.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/default/alert/modernizr.custom.js" afterPath="$PROJECT_DIR$/modules/default/alert/modernizr.custom.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/default/alert/notificationFx.js" afterPath="$PROJECT_DIR$/modules/default/alert/notificationFx.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/default/alert/ns-default.css" afterPath="$PROJECT_DIR$/modules/default/alert/ns-default.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/default/alert/translations/de.json" afterPath="$PROJECT_DIR$/modules/default/alert/translations/de.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/default/alert/translations/en.json" afterPath="$PROJECT_DIR$/modules/default/alert/translations/en.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/default/calendar/README.md" afterPath="$PROJECT_DIR$/modules/default/calendar/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/default/calendar/calendar.css" afterPath="$PROJECT_DIR$/modules/default/calendar/calendar.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/default/calendar/calendar.js" afterPath="$PROJECT_DIR$/modules/default/calendar/calendar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/default/calendar/calendarfetcher.js" afterPath="$PROJECT_DIR$/modules/default/calendar/calendarfetcher.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/default/calendar/debug.js" afterPath="$PROJECT_DIR$/modules/default/calendar/debug.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/default/calendar/node_helper.js" afterPath="$PROJECT_DIR$/modules/default/calendar/node_helper.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/default/calendar/vendor/ical.js/.travis.yml" afterPath="$PROJECT_DIR$/modules/default/calendar/vendor/ical.js/.travis.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/default/calendar/vendor/ical.js/LICENSE" afterPath="$PROJECT_DIR$/modules/default/calendar/vendor/ical.js/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/default/calendar/vendor/ical.js/NOTICE" afterPath="$PROJECT_DIR$/modules/default/calendar/vendor/ical.js/NOTICE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/default/calendar/vendor/ical.js/example.js" afterPath="$PROJECT_DIR$/modules/default/calendar/vendor/ical.js/example.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/default/calendar/vendor/ical.js/ical.js" afterPath="$PROJECT_DIR$/modules/default/calendar/vendor/ical.js/ical.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/default/calendar/vendor/ical.js/index.js" afterPath="$PROJECT_DIR$/modules/default/calendar/vendor/ical.js/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/default/calendar/vendor/ical.js/node-ical.js" afterPath="$PROJECT_DIR$/modules/default/calendar/vendor/ical.js/node-ical.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/default/calendar/vendor/ical.js/package.json" afterPath="$PROJECT_DIR$/modules/default/calendar/vendor/ical.js/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/default/calendar/vendor/ical.js/readme.md" afterPath="$PROJECT_DIR$/modules/default/calendar/vendor/ical.js/readme.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/default/calendar/vendor/ical.js/test/test.js" afterPath="$PROJECT_DIR$/modules/default/calendar/vendor/ical.js/test/test.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/default/calendar/vendor/ical.js/test/test1.ics" afterPath="$PROJECT_DIR$/modules/default/calendar/vendor/ical.js/test/test1.ics" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/default/calendar/vendor/ical.js/test/test10.ics" afterPath="$PROJECT_DIR$/modules/default/calendar/vendor/ical.js/test/test10.ics" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/default/calendar/vendor/ical.js/test/test11.ics" afterPath="$PROJECT_DIR$/modules/default/calendar/vendor/ical.js/test/test11.ics" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/default/calendar/vendor/ical.js/test/test2.ics" afterPath="$PROJECT_DIR$/modules/default/calendar/vendor/ical.js/test/test2.ics" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/default/calendar/vendor/ical.js/test/test3.ics" afterPath="$PROJECT_DIR$/modules/default/calendar/vendor/ical.js/test/test3.ics" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/default/calendar/vendor/ical.js/test/test4.ics" afterPath="$PROJECT_DIR$/modules/default/calendar/vendor/ical.js/test/test4.ics" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/default/calendar/vendor/ical.js/test/test5.ics" afterPath="$PROJECT_DIR$/modules/default/calendar/vendor/ical.js/test/test5.ics" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/default/calendar/vendor/ical.js/test/test6.ics" afterPath="$PROJECT_DIR$/modules/default/calendar/vendor/ical.js/test/test6.ics" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/default/calendar/vendor/ical.js/test/test7.ics" afterPath="$PROJECT_DIR$/modules/default/calendar/vendor/ical.js/test/test7.ics" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/default/calendar/vendor/ical.js/test/test8.ics" afterPath="$PROJECT_DIR$/modules/default/calendar/vendor/ical.js/test/test8.ics" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/default/calendar/vendor/ical.js/test/test9.ics" afterPath="$PROJECT_DIR$/modules/default/calendar/vendor/ical.js/test/test9.ics" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/default/clock/README.md" afterPath="$PROJECT_DIR$/modules/default/clock/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/default/clock/clock.js" afterPath="$PROJECT_DIR$/modules/default/clock/clock.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/default/clock/clock_styles.css" afterPath="$PROJECT_DIR$/modules/default/clock/clock_styles.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/default/clock/faces/face-001.svg" afterPath="$PROJECT_DIR$/modules/default/clock/faces/face-001.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/default/clock/faces/face-002.svg" afterPath="$PROJECT_DIR$/modules/default/clock/faces/face-002.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/default/clock/faces/face-003.svg" afterPath="$PROJECT_DIR$/modules/default/clock/faces/face-003.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/default/clock/faces/face-004.svg" afterPath="$PROJECT_DIR$/modules/default/clock/faces/face-004.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/default/clock/faces/face-005.svg" afterPath="$PROJECT_DIR$/modules/default/clock/faces/face-005.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/default/clock/faces/face-006.svg" afterPath="$PROJECT_DIR$/modules/default/clock/faces/face-006.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/default/clock/faces/face-007.svg" afterPath="$PROJECT_DIR$/modules/default/clock/faces/face-007.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/default/clock/faces/face-008.svg" afterPath="$PROJECT_DIR$/modules/default/clock/faces/face-008.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/default/clock/faces/face-009.svg" afterPath="$PROJECT_DIR$/modules/default/clock/faces/face-009.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/default/clock/faces/face-010.svg" afterPath="$PROJECT_DIR$/modules/default/clock/faces/face-010.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/default/clock/faces/face-011.svg" afterPath="$PROJECT_DIR$/modules/default/clock/faces/face-011.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/default/clock/faces/face-012.svg" afterPath="$PROJECT_DIR$/modules/default/clock/faces/face-012.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/default/compliments/README.md" afterPath="$PROJECT_DIR$/modules/default/compliments/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/default/compliments/compliments.js" afterPath="$PROJECT_DIR$/modules/default/compliments/compliments.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/default/currentweather/README.md" afterPath="$PROJECT_DIR$/modules/default/currentweather/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/default/currentweather/currentweather.css" afterPath="$PROJECT_DIR$/modules/default/currentweather/currentweather.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/default/currentweather/currentweather.js" afterPath="$PROJECT_DIR$/modules/default/currentweather/currentweather.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/default/defaultmodules.js" afterPath="$PROJECT_DIR$/modules/default/defaultmodules.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/default/helloworld/README.md" afterPath="$PROJECT_DIR$/modules/default/helloworld/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/default/helloworld/helloworld.js" afterPath="$PROJECT_DIR$/modules/default/helloworld/helloworld.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/default/newsfeed/README.md" afterPath="$PROJECT_DIR$/modules/default/newsfeed/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/default/newsfeed/fetcher.js" afterPath="$PROJECT_DIR$/modules/default/newsfeed/fetcher.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/default/newsfeed/newsfeed.js" afterPath="$PROJECT_DIR$/modules/default/newsfeed/newsfeed.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/default/newsfeed/node_helper.js" afterPath="$PROJECT_DIR$/modules/default/newsfeed/node_helper.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/default/spacer/spacer.js" afterPath="$PROJECT_DIR$/modules/default/spacer/spacer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/default/weatherforecast/README.md" afterPath="$PROJECT_DIR$/modules/default/weatherforecast/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/default/weatherforecast/weatherforecast.css" afterPath="$PROJECT_DIR$/modules/default/weatherforecast/weatherforecast.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/default/weatherforecast/weatherforecast.js" afterPath="$PROJECT_DIR$/modules/default/weatherforecast/weatherforecast.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/datasets/datasets.txt" afterPath="$PROJECT_DIR$/modules/gesture_control/datasets/datasets.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/face_recognize.py" afterPath="$PROJECT_DIR$/modules/gesture_control/face_recognize.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/gesture_control.js" afterPath="$PROJECT_DIR$/modules/gesture_control/gesture_control.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/gestures.css" afterPath="$PROJECT_DIR$/modules/gesture_control/gestures.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/gesture_control/node_helper.js" afterPath="$PROJECT_DIR$/modules/gesture_control/node_helper.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/node_modules/node_helper/index.js" afterPath="$PROJECT_DIR$/modules/node_modules/node_helper/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/node_modules/oauth/.npmignore" afterPath="$PROJECT_DIR$/modules/node_modules/oauth/.npmignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/node_modules/oauth/LICENSE" afterPath="$PROJECT_DIR$/modules/node_modules/oauth/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/node_modules/oauth/Makefile" afterPath="$PROJECT_DIR$/modules/node_modules/oauth/Makefile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/node_modules/oauth/Readme.md" afterPath="$PROJECT_DIR$/modules/node_modules/oauth/Readme.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/node_modules/oauth/examples/express-gdata/server.js" afterPath="$PROJECT_DIR$/modules/node_modules/oauth/examples/express-gdata/server.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/node_modules/oauth/examples/express-gdata/views/google_calendars.ejs" afterPath="$PROJECT_DIR$/modules/node_modules/oauth/examples/express-gdata/views/google_calendars.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/node_modules/oauth/examples/express-gdata/views/google_contacts.ejs" afterPath="$PROJECT_DIR$/modules/node_modules/oauth/examples/express-gdata/views/google_contacts.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/node_modules/oauth/examples/express-gdata/views/layout.ejs" afterPath="$PROJECT_DIR$/modules/node_modules/oauth/examples/express-gdata/views/layout.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/node_modules/oauth/examples/term.ie.oauth-HMAC-SHA1.js" afterPath="$PROJECT_DIR$/modules/node_modules/oauth/examples/term.ie.oauth-HMAC-SHA1.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/node_modules/oauth/index.js" afterPath="$PROJECT_DIR$/modules/node_modules/oauth/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/node_modules/oauth/lib/_utils.js" afterPath="$PROJECT_DIR$/modules/node_modules/oauth/lib/_utils.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/node_modules/oauth/lib/oauth.js" afterPath="$PROJECT_DIR$/modules/node_modules/oauth/lib/oauth.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/node_modules/oauth/lib/oauth2.js" afterPath="$PROJECT_DIR$/modules/node_modules/oauth/lib/oauth2.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/node_modules/oauth/lib/sha1.js" afterPath="$PROJECT_DIR$/modules/node_modules/oauth/lib/sha1.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/node_modules/oauth/package.json" afterPath="$PROJECT_DIR$/modules/node_modules/oauth/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/node_modules/oauth/tests/oauth.js" afterPath="$PROJECT_DIR$/modules/node_modules/oauth/tests/oauth.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/node_modules/oauth/tests/oauth2.js" afterPath="$PROJECT_DIR$/modules/node_modules/oauth/tests/oauth2.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/node_modules/oauth/tests/sha1.js" afterPath="$PROJECT_DIR$/modules/node_modules/oauth/tests/sha1.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/node_modules/user-stream/.npmignore" afterPath="$PROJECT_DIR$/modules/node_modules/user-stream/.npmignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/node_modules/user-stream/README.md" afterPath="$PROJECT_DIR$/modules/node_modules/user-stream/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/node_modules/user-stream/index.js" afterPath="$PROJECT_DIR$/modules/node_modules/user-stream/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/node_modules/user-stream/lib/user-stream.js" afterPath="$PROJECT_DIR$/modules/node_modules/user-stream/lib/user-stream.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/node_modules/user-stream/package.json" afterPath="$PROJECT_DIR$/modules/node_modules/user-stream/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/node_modules/user-stream/test/stream.js" afterPath="$PROJECT_DIR$/modules/node_modules/user-stream/test/stream.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/pandora/pandora.js" afterPath="$PROJECT_DIR$/modules/pandora/pandora.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/voice_control/Identification/CreateProfile.py" afterPath="$PROJECT_DIR$/modules/voice_control/Identification/CreateProfile.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/voice_control/Identification/DeleteProfile.py" afterPath="$PROJECT_DIR$/modules/voice_control/Identification/DeleteProfile.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/voice_control/Identification/EnrollProfile.py" afterPath="$PROJECT_DIR$/modules/voice_control/Identification/EnrollProfile.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/voice_control/Identification/EnrollmentResponse.py" afterPath="$PROJECT_DIR$/modules/voice_control/Identification/EnrollmentResponse.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/voice_control/Identification/GetProfile.py" afterPath="$PROJECT_DIR$/modules/voice_control/Identification/GetProfile.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/voice_control/Identification/IdentificationProfile.py" afterPath="$PROJECT_DIR$/modules/voice_control/Identification/IdentificationProfile.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/voice_control/Identification/IdentificationResponse.py" afterPath="$PROJECT_DIR$/modules/voice_control/Identification/IdentificationResponse.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/voice_control/Identification/IdentificationServiceHttpClientHelper.py" afterPath="$PROJECT_DIR$/modules/voice_control/Identification/IdentificationServiceHttpClientHelper.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/voice_control/Identification/IdentifyFile.py" afterPath="$PROJECT_DIR$/modules/voice_control/Identification/IdentifyFile.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/voice_control/Identification/IdentifySpeaker.py" afterPath="$PROJECT_DIR$/modules/voice_control/Identification/IdentifySpeaker.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/voice_control/Identification/IdentifyVoice.py" afterPath="$PROJECT_DIR$/modules/voice_control/Identification/IdentifyVoice.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/voice_control/Identification/PrintAllProfiles.py" afterPath="$PROJECT_DIR$/modules/voice_control/Identification/PrintAllProfiles.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/voice_control/Identification/ProfileCreationResponse.py" afterPath="$PROJECT_DIR$/modules/voice_control/Identification/ProfileCreationResponse.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/voice_control/Identification/ResetEnrollments.py" afterPath="$PROJECT_DIR$/modules/voice_control/Identification/ResetEnrollments.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/voice_control/Record.py" afterPath="$PROJECT_DIR$/modules/voice_control/Record.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/voice_control/node_helper.js" afterPath="$PROJECT_DIR$/modules/voice_control/node_helper.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/voice_control/voice_control.js" afterPath="$PROJECT_DIR$/modules/voice_control/voice_control.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/youtube/youtube.js" afterPath="$PROJECT_DIR$/modules/youtube/youtube.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mongodb_files/sen5or/import_instructions" afterPath="$PROJECT_DIR$/mongodb_files/sen5or/import_instructions" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mongodb_files/sen5or/users.metadata.json" afterPath="$PROJECT_DIR$/mongodb_files/sen5or/users.metadata.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/serveronly/index.js" afterPath="$PROJECT_DIR$/serveronly/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/translations/de.json" afterPath="$PROJECT_DIR$/translations/de.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/translations/en.json" afterPath="$PROJECT_DIR$/translations/en.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/translations/es.json" afterPath="$PROJECT_DIR$/translations/es.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/translations/fr.json" afterPath="$PROJECT_DIR$/translations/fr.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/translations/fy.json" afterPath="$PROJECT_DIR$/translations/fy.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/translations/gr.json" afterPath="$PROJECT_DIR$/translations/gr.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/translations/it.json" afterPath="$PROJECT_DIR$/translations/it.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/translations/ja.json" afterPath="$PROJECT_DIR$/translations/ja.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/translations/nb.json" afterPath="$PROJECT_DIR$/translations/nb.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/translations/nl.json" afterPath="$PROJECT_DIR$/translations/nl.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/translations/nn.json" afterPath="$PROJECT_DIR$/translations/nn.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/translations/pl.json" afterPath="$PROJECT_DIR$/translations/pl.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/translations/pt.json" afterPath="$PROJECT_DIR$/translations/pt.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/translations/pt_br.json" afterPath="$PROJECT_DIR$/translations/pt_br.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/translations/sv.json" afterPath="$PROJECT_DIR$/translations/sv.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/translations/translations.js" afterPath="$PROJECT_DIR$/translations/translations.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/translations/zh_cn.json" afterPath="$PROJECT_DIR$/translations/zh_cn.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/translations/zh_tw.json" afterPath="$PROJECT_DIR$/translations/zh_tw.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/font-awesome-4.5.0/HELP-US-OUT.txt" afterPath="$PROJECT_DIR$/vendor/font-awesome-4.5.0/HELP-US-OUT.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/font-awesome-4.5.0/css/font-awesome.css" afterPath="$PROJECT_DIR$/vendor/font-awesome-4.5.0/css/font-awesome.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/font-awesome-4.5.0/css/font-awesome.min.css" afterPath="$PROJECT_DIR$/vendor/font-awesome-4.5.0/css/font-awesome.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/font-awesome-4.5.0/fonts/fontawesome-webfont.svg" afterPath="$PROJECT_DIR$/vendor/font-awesome-4.5.0/fonts/fontawesome-webfont.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/font-awesome-4.5.0/less/animated.less" afterPath="$PROJECT_DIR$/vendor/font-awesome-4.5.0/less/animated.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/font-awesome-4.5.0/less/bordered-pulled.less" afterPath="$PROJECT_DIR$/vendor/font-awesome-4.5.0/less/bordered-pulled.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/font-awesome-4.5.0/less/core.less" afterPath="$PROJECT_DIR$/vendor/font-awesome-4.5.0/less/core.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/font-awesome-4.5.0/less/fixed-width.less" afterPath="$PROJECT_DIR$/vendor/font-awesome-4.5.0/less/fixed-width.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/font-awesome-4.5.0/less/font-awesome.less" afterPath="$PROJECT_DIR$/vendor/font-awesome-4.5.0/less/font-awesome.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/font-awesome-4.5.0/less/icons.less" afterPath="$PROJECT_DIR$/vendor/font-awesome-4.5.0/less/icons.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/font-awesome-4.5.0/less/larger.less" afterPath="$PROJECT_DIR$/vendor/font-awesome-4.5.0/less/larger.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/font-awesome-4.5.0/less/list.less" afterPath="$PROJECT_DIR$/vendor/font-awesome-4.5.0/less/list.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/font-awesome-4.5.0/less/mixins.less" afterPath="$PROJECT_DIR$/vendor/font-awesome-4.5.0/less/mixins.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/font-awesome-4.5.0/less/path.less" afterPath="$PROJECT_DIR$/vendor/font-awesome-4.5.0/less/path.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/font-awesome-4.5.0/less/rotated-flipped.less" afterPath="$PROJECT_DIR$/vendor/font-awesome-4.5.0/less/rotated-flipped.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/font-awesome-4.5.0/less/stacked.less" afterPath="$PROJECT_DIR$/vendor/font-awesome-4.5.0/less/stacked.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/font-awesome-4.5.0/less/variables.less" afterPath="$PROJECT_DIR$/vendor/font-awesome-4.5.0/less/variables.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/font-awesome-4.5.0/scss/_animated.scss" afterPath="$PROJECT_DIR$/vendor/font-awesome-4.5.0/scss/_animated.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/font-awesome-4.5.0/scss/_bordered-pulled.scss" afterPath="$PROJECT_DIR$/vendor/font-awesome-4.5.0/scss/_bordered-pulled.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/font-awesome-4.5.0/scss/_core.scss" afterPath="$PROJECT_DIR$/vendor/font-awesome-4.5.0/scss/_core.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/font-awesome-4.5.0/scss/_fixed-width.scss" afterPath="$PROJECT_DIR$/vendor/font-awesome-4.5.0/scss/_fixed-width.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/font-awesome-4.5.0/scss/_icons.scss" afterPath="$PROJECT_DIR$/vendor/font-awesome-4.5.0/scss/_icons.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/font-awesome-4.5.0/scss/_larger.scss" afterPath="$PROJECT_DIR$/vendor/font-awesome-4.5.0/scss/_larger.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/font-awesome-4.5.0/scss/_list.scss" afterPath="$PROJECT_DIR$/vendor/font-awesome-4.5.0/scss/_list.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/font-awesome-4.5.0/scss/_mixins.scss" afterPath="$PROJECT_DIR$/vendor/font-awesome-4.5.0/scss/_mixins.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/font-awesome-4.5.0/scss/_path.scss" afterPath="$PROJECT_DIR$/vendor/font-awesome-4.5.0/scss/_path.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/font-awesome-4.5.0/scss/_rotated-flipped.scss" afterPath="$PROJECT_DIR$/vendor/font-awesome-4.5.0/scss/_rotated-flipped.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/font-awesome-4.5.0/scss/_stacked.scss" afterPath="$PROJECT_DIR$/vendor/font-awesome-4.5.0/scss/_stacked.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/font-awesome-4.5.0/scss/_variables.scss" afterPath="$PROJECT_DIR$/vendor/font-awesome-4.5.0/scss/_variables.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/font-awesome-4.5.0/scss/font-awesome.scss" afterPath="$PROJECT_DIR$/vendor/font-awesome-4.5.0/scss/font-awesome.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/jquery-3.1.1.min.js" afterPath="$PROJECT_DIR$/vendor/jquery-3.1.1.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/moment/moment-with-locales.js" afterPath="$PROJECT_DIR$/vendor/moment/moment-with-locales.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/moment/moment-with-locales.min.js" afterPath="$PROJECT_DIR$/vendor/moment/moment-with-locales.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/vendor.js" afterPath="$PROJECT_DIR$/vendor/vendor.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/weather-icons/css/weather-icons-wind.css" afterPath="$PROJECT_DIR$/vendor/weather-icons/css/weather-icons-wind.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/weather-icons/css/weather-icons-wind.min.css" afterPath="$PROJECT_DIR$/vendor/weather-icons/css/weather-icons-wind.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/weather-icons/css/weather-icons.css" afterPath="$PROJECT_DIR$/vendor/weather-icons/css/weather-icons.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/weather-icons/css/weather-icons.min.css" afterPath="$PROJECT_DIR$/vendor/weather-icons/css/weather-icons.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/weather-icons/font/weathericons-regular-webfont.svg" afterPath="$PROJECT_DIR$/vendor/weather-icons/font/weathericons-regular-webfont.svg" />
     </list>
     <ignored path="UI.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,33 +503,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="bluetooth_control.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/bluetooth_control/bluetooth_control.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="module.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/module.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="529">
-              <caret line="75" column="38" selection-start-line="75" selection-start-column="38" selection-end-line="75" selection-end-column="38" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="node_helper.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/modules/bluetooth_control/node_helper.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+            <state relative-caret-position="227">
+              <caret line="47" column="19" lean-forward="true" selection-start-line="47" selection-start-column="19" selection-end-line="47" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -71,7 +517,7 @@
         <entry file="file://$PROJECT_DIR$/modules/voice_control/node_helper.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="2070">
-              <caret line="138" column="46" selection-start-line="138" selection-start-column="16" selection-end-line="138" selection-end-column="46" />
+              <caret line="138" column="46" lean-forward="false" selection-start-line="138" selection-start-column="16" selection-end-line="138" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -110,9 +556,7 @@
         <option value="$PROJECT_DIR$/modules/default/currentweather/currentweather.js" />
         <option value="$PROJECT_DIR$/js/main.js" />
         <option value="$PROJECT_DIR$/config/config_shit.js" />
-        <option value="$PROJECT_DIR$/modules/voice_control/Record.py" />
         <option value="$PROJECT_DIR$/js/app.js" />
-        <option value="$PROJECT_DIR$/modules/gesture_control/face_recognize.py" />
         <option value="$PROJECT_DIR$/modules/MMM-twitter/MMM-twitter.js" />
         <option value="$PROJECT_DIR$/css/custom.css" />
         <option value="$PROJECT_DIR$/modules/gesture_control/node_helper.js" />
@@ -127,6 +571,10 @@
         <option value="$PROJECT_DIR$/modules/bluetooth_control/bluetooth_control.js" />
         <option value="$PROJECT_DIR$/modules/default/compliments/compliments.js" />
         <option value="$PROJECT_DIR$/modules/bluetooth_control/BTsignal.sh" />
+        <option value="$PROJECT_DIR$/modules/voice_control/Record.py" />
+        <option value="$PROJECT_DIR$/modules/gesture_control/face_recognize.py" />
+        <option value="$PROJECT_DIR$/modules/bluetooth_control/TurnOnScreen.sh" />
+        <option value="$PROJECT_DIR$/modules/bluetooth_control/TurnOffScreen.sh" />
         <option value="$PROJECT_DIR$/modules/bluetooth_control/node_helper.js" />
       </list>
     </option>
@@ -149,19 +597,9 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="56" />
-    <option name="width" value="1914" />
-    <option name="height" value="984" />
-  </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
-    <OptionsSetting value="true" id="Add" />
-    <OptionsSetting value="true" id="Remove" />
-    <OptionsSetting value="true" id="Checkout" />
-    <OptionsSetting value="true" id="Update" />
-    <OptionsSetting value="true" id="Status" />
-    <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
-    <ConfirmationsSetting value="0" id="Remove" />
+    <option name="y" value="55" />
+    <option name="width" value="1908" />
+    <option name="height" value="980" />
   </component>
   <component name="ProjectView">
     <navigator currentView="Scope" currentSubView="Project Files" proportions="" version="1">
@@ -178,11 +616,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane />
-      </pane>
       <pane id="Scope">
         <subPane subId="Project Files">
           <PATH>
@@ -195,26 +628,11 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="UI">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="mongodb_files">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="sen5or">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -229,22 +647,23 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="DDL Data Source" />
     <property name="jsx.switch.disabled" value="true" />
+    <property name="js.eslint.eslintPackage" value="$PROJECT_DIR$/node_modules/eslint" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/modules/bluetooth_control" />
-      <recent name="$PROJECT_DIR$/modules" />
-      <recent name="$PROJECT_DIR$/modules/gesture_control" />
-      <recent name="$PROJECT_DIR$/modules/voice_control" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/mongodb_files" />
       <recent name="$PROJECT_DIR$/modules/voice_control" />
       <recent name="$PROJECT_DIR$/python" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/modules/bluetooth_control" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/modules" />
+      <recent name="$PROJECT_DIR$/modules/gesture_control" />
+      <recent name="$PROJECT_DIR$/modules/voice_control" />
+    </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.stream-example.html">
+  <component name="RunManager">
     <configuration default="false" name="stream-example.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/UI/modules/gesture_control/stream-example.html">
       <method />
     </configuration>
@@ -252,9 +671,10 @@
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
       <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file id="idea.log" enabled="true" />
       <method />
     </configuration>
-    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App">
       <module name="" />
       <option name="DEPLOY" value="true" />
       <option name="ARTIFACT_NAME" value="" />
@@ -264,7 +684,7 @@
       <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
       <option name="PREFERRED_AVD" value="" />
       <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
       <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
       <option name="FORCE_STOP_RUNNING_APP" value="true" />
       <option name="DEBUGGER_TYPE" value="Java" />
@@ -272,7 +692,11 @@
       <option name="PREFERRED_AVD" value="" />
       <Java />
       <Profilers>
+        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
+        <option name="GAPID_ENABLED" value="false" />
         <option name="GAPID_DISABLE_PCS" value="false" />
+        <option name="SUPPORT_LIB_ENABLED" value="true" />
+        <option name="INSTRUMENTATION_ENABLED" value="true" />
       </Profilers>
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
@@ -297,7 +721,11 @@
       <option name="PREFERRED_AVD" value="" />
       <Java />
       <Profilers>
+        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
+        <option name="GAPID_ENABLED" value="false" />
         <option name="GAPID_DISABLE_PCS" value="false" />
+        <option name="SUPPORT_LIB_ENABLED" value="true" />
+        <option name="INSTRUMENTATION_ENABLED" value="true" />
       </Profilers>
       <method />
     </configuration>
@@ -324,7 +752,7 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
       <option name="arquillianRunConfiguration">
@@ -495,8 +923,8 @@
       <setting name="cmdLine" value="run-app" />
       <setting name="passParentEnv" value="true" />
       <setting name="launchBrowser" value="true" />
+      <setting name="launchBrowserUrl" value="" />
       <setting name="depsClasspath" value="false" />
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
@@ -511,27 +939,6 @@
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="true" type="JUnitTestDiscovery" factoryName="JUnit Test Discovery" changeList="All">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
@@ -562,6 +969,12 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
@@ -588,14 +1001,6 @@
       <option name="workingDirectory" />
       <option name="isAlternativeJrePathEnabled" value="false" />
       <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="MongoRunConfiguration" factoryName="Mongo">
-      <setting name="path" value="" />
-      <setting name="shellParams" value="" />
-      <method />
-    </configuration>
-    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
       <method />
     </configuration>
     <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
@@ -686,34 +1091,6 @@
       <listeners />
       <method />
     </configuration>
-    <configuration default="true" type="TestNGTestDiscovery" factoryName="TestNG Test Discovery" changeList="All">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
-      <method />
-    </configuration>
     <configuration default="true" type="Tox" factoryName="Tox">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -725,19 +1102,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <module name="UI" />
-      <method />
-    </configuration>
-    <configuration default="true" type="executeSpecs" factoryName="Gauge Execution">
-      <setting name="environment" value="" />
-      <setting name="specsToExecute" value="" />
-      <setting name="tags" value="" />
-      <setting name="parallelNodes" value="" />
-      <setting name="execInParallel" value="false" />
-      <setting name="programParameters" value="" />
-      <setting name="workingDirectory" value="" />
-      <setting name="moduleName" value="" />
-      <envMap />
-      <setting name="rowsRange" value="" />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
@@ -754,19 +1118,6 @@
       <scripts />
       <node-interpreter value="project" />
       <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <working-directory />
-      <pass-parent-env>true</pass-parent-env>
-      <envs />
-      <ui />
-      <extra-mocha-options />
-      <test-kind>DIRECTORY</test-kind>
-      <test-directory />
-      <recursive>false</recursive>
       <method />
     </configuration>
     <configuration default="true" type="osgi.bnd.run" factoryName="Run Launcher">
@@ -888,11 +1239,30 @@
     <list size="1">
       <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.stream-example.html" />
     </list>
-    <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.stream-example.html" />
-      </list>
-    </recent_temporary>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <Java />
+      <Profilers>
+        <option name="GAPID_DISABLE_PCS" value="false" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <method />
+    </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -941,7 +1311,14 @@
       <workItem from="1480634639600" duration="112000" />
       <workItem from="1480634830681" duration="5067000" />
       <workItem from="1480641191403" duration="1674000" />
-      <workItem from="1480814431583" duration="1335000" />
+      <workItem from="1480814431583" duration="3880000" />
+      <workItem from="1480836884496" duration="385000" />
+      <workItem from="1480840027414" duration="650000" />
+      <workItem from="1480959913368" duration="1071000" />
+      <workItem from="1480971301695" duration="6370000" />
+      <workItem from="1480981646119" duration="568000" />
+      <workItem from="1480982787144" duration="887000" />
+      <workItem from="1480984338671" duration="50000" />
     </task>
     <task id="LOCAL-00001" summary="fixed and renamed twitter module to MMM-twitter">
       <created>1478933440081</created>
@@ -1034,42 +1411,56 @@
       <option name="project" value="LOCAL" />
       <updated>1480815429789</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Added db files">
+      <created>1480815772476</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1480815772476</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="251519000" />
+    <option name="totallyTimeSpent" value="264045000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="56" width="1914" height="984" extended-state="4" />
+    <frame x="0" y="55" width="1908" height="980" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31271878" sideWeight="0.50213444" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293979" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.09699526" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31271878" sideWeight="0.49786553" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2857143" sideWeight="0.49786553" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24569893" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24527311" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329582" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.09699526" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32716763" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="processedProjectFiles" value="true" />
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.sh" />
@@ -1099,7 +1490,8 @@
     <MESSAGE value="Reduced twitter interval to 60 sec, changed tokens" />
     <MESSAGE value="Face recognition and voice recognition both working&#10;" />
     <MESSAGE value="Added bluetooth and Voice queue&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added bluetooth and Voice queue&#10;" />
+    <MESSAGE value="Added db files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added db files" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1112,111 +1504,96 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="50" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/gesture_control/stream-example.html" />
-    <entry file="file://$PROJECT_DIR$/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-90">
-          <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/modules/voice_control/jsmpg.js" />
     <entry file="file://$PROJECT_DIR$/modules/voice_control/npm-debug.log" />
     <entry file="file://$PROJECT_DIR$/js/logger.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/class.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
-          <caret line="54" column="46" selection-start-line="54" selection-start-column="46" selection-end-line="54" selection-end-column="46" />
+          <caret line="54" column="46" lean-forward="false" selection-start-line="54" selection-start-column="46" selection-end-line="54" selection-end-column="46" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/gesture_control/gestures.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/iconv-lite/encodings/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+          <caret line="17" column="8" lean-forward="false" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Gruntfile.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-555">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/socket.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
-          <caret line="31" column="15" selection-start-line="27" selection-start-column="12" selection-end-line="31" selection-end-column="15" />
+          <caret line="31" column="15" lean-forward="false" selection-start-line="27" selection-start-column="12" selection-end-line="31" selection-end-column="15" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/translator.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2721">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/socketclient.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-186">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file:///usr/share/applications/google-chrome.desktop">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/config.js.sample">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/serveronly/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
-          <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
+          <caret line="1" column="4" lean-forward="false" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
-          <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+          <caret line="6" column="5" lean-forward="false" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/voice_control/output.wav">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1224,230 +1601,246 @@
     <entry file="file://$PROJECT_DIR$/modules/voice_control/Identification/GetProfile.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/electron.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="471">
-          <caret line="161" column="20" selection-start-line="161" selection-start-column="8" selection-end-line="161" selection-end-column="20" />
+          <caret line="161" column="20" lean-forward="false" selection-start-line="161" selection-start-column="8" selection-end-line="161" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/loader.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-910">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/defaults.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
-          <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+          <caret line="14" column="20" lean-forward="false" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/default/currentweather/currentweather.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="61">
-          <caret line="176" column="118" selection-start-line="176" selection-start-column="118" selection-end-line="176" selection-end-column="118" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-322">
-          <caret line="38" column="15" selection-start-line="38" selection-start-column="8" selection-end-line="38" selection-end-column="15" />
+          <caret line="176" column="118" lean-forward="false" selection-start-line="176" selection-start-column="118" selection-end-line="176" selection-end-column="118" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/voice_control/Identification/IdentificationServiceHttpClientHelper.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
-          <caret line="62" column="38" selection-start-line="62" selection-start-column="37" selection-end-line="62" selection-end-column="38" />
+          <caret line="62" column="38" lean-forward="false" selection-start-line="62" selection-start-column="37" selection-end-line="62" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/gesture_control/jsmpg.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1785">
-          <caret line="268" column="19" selection-start-line="268" selection-start-column="15" selection-end-line="268" selection-end-column="19" />
+          <caret line="268" column="19" lean-forward="false" selection-start-line="268" selection-start-column="15" selection-end-line="268" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/gesture_control/haarcascade_frontalface_default.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/gesture_control/face_recognize.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="54" column="35" selection-start-line="54" selection-start-column="35" selection-end-line="54" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/voice_control/Record.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-585">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/default/weatherforecast/weatherforecast.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1598">
-          <caret line="156" column="6" selection-start-line="88" selection-start-column="4" selection-end-line="156" selection-end-column="6" />
+          <caret line="156" column="6" lean-forward="false" selection-start-line="88" selection-start-column="4" selection-end-line="156" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/custom.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="403">
-          <caret line="58" column="1" selection-start-line="58" selection-start-column="1" selection-end-line="58" selection-end-column="1" />
+          <caret line="58" column="1" lean-forward="false" selection-start-line="58" selection-start-column="1" selection-end-line="58" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/old_config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1208">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/old_config2.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/gesture_control/gesture_control.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="885">
-          <caret line="59" column="15" selection-start-line="59" selection-start-column="15" selection-end-line="59" selection-end-column="15" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/MMM-twitter/node_helper.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="52">
-          <caret line="13" column="10" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
+          <caret line="13" column="10" lean-forward="false" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/MMM-twitter/MMM-twitter.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1103">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
-          <caret line="208" column="22" selection-start-line="208" selection-start-column="12" selection-end-line="208" selection-end-column="22" />
+          <caret line="208" column="22" lean-forward="false" selection-start-line="208" selection-start-column="12" selection-end-line="208" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/default/newsfeed/newsfeed.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
-          <caret line="30" column="26" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
+          <caret line="30" column="26" lean-forward="false" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/default/newsfeed/fetcher.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
-          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="115" column="38" selection-start-line="115" selection-start-column="38" selection-end-line="115" selection-end-column="38" />
+          <caret line="21" column="13" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
-          <caret line="16" column="36" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
+          <caret line="16" column="36" lean-forward="false" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/voice_control/voice_control.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/default/compliments/compliments.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
-          <caret line="128" column="10" selection-start-line="128" selection-start-column="10" selection-end-line="128" selection-end-column="10" />
+          <caret line="128" column="10" lean-forward="false" selection-start-line="128" selection-start-column="10" selection-end-line="128" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/node_modules/oauth/lib/sha1.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/gesture_control/node_helper.js">
+    <entry file="file://$PROJECT_DIR$/mongodb_files/sen5or/import_instructions">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="454">
-          <caret line="161" column="0" selection-start-line="128" selection-start-column="8" selection-end-line="161" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/voice_control/node_helper.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2070">
-          <caret line="138" column="46" selection-start-line="138" selection-start-column="16" selection-end-line="138" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/bluetooth_control/bluetooth_control.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/module.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="529">
-          <caret line="75" column="38" selection-start-line="75" selection-start-column="38" selection-end-line="75" selection-end-column="38" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+          <caret line="75" column="38" lean-forward="false" selection-start-line="75" selection-start-column="38" selection-end-line="75" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/bluetooth_control/bluetooth_control.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/voice_control/Record.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-150">
+          <caret line="35" column="8" lean-forward="false" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/gesture_control/face_recognize.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="51" column="37" lean-forward="true" selection-start-line="51" selection-start-column="37" selection-end-line="51" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/gesture_control/node_helper.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-38">
+          <caret line="130" column="73" lean-forward="false" selection-start-line="130" selection-start-column="73" selection-end-line="130" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/gesture_control/gesture_control.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-653">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-833">
+          <caret line="45" column="3" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="47" selection-end-column="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/bluetooth_control/BTsignal.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/voice_control/node_helper.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2070">
+          <caret line="138" column="46" lean-forward="false" selection-start-line="138" selection-start-column="16" selection-end-line="138" selection-end-column="46" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/bluetooth_control/TurnOnScreen.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="27" lean-forward="false" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/bluetooth_control/TurnOffScreen.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/bluetooth_control/node_helper.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+        <state relative-caret-position="227">
+          <caret line="47" column="19" lean-forward="true" selection-start-line="47" selection-start-column="19" selection-end-line="47" selection-end-column="19" />
           <folding />
         </state>
       </provider>
